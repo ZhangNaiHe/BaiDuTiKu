@@ -11,7 +11,7 @@
  Target Server Version : 50725
  File Encoding         : 65001
 
- Date: 15/10/2019 22:09:24
+ Date: 15/10/2019 22:43:22
 */
 
 SET NAMES utf8mb4;
@@ -28,7 +28,7 @@ CREATE TABLE `structure`  (
   `structure_title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '科目章节小标题',
   `subject_id` int(30) NOT NULL COMMENT '科目id',
   PRIMARY KEY (`structure_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 136 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 166 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of structure
@@ -168,6 +168,36 @@ INSERT INTO `structure` VALUES (132, '物理', '第六章 实验', '2 力学实�
 INSERT INTO `structure` VALUES (133, '物理', '第六章 实验', '3 电学实验', 3);
 INSERT INTO `structure` VALUES (134, '物理', '第六章 实验', '4 热学实验', 3);
 INSERT INTO `structure` VALUES (135, '物理', '第六章 实验', '5 光学实验及其他', 3);
+INSERT INTO `structure` VALUES (136, '化学', '第一章 化学科学与探究', '1 化学科学特点', 4);
+INSERT INTO `structure` VALUES (137, '化学', '第一章 化学科学与探究', '2 化学研究方法与工业化学', 4);
+INSERT INTO `structure` VALUES (138, '化学', '第二章 化学基本概念和基本理论', '1 物质的组成、性质和分类', 4);
+INSERT INTO `structure` VALUES (139, '化学', '第二章 化学基本概念和基本理论', '2 化学用语', 4);
+INSERT INTO `structure` VALUES (140, '化学', '第二章 化学基本概念和基本理论', '3 化学常用计量', 4);
+INSERT INTO `structure` VALUES (141, '化学', '第二章 化学基本概念和基本理论', '4 溶液和胶体', 4);
+INSERT INTO `structure` VALUES (142, '化学', '第二章 化学基本概念和基本理论', '5 元素周期律', 4);
+INSERT INTO `structure` VALUES (143, '化学', '第三章 物质结构与性质', '1 物质结构', 4);
+INSERT INTO `structure` VALUES (144, '化学', '第三章 物质结构与性质', '2 化学键与物质的性质', 4);
+INSERT INTO `structure` VALUES (145, '化学', '第三章 物质结构与性质', '3 分子间作用与物质的性质', 4);
+INSERT INTO `structure` VALUES (146, '化学', '第四章 化学反应原理', '1 化学反应与能量', 4);
+INSERT INTO `structure` VALUES (147, '化学', '第四章 化学反应原理', '2 化学反应速率和化学平衡', 4);
+INSERT INTO `structure` VALUES (148, '化学', '第四章 化学反应原理', '3 电解质溶液', 4);
+INSERT INTO `structure` VALUES (149, '化学', '第五章 常见无机物及其反应', '1 卤族与氮族及其应用', 4);
+INSERT INTO `structure` VALUES (150, '化学', '第五章 常见无机物及其反应', '2 氧族与碳族及其应用', 4);
+INSERT INTO `structure` VALUES (151, '化学', '第五章 常见无机物及其反应', '3 金属及其化合物', 4);
+INSERT INTO `structure` VALUES (152, '化学', '第六章 常见有机物及其应用', '1 有机化合物的组成与结构', 4);
+INSERT INTO `structure` VALUES (153, '化学', '第六章 常见有机物及其应用', '2 烃', 4);
+INSERT INTO `structure` VALUES (154, '化学', '第六章 常见有机物及其应用', '3 烃的衍生物', 4);
+INSERT INTO `structure` VALUES (155, '化学', '第六章 常见有机物及其应用', '4 糖类、蛋白质', 4);
+INSERT INTO `structure` VALUES (156, '化学', '第六章 常见有机物及其应用', '5 合成材料', 4);
+INSERT INTO `structure` VALUES (157, '化学', '第七章 化学综合计算', '1 化学综合计算', 4);
+INSERT INTO `structure` VALUES (158, '化学', '第八章 化学实验', '1 常用仪器及其使用', 4);
+INSERT INTO `structure` VALUES (159, '化学', '第八章 化学实验', '2 化学实验基本操作', 4);
+INSERT INTO `structure` VALUES (160, '化学', '第八章 化学实验', '3 物质的分离、提纯和检验', 4);
+INSERT INTO `structure` VALUES (161, '化学', '第八章 化学实验', '4 常见气体的制备与收集', 4);
+INSERT INTO `structure` VALUES (162, '化学', '第八章 化学实验', '5 定量实验与探究实验', 4);
+INSERT INTO `structure` VALUES (163, '化学', '第八章 化学实验', '6 无机物的性质实验', 4);
+INSERT INTO `structure` VALUES (164, '化学', '第八章 化学实验', '7 有机物的性质实验', 4);
+INSERT INTO `structure` VALUES (165, '化学', '第八章 化学实验', '8 化学实验方案的设计与评价', 4);
 
 -- ----------------------------
 -- Table structure for test
