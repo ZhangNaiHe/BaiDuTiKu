@@ -11,7 +11,7 @@
  Target Server Version : 50725
  File Encoding         : 65001
 
- Date: 15/10/2019 21:20:37
+ Date: 15/10/2019 21:48:50
 */
 
 SET NAMES utf8mb4;
@@ -28,7 +28,7 @@ CREATE TABLE `structure`  (
   `structure_title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '科目章节小标题',
   `subject_id` int(30) NOT NULL COMMENT '科目id',
   PRIMARY KEY (`structure_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 101 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 119 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of structure
@@ -87,7 +87,7 @@ INSERT INTO `structure` VALUES (51, '理科数学', '第十二章 概率与统�
 INSERT INTO `structure` VALUES (52, '理科数学', '第十三章 算法初步', '1 算法', 1);
 INSERT INTO `structure` VALUES (53, '理科数学', '第十四章 数系的扩充和复数的引入', '1 复数', 1);
 INSERT INTO `structure` VALUES (54, '理科数学', '第十五章 推理与证明', '1 合情推理与演绎推理', 1);
-INSERT INTO `structure` VALUES (55, '理科数学', '第十五章 推理与证明', '2 直接证明、间接证明、数学归纳法', 2);
+INSERT INTO `structure` VALUES (55, '理科数学', '第十五章 推理与证明', '2 直接证明、间接证明、数学归纳法', 1);
 INSERT INTO `structure` VALUES (56, '理科数学', '第十六章 选修部分', '1 几何证明选讲', 1);
 INSERT INTO `structure` VALUES (57, '理科数学', '第十六章 选修部分', '2 坐标系与参数方程', 1);
 INSERT INTO `structure` VALUES (58, '理科数学', '第十六章 选修部分', '3 不等式选讲', 1);
@@ -133,6 +133,24 @@ INSERT INTO `structure` VALUES (97, '文科数学', '第十章 圆锥曲线与�
 INSERT INTO `structure` VALUES (98, '文科数学', '第十章 圆锥曲线与方程', '4 直线与圆锥曲线的位置关系', 2);
 INSERT INTO `structure` VALUES (99, '文科数学', '第十章 圆锥曲线与方程', '5 曲线与方程', 2);
 INSERT INTO `structure` VALUES (100, '文科数学', '第十章 圆锥曲线与方程', '6 圆锥曲线的综合问题', 2);
+INSERT INTO `structure` VALUES (101, '文科数学', '第十一章 概率与统计', '1 随机事件及其概率', 2);
+INSERT INTO `structure` VALUES (102, '文科数学', '第十一章 概率与统计', '2 古典概型与几何概型', 2);
+INSERT INTO `structure` VALUES (103, '文科数学', '第十一章 概率与统计', '3 统计与统计案例', 2);
+INSERT INTO `structure` VALUES (104, '文科数学', '第十二章 算法初步', '1 算法', 2);
+INSERT INTO `structure` VALUES (105, '文科数学', '第十三章 数系的扩充和复数的引入', '1 复数', 2);
+INSERT INTO `structure` VALUES (106, '文科数学', '第十四章 推理与证明', '1 合情推理与演绎推理', 2);
+INSERT INTO `structure` VALUES (107, '文科数学', '第十四章 推理与证明', '2 直接证明、间接证明、数学归纳法', 2);
+INSERT INTO `structure` VALUES (108, '文科数学', '第十五章 选修部分', '1 几何证明选讲', 2);
+INSERT INTO `structure` VALUES (109, '文科数学', '第十五章 选修部分', '2 坐标系与参数方程', 2);
+INSERT INTO `structure` VALUES (110, '文科数学', '第十五章 选修部分', '3 不等式选讲', 2);
+INSERT INTO `structure` VALUES (111, '物理', '第一章 力学', '1 运动的描述', 3);
+INSERT INTO `structure` VALUES (112, '物理', '第一章 力学', '2 相互作用、力与机械', 3);
+INSERT INTO `structure` VALUES (113, '物理', '第一章 力学', '3 牛顿运动定律', 3);
+INSERT INTO `structure` VALUES (114, '物理', '第一章 力学', '4 曲线引动、万有引力', 3);
+INSERT INTO `structure` VALUES (115, '物理', '第一章 力学', '5 动量', 3);
+INSERT INTO `structure` VALUES (116, '物理', '第一章 力学', '6 机械能', 3);
+INSERT INTO `structure` VALUES (117, '物理', '第一章 力学', '7 机械振动', 3);
+INSERT INTO `structure` VALUES (118, '物理', '第一章 力学', '8 机械波', 3);
 
 -- ----------------------------
 -- Table structure for test
