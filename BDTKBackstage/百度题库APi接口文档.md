@@ -5,6 +5,7 @@
 ```javascript
 提交方式: post
 提交地址: http://47.102.213.250:80/api/v1/user_login
+提交参数: username&password
 
 响应数据
 成功返回:
@@ -24,6 +25,7 @@
 ```javascript
 提交方式: post
 提交地址: http://47.102.213.250:80/api/v1/user_register
+提交擦数: username&password
 
 响应数据
 成功返回:
@@ -38,4 +40,67 @@
 ```
 
 
+
+## 首页
+
+1. ##### 获取左边菜单栏
+
+```javascript
+提交方式: get
+提交地址: http://47.102.213.250:80/api/v1/tabsmenu
+提交参数: 无
+
+响应数据
+成功返回:
+{
+    "code": 200,
+    "data": {
+        "tabs": [
+            {
+                "cat_father_id": 1,
+                "cat_name": "高考",
+                "cat_son_name": "高考",
+                "cat_son_id": 1
+            },
+            {
+                "cat_father_id": 2,
+                "cat_name": "建筑类",
+                "cat_son_name": "一级建造师,二级建造师",
+                "cat_son_id": 2
+            },
+            {
+                "cat_father_id": 3,
+                "cat_name": "财会类",
+                "cat_son_name": "会计从业资格,中级会计师,注册会计师CPA,中级经济师,初级会计师",
+                "cat_son_id": 3
+            },
+            {
+                "cat_father_id": 4,
+                "cat_name": "计算机类",
+                "cat_son_name": "计算机四级",
+                "cat_son_id": 4
+            },
+            {
+                "cat_father_id": 5,
+                "cat_name": "公务员",
+                "cat_son_name": "警察招考,政法干警,国考",
+                "cat_son_id": 5
+            },
+            {
+                "cat_father_id": 6,
+                "cat_name": "医药类",
+                "cat_son_name": "临床执业医师,临床助理医师,执业中药医师,执业西药药师,护士资格",
+                "cat_son_id": 6
+            },
+            {
+                "cat_father_id": 7,
+                "cat_name": "其他",
+                "cat_son_name": "考研,高考",
+                "cat_son_id": 7
+            }
+        ]
+    }
+}
+
+```
 
