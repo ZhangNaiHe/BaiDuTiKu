@@ -104,3 +104,68 @@
 
 ```
 
+2. ##### 章节学习
+
+```javascript
+提交方式: get
+提交地址: http://47.102.213.250:80/api/v1/subject
+提交参数: 无
+
+响应数据
+成功返回:
+{
+    "code": "200",
+    "data": [
+        {
+            "subject_id": 1,
+            "subject_pic": "http://127.0.0.1",
+            "subject_title": "文科数学",
+            "subject_num": 495
+        },
+        {
+            "subject_id": 2,
+            "subject_pic": "http://127.0.0.1",
+            "subject_title": "理科数学",
+            "subject_num": 534
+        },
+        {
+            "subject_id": 3,
+            "subject_pic": "http://127.0.0.1",
+            "subject_title": "物理",
+            "subject_num": 277
+        },
+        {
+            "subject_id": 4,
+            "subject_pic": "http://127.0.0.1",
+            "subject_title": "化学",
+            "subject_num": 446
+        },
+        {
+            "subject_id": 5,
+            "subject_pic": "http://127.0.0.1",
+            "subject_title": "生物",
+            "subject_num": 136
+        },
+        {
+            "subject_id": 6,
+            "subject_pic": "http://127.0.0.1",
+            "subject_title": "政治",
+            "subject_num": 372
+        },
+        {
+            "subject_id": 7,
+            "subject_pic": "http://127.0.0.1",
+            "subject_title": "历史",
+            "subject_num": 230
+        },
+        {
+            "subject_id": 8,
+            "subject_pic": "http://127.0.0.1",
+            "subject_title": "地理",
+            "subject_num": 89
+        }
+    ]
+}
+
+```
+
