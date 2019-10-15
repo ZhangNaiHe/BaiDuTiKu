@@ -1,8 +1,10 @@
 <template>
   <div class="Login">
     <el-dialog :visible.sync="dialogVisible">
-      <img src="../assets/jjh-loginlogo.png" alt />
-      <span class="login-user">用户名密码登录</span>
+      <div class="top-img">
+        <img src="../assets/jjh-loginlogo.png" alt />
+        <span class="login-user">用户名密码登录</span>
+      </div>
       <!-- 表单 -->
       <el-form
         :model="loginForm"
@@ -30,11 +32,17 @@
         </div>
       </el-form>
       <div class="footer">
-        <span>扫码登录</span>
-        <span>
-          <img src="../assets/jjh-login.png" alt />
+        <span class="footer-sm">扫码登录 |</span>
+        <span class="footer-img1">
+          <!-- <img class="img1" src="../assets/jjh-login.png" alt /> -->
         </span>
-        <span>立即注册</span>
+        <span class="footer-img2">
+          <!-- <img class="img2" src="../assets/jjh-login.png" alt /> -->
+        </span>
+        <span class="footer-img3">
+          <!-- <img class="img3" src="../assets/jjh-login.png" alt /> -->
+        </span>
+        <span class="footer-zc">立即注册</span>
       </div>
     </el-dialog>
   </div>
@@ -47,8 +55,8 @@ export default {
       dialogVisible: true,
       checked: true,
       loginForm: {
-        username: "aaa",
-        password: "222"
+        username: "admin",
+        password: "123"
       },
       loginRules: {
         username: [
@@ -82,7 +90,7 @@ export default {
         let { data: res } = await this.$http.post("user_login", this.loginForm);
         console.log(res);
         if (res.code == 200) {
-          this.$router.push("/home");
+          this.$router.push("/");
           return this.$message.success(res.message);
         }
         if (res.code == 400) {
@@ -106,10 +114,10 @@ export default {
 .el-dialog__body {
   padding: 0;
   margin-top: -5px;
-  margin-left: 28px;
+  /* margin-left: 28px; */
 }
-img {
-  margin-top: 0px;
+.top-img {
+  margin-left: 28px;
 }
 .login-user {
   font-size: 16px;
@@ -120,6 +128,8 @@ img {
   width: 302px;
   height: 240px;
   margin-top: 40px;
+  margin-left: 28px;
+  margin-bottom: 7px;
   font-size: 14px;
   color: #666;
 }
@@ -153,23 +163,73 @@ img {
 }
 
 .fget > span {
+  height: 20px;
+  line-height: 20px;
   color: #2e82ff;
+  font-family: Microsoft YaHei;
 }
 
 .fget2 {
   display: inline-block;
-  /* margin-right: 220px; */
-  /* float: right; */
-}
-.footer > span {
-  display: inline-block;
-  width: 30px;
-  height: 20px;
-  overflow: hidden;
+  /* margin-right: 18px; */
+  float: right;
+  font-family: Microsoft YaHei;
 }
 
-.footer > span > img {
-  /* height: 20px; */
-  background-position: 0px 0px;
+.footer {
+  height: 61px;
+  background-color: #f0f6ff;
+}
+
+.footer-sm {
+  padding-left: 28px;
+}
+.footer > .footer-img1 {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding-top: 5px;
+  margin-left: 10px;
+  background-image: url("../assets/jjh-login.png");
+  background-position: 28px 55px;
+  overflow: hidden;
+  /* background-color: aqua; */
+}
+
+.footer > .footer-img2 {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding-top: 5px;
+  margin-left: 10px;
+  background-image: url("../assets/jjh-login.png");
+  background-position: 55px 58px;
+  overflow: hidden;
+  /* background-color: rgb(90, 97, 97); */
+}
+.footer > .footer-img3 {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding-top: 5px;
+  margin-left: 10px;
+  background-image: url("../assets/jjh-login.png");
+  background-position: 79px 34px;
+  overflow: hidden;
+  /* background-color: rgb(175, 240, 240); */
+}
+
+.footer > span {
+  color: #2e82ff;
+  font-family: Microsoft YaHei;
+}
+
+.footer-zc {
+  width: 60px;
+  height: 20px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 20px;
+  font-family: Microsoft YaHei;
 }
 </style>
