@@ -11,7 +11,7 @@
  Target Server Version : 50725
  File Encoding         : 65001
 
- Date: 15/10/2019 11:07:08
+ Date: 15/10/2019 11:17:22
 */
 
 SET NAMES utf8mb4;
@@ -133,6 +133,8 @@ CREATE TABLE `test`  (
   `topic_id` int(20) NOT NULL AUTO_INCREMENT COMMENT '试题id',
   `topic_classics` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '试题分类',
   `topic_title` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '试题题目',
+  `test_classics` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '题目类型比如简答题，单选题',
+  `topic_score` tinyint(4) NOT NULL COMMENT '各个题目分数',
   `topic_answer` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '试题解析',
   `subject_id` int(20) NOT NULL COMMENT '科目id',
   PRIMARY KEY (`topic_id`) USING BTREE
