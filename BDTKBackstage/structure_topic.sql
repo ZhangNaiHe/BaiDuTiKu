@@ -11,7 +11,7 @@
  Target Server Version : 50725
  File Encoding         : 65001
 
- Date: 15/10/2019 21:48:50
+ Date: 15/10/2019 22:09:24
 */
 
 SET NAMES utf8mb4;
@@ -28,7 +28,7 @@ CREATE TABLE `structure`  (
   `structure_title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '科目章节小标题',
   `subject_id` int(30) NOT NULL COMMENT '科目id',
   PRIMARY KEY (`structure_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 119 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 136 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of structure
@@ -151,6 +151,23 @@ INSERT INTO `structure` VALUES (115, '物理', '第一章 力学', '5 动量', 3
 INSERT INTO `structure` VALUES (116, '物理', '第一章 力学', '6 机械能', 3);
 INSERT INTO `structure` VALUES (117, '物理', '第一章 力学', '7 机械振动', 3);
 INSERT INTO `structure` VALUES (118, '物理', '第一章 力学', '8 机械波', 3);
+INSERT INTO `structure` VALUES (119, '物理', '第二章 热学', '1 分子热运动和热机', 3);
+INSERT INTO `structure` VALUES (120, '物理', '第二章 热学', '2 固体、液体和气体', 3);
+INSERT INTO `structure` VALUES (121, '物理', '第三章 电磁学', '1 电场', 3);
+INSERT INTO `structure` VALUES (122, '物理', '第三章 电磁学', '2 电路与恒定电流', 3);
+INSERT INTO `structure` VALUES (123, '物理', '第三章 电磁学', '3 磁场', 3);
+INSERT INTO `structure` VALUES (124, '物理', '第三章 电磁学', '4 电磁感应', 3);
+INSERT INTO `structure` VALUES (125, '物理', '第三章 电磁学', '5 交变电流', 3);
+INSERT INTO `structure` VALUES (126, '物理', '第三章 电磁学', '6 电磁场、电磁波及电磁技术', 3);
+INSERT INTO `structure` VALUES (127, '物理', '第四章 光学', '1 光', 3);
+INSERT INTO `structure` VALUES (128, '物理', '第四章 光学', '2 光的波粒二象性', 3);
+INSERT INTO `structure` VALUES (129, '物理', '第五章 原子物理学与相对论', '1 原子、原子核与核技术', 3);
+INSERT INTO `structure` VALUES (130, '物理', '第五章 原子物理学与相对论', '2 相对论', 3);
+INSERT INTO `structure` VALUES (131, '物理', '第六章 实验', '1 物理实验基础', 3);
+INSERT INTO `structure` VALUES (132, '物理', '第六章 实验', '2 力学实验', 3);
+INSERT INTO `structure` VALUES (133, '物理', '第六章 实验', '3 电学实验', 3);
+INSERT INTO `structure` VALUES (134, '物理', '第六章 实验', '4 热学实验', 3);
+INSERT INTO `structure` VALUES (135, '物理', '第六章 实验', '5 光学实验及其他', 3);
 
 -- ----------------------------
 -- Table structure for test
