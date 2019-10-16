@@ -6,7 +6,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
-
+import "./assets/css/base.css";
 // 配置axios
 import Axios from 'axios'
 Vue.prototype.$http = Axios
