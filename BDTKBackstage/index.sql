@@ -2,7 +2,8 @@
 SQLyog Ultimate - MySQL GUI v8.2 
 MySQL - 5.7.25 : Database - baidutiku
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -138,7 +139,7 @@ CREATE TABLE `test_paper` (
 
 /*Data for the table `test_paper` */
 
-insert  into `test_paper`(`paper_id`,`paper_name`,`chicks`,`paper_cat`) values (1,'2019年高考真题 文科数学(北京卷)',10,'history'),(2,'2019年高考真题 文综 (北京卷)',9,'paper '),(3,'2019年高考真题 英语 (北京卷)',12,'paper '),(4,'2019年高考真题 理综 (北京卷)',55,'history '),(5,'2019年高考真题 语文 (北京卷)',38,'paper '),(6,'2019年高考真题 理科数学 (北京卷)',46,'history '),(7,'2019年高考真题 文科数学 (北京卷)',77,'paper '),(8,'2019年高考真题 语文 (北京卷)',54,'history '),(9,'2019年高考真题 英语 (北京卷)',75,'paper'),(10,'2019年高考真题 文科数学 (北京卷)',36,'history');
+insert  into `test_paper`(`paper_id`,`paper_name`,`chicks`,`paper_cat`) values (1,'2019年高考真题 文科数学(北京卷)',10,'history'),(2,'2019年高考真题 文综 (北京卷)',9,'paper'),(3,'2019年高考真题 英语 (北京卷)',12,'paper'),(4,'2019年高考真题 理综 (北京卷)',55,'history'),(5,'2019年高考真题 语文 (北京卷)',38,'paper'),(6,'2019年高考真题 理科数学 (北京卷)',46,'history'),(7,'2019年高考真题 文科数学 (北京卷)',77,'paper'),(8,'2019年高考真题 语文 (北京卷)',54,'history'),(9,'2019年高考真题 英语 (北京卷)',75,'paper'),(10,'2019年高考真题 文科数学 (北京卷)',36,'history');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
