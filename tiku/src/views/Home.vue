@@ -11,18 +11,6 @@
           <el-carousel-item v-for="item in 2" :key="item"></el-carousel-item>
         </el-carousel>
         <!-- 菜单 -->
-        <!-- <el-menu class="el-menu-list">
-          <el-menu-item v-for="item in MenusList" :key="item.cat_father_id">
-            <span slot="title">{{item.cat_name}}</span>
-            <i class="el-icon-arrow-right" style="float:right;line-height:49px;"></i>
-          </el-menu-item>
-        </el-menu>-->
-        <!-- 隐藏菜单 -->
-        <!-- <el-menu class="el-menu-list-send" v-for="(subitem,i) in this.MenusLists" :key="i">
-          <el-menu-item>
-            <span slot="title">{{subitem}}</span>
-          </el-menu-item>
-        </el-menu>-->
         <el-menu
           default-active="1"
           class="el-menu-vertical-demo"
@@ -38,10 +26,7 @@
             <template slot="title">
               <span slot="title">{{item.cat_name}}</span>
             </template>
-            <el-menu-item
-              v-for="(subitem) in item.cat_son_name"
-              :key="subitem.cat_son_id"
-            >
+            <el-menu-item v-for="(subitem) in item.cat_son_name" :key="subitem.cat_son_id">
               <span slot="title">{{subitem}}</span>
             </el-menu-item>
           </el-submenu>
@@ -59,16 +44,17 @@
             </div>
             <!-- 课程 -->
             <div class="box-con">
-              <div class="class-box">
-                <a href="#">
-                  <!-- 图片 -->
+              <!-- 跳转连接el-link -->
+              <el-link :underline="false">
+                <div class="class-box" v-for="(item1,i) in lists" :key="i">
+                  <!-- 图标 -->
                   <div class="icon"></div>
-                  <p class="icon-p">文科数学</p>
+                  <p class="icon-p">{{item1.subject_title}}</p>
                   <p class="icon-s">
-                    <span>495</span>个考点
+                    <span>{{item1.total}}</span>个考点
                   </p>
-                </a>
-              </div>
+                </div>
+              </el-link>
             </div>
           </div>
         </div>
@@ -85,11 +71,15 @@ export default {
       // 菜单列表数据
       MenusList: [],
       // 隐藏列表数据
-      MenusLists: []
+      MenusLists: [],
+      // 章节学习
+      lists: [],
+      // 章节图标
     };
   },
   created() {
     this.getmenusList();
+    this.getLists();
   },
   methods: {
     // 获取菜单列表
@@ -112,6 +102,13 @@ export default {
         this.MenusLists = item.cat_son_name;
       });
       // console.log(this.MenusLists);
+    },
+    // 获取章节学习
+    async getLists() {
+      // 发起axios
+      const { data: res } = await this.$http.get("subject");
+      console.log(res);
+      this.lists = res.data;
     }
   }
 };
@@ -145,33 +142,6 @@ el-main {
   font-weight: 700;
   margin-bottom: 15px;
 }
-.el-menu-list {
-  position: absolute;
-  width: 230px;
-  top: 59px;
-  z-index: 999;
-  left: 17.5%;
-}
-.el-menu-list .el-menu-item {
-  height: 50px;
-  line-height: 50px;
-  color: #fff;
-  font-size: 14px;
-  padding-left: 20px;
-  background-color: #000;
-  opacity: 0.65;
-  border-bottom: 1px solid #1e1e1e;
-  box-sizing: border-box;
-}
-.el-menu-list-send {
-  position: absolute;
-  width: 230px;
-  height: 350px;
-  top: 59px;
-  z-index: 999;
-  left: 29.6%;
-  background-color: red;
-}
 .division_end {
   width: 40px;
   height: 4px;
@@ -184,7 +154,6 @@ el-main {
   padding-top: 30px;
 }
 .gaokao_erea p {
-  /* display: block; */
   font-weight: 700;
   font-size: 24px;
   color: #333;
@@ -206,13 +175,10 @@ el-main {
   float: left;
   width: 198px;
   height: 198px;
-  background-color: red;
+  background-color: #ffffff;
   text-align: center;
   border: 1px #f0f0f0 solid;
   box-sizing: border-box;
-}
-.class-box a {
-  text-decoration: none;
 }
 .icon {
   width: 59px;
@@ -231,5 +197,8 @@ el-main {
   color: #666;
   height: 12px;
   line-height: 12px;
+}
+.class-box:hover {
+  background-color: #fafafa;
 }
 </style>
