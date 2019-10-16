@@ -11,7 +11,7 @@
  Target Server Version : 50725
  File Encoding         : 65001
 
- Date: 15/10/2019 22:43:22
+ Date: 16/10/2019 09:03:19
 */
 
 SET NAMES utf8mb4;
@@ -28,7 +28,7 @@ CREATE TABLE `structure`  (
   `structure_title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '科目章节小标题',
   `subject_id` int(30) NOT NULL COMMENT '科目id',
   PRIMARY KEY (`structure_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 166 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 247 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of structure
@@ -198,6 +198,87 @@ INSERT INTO `structure` VALUES (162, '化学', '第八章 化学实验', '5 定�
 INSERT INTO `structure` VALUES (163, '化学', '第八章 化学实验', '6 无机物的性质实验', 4);
 INSERT INTO `structure` VALUES (164, '化学', '第八章 化学实验', '7 有机物的性质实验', 4);
 INSERT INTO `structure` VALUES (165, '化学', '第八章 化学实验', '8 化学实验方案的设计与评价', 4);
+INSERT INTO `structure` VALUES (166, '生物', '第一章 分子与细胞', '1 细胞的分子组成', 5);
+INSERT INTO `structure` VALUES (167, '生物', '第一章 分子与细胞', '2 细胞的结构', 5);
+INSERT INTO `structure` VALUES (168, '生物', '第一章 分子与细胞', '3 细胞的代谢', 5);
+INSERT INTO `structure` VALUES (169, '生物', '第一章 分子与细胞', '4 细胞的增殖', 5);
+INSERT INTO `structure` VALUES (170, '生物', '第一章 分子与细胞', '5 细胞的分化、衰老与凋亡', 5);
+INSERT INTO `structure` VALUES (171, '生物', '第二章 遗传与进化', '1 遗传的细胞基础', 5);
+INSERT INTO `structure` VALUES (172, '生物', '第二章 遗传与进化', '2 遗传的分子基础', 5);
+INSERT INTO `structure` VALUES (173, '生物', '第二章 遗传与进化', '3 遗传的基本规律', 5);
+INSERT INTO `structure` VALUES (174, '生物', '第二章 遗传与进化', '4 生物的变异', 5);
+INSERT INTO `structure` VALUES (175, '生物', '第二章 遗传与进化', '5 人类遗传病', 5);
+INSERT INTO `structure` VALUES (176, '生物', '第二章 遗传与进化', '6 生物的进化', 5);
+INSERT INTO `structure` VALUES (177, '生物', '第三章 稳态与环境', '1 植物的激素调节', 5);
+INSERT INTO `structure` VALUES (178, '生物', '第三章 稳态与环境', '2 动物生命活动的调节', 5);
+INSERT INTO `structure` VALUES (179, '生物', '第三章 稳态与环境', '3 人体的内环境与稳态', 5);
+INSERT INTO `structure` VALUES (180, '生物', '第三章 稳态与环境', '4 种群和群落', 5);
+INSERT INTO `structure` VALUES (181, '生物', '第三章 稳态与环境', '5 生态系统', 5);
+INSERT INTO `structure` VALUES (182, '生物', '第三章 稳态与环境', '6 生态环境的保护', 5);
+INSERT INTO `structure` VALUES (183, '生物', '第四章 生物技术实践', '1 微生物的利用', 5);
+INSERT INTO `structure` VALUES (184, '生物', '第四章 生物技术实践', '2 酶的反应', 5);
+INSERT INTO `structure` VALUES (185, '生物', '第四章 生物技术实践', '3 生物技术在食品加工的应用', 5);
+INSERT INTO `structure` VALUES (186, '生物', '第四章 生物技术实践', '4 生物技术在其他方面的应用', 5);
+INSERT INTO `structure` VALUES (187, '政治', '第一章 神奇的货币', '1 揭开货币的神秘面纱', 6);
+INSERT INTO `structure` VALUES (188, '政治', '第一章 神奇的货币', '2 揭开货币的神秘的面纱', 6);
+INSERT INTO `structure` VALUES (189, '政治', '第一章 神奇的货币', '3 信用工具和外汇', 6);
+INSERT INTO `structure` VALUES (190, '政治', '第二章 多变的价格', '1 影响价格的因素', 6);
+INSERT INTO `structure` VALUES (191, '政治', '第二章 多变得价格', '2 价格变动的影响', 6);
+INSERT INTO `structure` VALUES (192, '政治', '第二章 多变的价格', '3 价格变动的影响', 6);
+INSERT INTO `structure` VALUES (193, '政治', '第三章 多彩的消费', '1 消费及其类型', 6);
+INSERT INTO `structure` VALUES (194, '政治', '第三章 多彩的消费', '2 树立正确的消费观', 6);
+INSERT INTO `structure` VALUES (195, '政治', '第四章 综合探究：正确对待金钱', '1 正确对待金钱', 6);
+INSERT INTO `structure` VALUES (196, '政治', '第五章 生产与经济制度', '1 发展生产、满足消费', 6);
+INSERT INTO `structure` VALUES (197, '政治', '第五章 生产与经济制度', '2 我国的基本经济制度', 6);
+INSERT INTO `structure` VALUES (198, '政治', '第六章 企业与劳动者', '1 公司的经营', 6);
+INSERT INTO `structure` VALUES (199, '政治', '第六章 企业与劳动者', '2 新时代的劳动者', 6);
+INSERT INTO `structure` VALUES (200, '政治', '第七章 投资理财的选择', '1 储蓄存款和商业银行', 6);
+INSERT INTO `structure` VALUES (201, '政治', '第七章 投资理财的选择', '2 股票、债券和保险', 6);
+INSERT INTO `structure` VALUES (202, '历史', '第一章 古代中国的政治制度', '1 先秦时期的政治制度', 7);
+INSERT INTO `structure` VALUES (203, '历史', '第一章 古代中国的政治制度', '2 秦朝中央集权制度的形成', 7);
+INSERT INTO `structure` VALUES (204, '历史', '第一章 古代中国的政治制度', '3 从汉至元政治制度的演变', 7);
+INSERT INTO `structure` VALUES (205, '历史', '第一章 古代中国的政治制度', '4 明清君主专制制度的强化', 7);
+INSERT INTO `structure` VALUES (206, '历史', '第二章 古代中国的经济', '1 农业的主要耕作方式和土地制度', 7);
+INSERT INTO `structure` VALUES (207, '历史', '第二章 古代中国的经济', '2 手工业的发展', 7);
+INSERT INTO `structure` VALUES (208, '历史', '第二章 古代中国的经济', '3 商业的发展', 7);
+INSERT INTO `structure` VALUES (209, '历史', '第二章 古代中国的经济', '4 古代中国的经济政策', 7);
+INSERT INTO `structure` VALUES (210, '历史', '第三章 中国传统文化主流思想的演变', '1 百家争鸣', 7);
+INSERT INTO `structure` VALUES (211, '历史', '第三章 中国传统文化主流思想的演变', '2 汉代儒学', 7);
+INSERT INTO `structure` VALUES (212, '历史', '第三章 中国传统文化主流思想的演变', '3 宋明理学', 7);
+INSERT INTO `structure` VALUES (213, '历史', '第三章 中国传统文化主流思想的演变', '4 明清之际的儒学', 7);
+INSERT INTO `structure` VALUES (214, '历史', '第四章 古代中国科技与文艺', '1 古代科技', 7);
+INSERT INTO `structure` VALUES (215, '历史', '第四章 古代中国科技与文艺', '2 汉字的演变及书画艺术', 7);
+INSERT INTO `structure` VALUES (216, '历史', '第四章 古代中国科技与文艺', '3 文学', 7);
+INSERT INTO `structure` VALUES (217, '历史', '第五章 古代希腊罗马', '1 雅典民主政治', 7);
+INSERT INTO `structure` VALUES (218, '历史', '第五章 古代希腊罗马', '2 罗马法', 7);
+INSERT INTO `structure` VALUES (219, '历史', '第五章 古代希腊罗马', '3 西方人文精神的起源', 7);
+INSERT INTO `structure` VALUES (220, '历史', '第六章 西方人文精神的发展', '1 文艺复兴和宗教改革', 7);
+INSERT INTO `structure` VALUES (221, '历史', '第六章 西方人文精神的发展', '2 启蒙运动', 7);
+INSERT INTO `structure` VALUES (222, '历史', '第七章 资本主义世界市场的形成与发展', '1 新航线的开辟', 7);
+INSERT INTO `structure` VALUES (223, '历史', '第七章 资本主义世界市场的形成与发展', '2 殖民扩张', 7);
+INSERT INTO `structure` VALUES (224, '历史', '第七章 资本主义世界市场的形成与发展', '3 工业革命', 7);
+INSERT INTO `structure` VALUES (225, '历史', '第八章 代议制的确立与发展', '1 英国君主立宪制的确立', 7);
+INSERT INTO `structure` VALUES (226, '历史', '第八章 代议制的确立与发展', '2 美国共和制的建立', 7);
+INSERT INTO `structure` VALUES (227, '历史', '第八章 代议制的确立与发展', '3 民主政治的扩展', 7);
+INSERT INTO `structure` VALUES (228, '地理', '第一章 自然地理', '1 地球与地图', 8);
+INSERT INTO `structure` VALUES (229, '地理', '第一章 自然地理', '2 宇宙中的地球', 8);
+INSERT INTO `structure` VALUES (230, '地理', '第一章 自然地理', '3 地球上的大气', 8);
+INSERT INTO `structure` VALUES (231, '地理', '第一章 自然地理', '4 地球上的水', 8);
+INSERT INTO `structure` VALUES (232, '地理', '第一章 自然地理', '5 地表形态的塑造', 8);
+INSERT INTO `structure` VALUES (233, '地理', '第一章 自然地理', '6 自然环境的整体性和差异性', 8);
+INSERT INTO `structure` VALUES (234, '地理', '第一章 自然地理', '7 自然环境对人类活动的影响', 8);
+INSERT INTO `structure` VALUES (235, '地理', '第二章 人文地理', '1 人口', 8);
+INSERT INTO `structure` VALUES (236, '地理', '第二章 人文地理', '2 城市', 8);
+INSERT INTO `structure` VALUES (237, '地理', '第二章 人文地理', '3 农业地域的形成与发展', 8);
+INSERT INTO `structure` VALUES (238, '地理', '第二章 人文地理', '4 工业地域的形成与发展', 8);
+INSERT INTO `structure` VALUES (239, '地理', '第二章 人文地理', '5 交通运输方式和布局', 8);
+INSERT INTO `structure` VALUES (240, '地理', '第二章 人文地理', '6 人类与地理环境的协调发展', 8);
+INSERT INTO `structure` VALUES (241, '地理', '第三章 区域可持续发展', '1 区域地理环境与人类活动', 8);
+INSERT INTO `structure` VALUES (242, '地理', '第三章 区域可持续发展', '2 区域生态环境建设', 8);
+INSERT INTO `structure` VALUES (243, '地理', '第三章 区域可持续发展', '3 资源综合开发', 8);
+INSERT INTO `structure` VALUES (244, '地理', '第三章 区域可持续发展', '4 区域经济发展', 8);
+INSERT INTO `structure` VALUES (245, '地理', '第三章 区域可持续发展', '5 区际联系', 8);
+INSERT INTO `structure` VALUES (246, '地理', '第三章 区域可持续发展', '6 地理信息技术的应用', 8);
 
 -- ----------------------------
 -- Table structure for test
