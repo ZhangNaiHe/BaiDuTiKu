@@ -389,3 +389,148 @@
 }
 ```
 
+### 分页
+
+1. ##### 大学
+
+```
+提交方式: get
+提交地址: http://47.102.213.250:80/api/v1/bigstudy
+提交参数: 无
+
+响应数据
+成功返回:
+{
+    "code": 200,
+    "data": {
+        "Mathematics": [
+            {
+                "structure_chapter": "第一章 集合与常用逻辑用语"
+            },
+            {
+                "structure_chapter": "第二章 函数的概念与基本初等函数"
+            },
+            {
+                "structure_chapter": "第三章 导数及其应用"
+            },
+            {
+                "structure_chapter": "第四章 三角函数与三角恒等变换"
+            },
+            {
+                "structure_chapter": "第五章 平面向量"
+            }
+        ],
+        "Artsmathematics": [
+            {
+                "structure_chapter": "第一章 集合与常用逻辑用语"
+            },
+            {
+                "structure_chapter": "第二章 函数的概念与基本初等函数"
+            },
+            {
+                "structure_chapter": "第三章 导数及其应用"
+            },
+            {
+                "structure_chapter": "第四章 三角函数与三角恒等变换"
+            },
+            {
+                "structure_chapter": "第五章 平面向量"
+            }
+        ],
+        "Physics": [
+            {
+                "structure_chapter": "第一章 力学"
+            },
+            {
+                "structure_chapter": "第二章 热学"
+            },
+            {
+                "structure_chapter": "第三章 电磁学"
+            },
+            {
+                "structure_chapter": "第四章 光学"
+            },
+            {
+                "structure_chapter": "第五章 原子物理学与相对论"
+            }
+        ],
+        "Chemistry": [
+            {
+                "structure_chapter": "第一章 化学科学与探究"
+            },
+            {
+                "structure_chapter": "第二章 化学基本概念和基本理论"
+            },
+            {
+                "structure_chapter": "第三章 物质结构与性质"
+            },
+            {
+                "structure_chapter": "第四章 化学反应原理"
+            },
+            {
+                "structure_chapter": "第五章 常见无机物及其反应"
+            }
+        ],
+        "Biology": [
+            {
+                "structure_chapter": "第一章 分子与细胞"
+            },
+            {
+                "structure_chapter": "第二章 遗传与进化"
+            },
+            {
+                "structure_chapter": "第三章 稳态与环境"
+            },
+            {
+                "structure_chapter": "第四章 生物技术实践"
+            }
+        ],
+        "Politics": [
+            {
+                "structure_chapter": "第一章 神奇的货币"
+            },
+            {
+                "structure_chapter": "第二章 多变的价格"
+            },
+            {
+                "structure_chapter": "第三章 多彩的消费"
+            },
+            {
+                "structure_chapter": "第四章 综合探究：正确对待金钱"
+            },
+            {
+                "structure_chapter": "第五章 生产与经济制度"
+            }
+        ],
+        "History": [
+            {
+                "structure_chapter": "第一章 古代中国的政治制度"
+            },
+            {
+                "structure_chapter": "第二章 古代中国的经济"
+            },
+            {
+                "structure_chapter": "第三章 中国传统文化主流思想的演变"
+            },
+            {
+                "structure_chapter": "第四章 古代中国科技与文艺"
+            },
+            {
+                "structure_chapter": "第五章 古代希腊罗马"
+            }
+        ],
+        "Geography": [
+            {
+                "structure_chapter": "第一章 自然地理"
+            },
+            {
+                "structure_chapter": "第二章 人文地理"
+            },
+            {
+                "structure_chapter": "第三章 区域可持续发展"
+            }
+        ]
+    }
+}
+```
+

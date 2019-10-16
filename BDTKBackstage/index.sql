@@ -2,7 +2,8 @@
 SQLyog Ultimate - MySQL GUI v8.2 
 MySQL - 5.7.25 : Database - baidutiku
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -66,14 +67,14 @@ CREATE TABLE `login` (
   `username` varchar(50) NOT NULL COMMENT '用户的名称',
   `password` varchar(50) NOT NULL COMMENT '用户的密码',
   `user_head` varchar(80) NOT NULL COMMENT '用户头像的地址',
-  `reg_time` datetime NOT NULL COMMENT '用户注册的时间',
+  `reg_time` varchar(60) NOT NULL COMMENT '用户注册的时间',
   `study_num` int(60) NOT NULL COMMENT '知识点总数',
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 /*Data for the table `login` */
 
-insert  into `login`(`user_id`,`username`,`password`,`user_head`,`reg_time`,`study_num`) values (1,'admin','123456','http://1.2.36.0','2019-10-16 08:16:00',0),(2,'lijiapeng','123456','http://1.2.36.0','2019-10-16 08:16:00',0),(3,'jiajionghui','123456','http://1.2.36.0','2019-10-16 08:16:00',0),(4,'zhaoheng','123456','http://1.2.36.0','2019-10-16 08:16:00',0);
+insert  into `login`(`user_id`,`username`,`password`,`user_head`,`reg_time`,`study_num`) values (1,'admin','123456','http://1.2.36.0','1571232789235',0),(2,'lijiapeng','123456','http://1.2.36.0','1571232789235',0),(3,'jiajionghui','123456','http://1.2.36.0','1571232789235',0),(4,'zhaoheng','123456','http://1.2.36.0','1571232789235',0);
 
 /*Table structure for table `menu_list` */
 
