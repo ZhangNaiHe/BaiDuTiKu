@@ -22,7 +22,7 @@
           style="width:230px;position:absolute;top:60px;left:17.5%;z-index: 99;"
           unique-opened="false"
         >
-          <el-submenu :index="index" v-for="(item,index) in MenusList" :key="item.cat_father_id">
+          <el-submenu :index="i" v-for="(item,i) in MenusList" :key="item.cat_father_id">
             <template slot="title">
               <span slot="title">{{item.cat_name}}</span>
             </template>
@@ -35,6 +35,7 @@
         <div class="division">
           <p class="dip">高考专区</p>
           <div class="division_end"></div>
+          <!-- 章节学习 -->
           <div class="gaokao_main">
             <div class="gaokao_erea">
               <p>
@@ -56,6 +57,65 @@
                 </div>
               </el-link>
             </div>
+            <!-- 大家都在学 -->
+            <div class="some">
+              <!-- 标题 -->
+              <div class="sometit">
+                <h3>
+                  大家都在学
+                  <a href="#">我也要学</a>
+                </h3>
+              </div>
+              <!-- 轮播 -->
+              <div class="someconn"></div>
+            </div>
+          </div>
+          <!-- 考试资源 -->
+          <div class="kaoshi">
+            <div class="kaoshi_main">
+              <p>
+                试卷资源
+                <span>一考知底，高分必刷，全面提分</span>
+                <span>当前位置: 北京</span>
+                <a href="#">更多地区></a>
+              </p>
+              <div class="linian">
+                <!-- 真题 -->
+                <div class="lizhen">
+                  <div class="year">
+                    <h3>
+                      历年真题
+                      <a href="#" class="more">更多真题试卷></a>
+                    </h3>
+                    <!-- 试卷 -->
+                    <ul>
+                      <li class="parer_list" v-for="(item3,i3) in liNians" :key="i3">
+                        <p class="nian_p">{{item3.paper_name}}</p>
+                        <p class="nian_s">解析|下载|估分</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- 模拟 -->
+                <div class="lizhen">
+                  <div class="year">
+                    <h3>
+                      模拟试卷
+                      <a href="#" class="more">更多模拟试卷></a>
+                    </h3>
+                    <!-- 试卷 -->
+                    <ul>
+                      <li class="parer_list" v-for="(item4,i4) in liMonis" :key="i4">
+                        <p class="nian_p">{{item4.paper_name}}</p>
+                        <p class="nian_s">解析|下载</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- 热门 -->
+                <div class="hot"></div>
+              </div>
+            </div>
           </div>
         </div>
       </el-main>
@@ -74,12 +134,17 @@ export default {
       MenusLists: [],
       // 章节学习
       lists: [],
-      // 章节图标
+      // 历年真题
+      liNians: [],
+      // 模拟试卷
+      liMonis: []
     };
   },
   created() {
     this.getmenusList();
     this.getLists();
+    this.getliNians();
+    this.getliMonis();
   },
   methods: {
     // 获取菜单列表
@@ -107,8 +172,42 @@ export default {
     async getLists() {
       // 发起axios
       const { data: res } = await this.$http.get("subject");
-      console.log(res);
+      window.console.log(res);
       this.lists = res.data;
+      // window.console.log(res.data.total);
+      // window.console.log(res.data[0].total);
+      // 判断
+      for (let i = 0; i < this.lists.length; i++) {
+        if (this.lists[i].total == null) {
+          this.lists[i].total = 0;
+        }
+      }
+    },
+    // 获取历年真题
+    async getliNians() {
+      // 发起axios
+      const { data: res } = await this.$http.get("paper");
+      window.console.log(res);
+      // 判断状态
+      if (res.code !== 200) {
+        // 提示
+        return this.$message.error("获取历年真题失败");
+      }
+      // 把数据给this.liNians
+      this.liNians = res.data.historySum;
+    },
+    // 获取模拟试卷
+    async getliMonis() {
+      // 发起axios
+      const { data: res } = await this.$http.get("paper");
+      window.console.log(res);
+      // 判断状态
+      if (res.code !== 200) {
+        // 提示
+        return this.$message.error("获取模拟试卷失败");
+      }
+      // 把数据给this.liMonis
+      this.liMonis = res.data.paperSum;
     }
   }
 };
@@ -200,5 +299,95 @@ el-main {
 }
 .class-box:hover {
   background-color: #fafafa;
+}
+.some {
+  float: left;
+  margin-left: 75px;
+}
+.sometit {
+  width: 310px;
+}
+.sometit h3 {
+  font-size: 20px;
+  color: #333;
+  height: 20px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.sometit a {
+  display: block;
+  text-decoration: none;
+  color: #666;
+  font-size: 12px;
+  float: right;
+}
+.kaoshi {
+  width: 1200px;
+  margin: 0 auto;
+  clear: both;
+  padding-top: 20px;
+}
+.kaoshi_main {
+  font-weight: 700;
+  font-size: 24px;
+  height: 24px;
+  line-height: 24px;
+  color: #333;
+}
+.kaoshi span {
+  color: #666;
+  font-size: 12px;
+  font-weight: 400;
+  margin-right: 30px;
+  margin-left: 10px;
+}
+.kaoshi a {
+  text-decoration: none;
+  margin-left: -15px;
+  font-size: 12px;
+  color: #11a68d;
+}
+.someconn {
+  width: 310px;
+  height: 364px;
+}
+.linian {
+  padding-top: 10px;
+}
+.lizhen {
+  float: left;
+  padding-right: 70px;
+  border-right: 1px solid #f0f0f0;
+}
+.year {
+  width: 289px;
+}
+.year h3 {
+  font-size: 20px;
+  color: #333;
+  line-height: 20px;
+  height: 20px;
+  font-weight: 400;
+}
+.more {
+  float: right;
+  font-size: 12px;
+}
+.parer_list {
+  list-style: square;
+  margin: 20px 0;
+}
+.nian_p {
+  font-size: 14px;
+  height: 14px;
+  line-height: 14px;
+  color: #333;
+}
+.nian_s {
+  font-size: 12px;
+  height: 12px;
+  line-height: 12px;
+  letter-spacing: 3px;
+  color: #11a68d;
 }
 </style>
