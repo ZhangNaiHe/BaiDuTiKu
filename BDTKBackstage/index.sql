@@ -16,18 +16,53 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`baidutiku` /*!40100 DEFAULT CHARACTER S
 
 USE `baidutiku`;
 
+/*Table structure for table `big_teacher` */
+
+DROP TABLE IF EXISTS `big_teacher`;
+
+CREATE TABLE `big_teacher` (
+  `big_teacher_id` int(30) NOT NULL AUTO_INCREMENT COMMENT '大教材id',
+  `big_teacher_name` varchar(255) NOT NULL COMMENT '大教材名称',
+  PRIMARY KEY (`big_teacher_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+
+/*Data for the table `big_teacher` */
+
+insert  into `big_teacher`(`big_teacher_id`,`big_teacher_name`) values (1,'大学数据'),(2,'大学英语'),(3,'大学物理'),(4,'大学化学'),(5,'大学生物'),(6,'大学地理'),(7,'思想政治'),(8,'统计'),(9,'信息技术'),(10,'工学'),(11,'建筑'),(12,'经济学'),(13,'管理学'),(14,'法学'),(15,'文学'),(16,'其他');
+
+/*Table structure for table `exam` */
+
+DROP TABLE IF EXISTS `exam`;
+
+CREATE TABLE `exam` (
+  `exam_id` int(30) NOT NULL AUTO_INCREMENT COMMENT '考试id',
+  `exam_num` int(35) NOT NULL COMMENT '多少门考试',
+  `exam_position` varchar(255) NOT NULL COMMENT '考试的职位',
+  `cat_father_id` int(30) NOT NULL COMMENT '分类表的id',
+  PRIMARY KEY (`exam_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+/*Data for the table `exam` */
+
+insert  into `exam`(`exam_id`,`exam_num`,`exam_position`,`cat_father_id`) values (1,5,'会计从业资格,初级会计师,中级会计师,注册会计师CPA,中级经济师',3),(2,2,'一级建造师,二级建造师',2),(3,4,'教师资格证,企业法律顾问,社会工作师,助力社会工作师',6),(4,2,'警察招考,政法干警',5);
+
 /*Table structure for table `login` */
 
 DROP TABLE IF EXISTS `login`;
 
 CREATE TABLE `login` (
-  `login_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '用户的id',
-  `username` varchar(30) NOT NULL COMMENT '用户名称',
-  `password` varchar(22) NOT NULL COMMENT '用户密码',
-  PRIMARY KEY (`login_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `user_id` int(30) NOT NULL AUTO_INCREMENT COMMENT '用户的id',
+  `username` varchar(50) NOT NULL COMMENT '用户的名称',
+  `password` varchar(50) NOT NULL COMMENT '用户的密码',
+  `user_head` varchar(80) NOT NULL COMMENT '用户头像的地址',
+  `reg_time` datetime NOT NULL COMMENT '用户注册的时间',
+  `study_num` int(60) NOT NULL COMMENT '知识点总数',
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 /*Data for the table `login` */
+
+insert  into `login`(`user_id`,`username`,`password`,`user_head`,`reg_time`,`study_num`) values (1,'admin','123456','http://1.2.36.0','2019-10-16 08:16:00',0),(2,'lijiapeng','123456','http://1.2.36.0','2019-10-16 08:16:00',0),(3,'jiajionghui','123456','http://1.2.36.0','2019-10-16 08:16:00',0),(4,'zhaoheng','123456','http://1.2.36.0','2019-10-16 08:16:00',0);
 
 /*Table structure for table `menu_list` */
 
@@ -82,13 +117,12 @@ CREATE TABLE `subject` (
   `subject_id` int(30) NOT NULL AUTO_INCREMENT COMMENT '科目id',
   `subject_pic` varchar(255) NOT NULL COMMENT '科目的图片',
   `subject_title` varchar(30) NOT NULL COMMENT '科目标题',
-  `subject_num` int(60) NOT NULL COMMENT '考点数量',
   PRIMARY KEY (`subject_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 /*Data for the table `subject` */
 
-insert  into `subject`(`subject_id`,`subject_pic`,`subject_title`,`subject_num`) values (1,'http://127.0.0.1','文科数学',495),(2,'http://127.0.0.1','理科数学',534),(3,'http://127.0.0.1','物理',277),(4,'http://127.0.0.1','化学',446),(5,'http://127.0.0.1','生物',136),(6,'http://127.0.0.1','政治',372),(7,'http://127.0.0.1','历史',230),(8,'http://127.0.0.1','地理',89);
+insert  into `subject`(`subject_id`,`subject_pic`,`subject_title`) values (1,'http://127.0.0.1','文科数学'),(2,'http://127.0.0.1','语文'),(3,'http://127.0.0.1','物理'),(4,'http://127.0.0.1','化学'),(5,'http://127.0.0.1','生物'),(6,'http://127.0.0.1','政治'),(7,'http://127.0.0.1','历史'),(8,'http://127.0.0.1','地理');
 
 /*Table structure for table `test_paper` */
 
