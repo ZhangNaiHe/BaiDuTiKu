@@ -28,7 +28,7 @@
 ```javascript
 提交方式: post
 提交地址: http://47.102.213.250:80/api/v1/user_register
-提交擦数: username&password
+提交参数: username&password&phone
 
 响应数据
 成功返回:
