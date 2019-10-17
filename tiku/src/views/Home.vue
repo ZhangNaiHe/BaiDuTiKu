@@ -48,7 +48,7 @@
               <!-- 跳转连接el-link -->
               <el-link :underline="false">
                 <div class="class-box" v-for="(item1,i) in lists" :key="i">
-                  <!-- <img src="../../../file-upload/public/uploads/00.jpg" alt=""> -->
+                  <img :src="ss+lists[0].subject_pic" alt id="icon" />
                   <!-- 图标 -->
                   <!-- <div id="icon" :class="imgs[i]"></div> -->
                   <!-- <img id="icon" :src="icons[i]" alt /> -->
@@ -119,20 +119,91 @@
                 <div class="lizhen" style="padding-left: 40px;padding-right: 0px;border: none;">
                   <div class="year">
                     <h3>
-                      模拟试卷
-                      <a href="#" class="more">更多模拟试卷></a>
+                      热门试卷
+                      <a href="#" class="more">更多热门试卷></a>
                     </h3>
                     <!-- 试卷 -->
                     <ul>
-                      <li class="parer_list" v-for="(item4,i4) in liMonis" :key="i4">
-                        <p class="nian_p">{{item4.paper_name}}</p>
+                      <li
+                        class="parer_list"
+                        v-for="(item5,i5) in hots"
+                        :key="i5"
+                        style=" list-style:none;margin-bottom: 30px;"
+                      >
+                        <i
+                          class="el-icon-wind-power"
+                          style="float:left;margin-top:-6px;color:#11a68d;margin-right:3px"
+                        ></i>
+                        <p class="nian_p">{{item5.paper_name}}</p>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- 名校精品试卷 -->
+            <div class="ming" style="clear:both">
+              <div class="ming_tit">
+                <h3>
+                  名校精品试卷
+                  <a href="#">更多名校精品卷></a>
+                </h3>
+              </div>
+              <!-- 名校 -->
+              <div class="bj">
+                <div class="tu">
+                  <div class="tu_tit">
+                    <p>北京大学附属中学</p>
+                    <p>同地区推荐共8套试卷</p>
+                  </div>
+                </div>
+                <ul class="tu_ul">
+                  <li>语文 海淀区2016年高三期末试卷</li>
+                  <li>英语 海淀区2016年高三期末试卷</li>
+                  <li>理科数学 海淀区2016年高三期末试卷</li>
+                </ul>
+              </div>
+              <div class="bj">
+                <div class="tu_o">
+                  <div class="tu_tit">
+                    <p>北京市第一零一中学</p>
+                    <p>同地区推荐共1套试卷</p>
+                  </div>
+                </div>
+                <ul class="tu_ul">
+                  <li>化学 海淀区2016年高三期末试卷</li>
+                </ul>
+              </div>
+              <div class="bj" style="margin-right:0px;">
+                <div class="tu_w">
+                  <div class="tu_tit">
+                    <p>北京市第四中学</p>
+                    <p>同地区推荐共9套试卷</p>
+                  </div>
+                </div>
+                <ul class="tu_ul">
+                  <li>语文 西城区2016年高三期末试卷</li>
+                  <li>英语 西城区2016年高三期末试卷</li>
+                  <li>理科数学 西城区2016年高三期末试卷</li>
+                </ul>
+              </div>
+              <!-- 各种名校 -->
+              <div class="bj_list">
+                <el-tag>北京市八一学校</el-tag>
+                <el-tag type="success">北京师范大学第二附属中学</el-tag>
+                <el-tag type="info">东北师范大学附属中学</el-tag>
+                <el-tag type="warning">上海中学</el-tag>
+                <el-tag type="success">衡水中学</el-tag>
+                <el-tag type="info">南京外国语学校</el-tag>
+                <el-tag type="warning">成都市第七中学</el-tag>
+              </div>
+            </div>
           </div>
+        </div>
+        <!-- 资格考试专区 -->
+        <div class="cation">
+          <p>资格考试专区</p>
+          <div class="cation_end"></div>
         </div>
       </el-main>
       <el-footer>Footer</el-footer>
@@ -141,7 +212,6 @@
 </template>
 
 <script>
-// import data from '../../../file-upload/public/uploads'
 export default {
   data() {
     return {
@@ -155,8 +225,10 @@ export default {
       liNians: [],
       // 模拟试卷
       liMonis: [],
-      imgs: "../../../file-upload/public/uploads/00.jpg",
-      // icons: ["../assets/images/shuxue.png"]
+      // 热门试卷
+      hots: [],
+      // 图片
+      ss: "/img/"
     };
   },
   created() {
@@ -164,6 +236,7 @@ export default {
     this.getLists();
     this.getliNians();
     this.getliMonis();
+    this.getHots();
   },
   methods: {
     // 获取菜单列表
@@ -193,6 +266,7 @@ export default {
       const { data: res } = await this.$http.get("subject");
       window.console.log(res);
       this.lists = res.data;
+      window.console.log(this.lists[0].subject_pic);
       // window.console.log(res.data.total);
       // window.console.log(res.data[0].total);
       // 判断
@@ -227,6 +301,14 @@ export default {
       }
       // 把数据给this.liMonis
       this.liMonis = res.data.paperSum;
+    },
+    // 获取热门试卷
+    async getHots() {
+      // 发起axios
+      const { data: res } = await this.$http.get("paper");
+      // console.log(res);
+      // 把数据给hots
+      this.hots = res.data.hotSum;
     }
   }
 };
@@ -397,6 +479,9 @@ el-main {
   list-style: square;
   margin: 20px 0;
 }
+.parer_list .nian_p:hover {
+  color: #11a68d;
+}
 .nian_p {
   font-size: 14px;
   height: 14px;
@@ -409,5 +494,85 @@ el-main {
   line-height: 12px;
   letter-spacing: 3px;
   color: #11a68d;
+}
+.ming_tit {
+  padding-top: 20px;
+}
+.ming_tit h3 {
+  padding-bottom: 15px;
+  font-size: 20px;
+  color: #333;
+  height: 20px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.ming_tit a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #666;
+  float: right;
+}
+.ming_tit a:hover {
+  color: #11a68d;
+}
+.bj {
+  width: 370px;
+  height: 226px;
+  border: 1px solid #f0f0f0;
+  float: left;
+  margin-right: 42px;
+}
+.tu {
+  height: 100px;
+  background-image: url("../assets/images/beijing01.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+.tu_o {
+  height: 100px;
+  background-image: url("../assets/images/beijing02.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+.tu_w {
+  height: 100px;
+  background-image: url("../assets/images/beijing03.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+.tu_tit {
+  position: absolute;
+  left: 30px;
+  top: 10px;
+}
+.tu_tit p:nth-child(1) {
+  font-size: 16px;
+  height: 16px;
+  line-height: 16px;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+.tu_tit p:nth-child(2) {
+  font-size: 12px;
+  color: #333;
+  height: 12px;
+  line-height: 12px;
+}
+.tu_ul {
+  font-size: 14px;
+  color: #333;
+}
+.tu_ul li {
+  line-height: 14px;
+  height: 14px;
+  padding-bottom: 20px;
+}
+.bj_list {
+  clear: both;
+  margin-top: 20px;
 }
 </style>

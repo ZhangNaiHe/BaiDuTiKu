@@ -7,3 +7,12 @@ html,body {
   .el-submenu__title{
     height: 50px;
 }
+.el-tag{
+  margin-top: 20px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px;
+  border: 1px solid #e6e6e6;
+  color: #666;
+  margin-left: 8px;
+}
