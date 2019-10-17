@@ -123,7 +123,7 @@ CREATE TABLE `subject` (
 
 /*Data for the table `subject` */
 
-insert  into `subject`(`subject_id`,`subject_pic`,`subject_title`) values (1,'./file-upload/public/uploads/00.jpg','文科数学'),(2,'http://127.0.0.1','语文'),(3,'http://127.0.0.1','物理'),(4,'http://127.0.0.1','化学'),(5,'http://127.0.0.1','生物'),(6,'http://127.0.0.1','政治'),(7,'http://127.0.0.1','历史'),(8,'http://127.0.0.1','地理');
+insert  into `subject`(`subject_id`,`subject_pic`,`subject_title`) values (1,'shuxue.png','文科数学'),(2,'shuxue_2.png','理科数学'),(3,'wuli.png','物理'),(4,'huaxue.png','化学'),(5,'shengwu.png','生物'),(6,'zhengzhi.png','政治'),(7,'lishi.png','历史'),(8,'http://127.0.0.1','地理');
 
 /*Table structure for table `test_paper` */
 

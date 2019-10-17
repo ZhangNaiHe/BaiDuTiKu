@@ -154,8 +154,8 @@ export default {
       // 历年真题
       liNians: [],
       // 模拟试卷
-      liMonis: []
-      // imgs: "../../../file-upload/public/uploads/00.jpg",
+      liMonis: [],
+      imgs: "../../../file-upload/public/uploads/00.jpg",
       // icons: ["../assets/images/shuxue.png"]
     };
   },
