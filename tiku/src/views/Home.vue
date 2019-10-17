@@ -48,8 +48,11 @@
               <!-- 跳转连接el-link -->
               <el-link :underline="false">
                 <div class="class-box" v-for="(item1,i) in lists" :key="i">
+                  <!-- <img src="../../../file-upload/public/uploads/00.jpg" alt=""> -->
                   <!-- 图标 -->
-                  <div class="icon"></div>
+                  <!-- <div id="icon" :class="imgs[i]"></div> -->
+                  <!-- <img id="icon" :src="icons[i]" alt /> -->
+                  <!-- <i id="icon" :class="icons[i]"></i> -->
                   <p class="icon-p">{{item1.subject_title}}</p>
                   <p class="icon-s">
                     <span>{{item1.total}}</span>个考点
@@ -97,7 +100,7 @@
                   </div>
                 </div>
                 <!-- 模拟 -->
-                <div class="lizhen">
+                <div class="lizhen" style="padding-left: 80px;">
                   <div class="year">
                     <h3>
                       模拟试卷
@@ -113,7 +116,20 @@
                   </div>
                 </div>
                 <!-- 热门 -->
-                <div class="hot"></div>
+                <div class="lizhen" style="padding-left: 40px;padding-right: 0px;border: none;">
+                  <div class="year">
+                    <h3>
+                      模拟试卷
+                      <a href="#" class="more">更多模拟试卷></a>
+                    </h3>
+                    <!-- 试卷 -->
+                    <ul>
+                      <li class="parer_list" v-for="(item4,i4) in liMonis" :key="i4">
+                        <p class="nian_p">{{item4.paper_name}}</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -125,6 +141,7 @@
 </template>
 
 <script>
+// import data from '../../../file-upload/public/uploads'
 export default {
   data() {
     return {
@@ -137,7 +154,9 @@ export default {
       // 历年真题
       liNians: [],
       // 模拟试卷
-      liMonis: []
+      liMonis: [],
+      imgs: "../../../file-upload/public/uploads/00.jpg",
+      // icons: ["../assets/images/shuxue.png"]
     };
   },
   created() {
@@ -187,7 +206,7 @@ export default {
     async getliNians() {
       // 发起axios
       const { data: res } = await this.$http.get("paper");
-      window.console.log(res);
+      // window.console.log(res);
       // 判断状态
       if (res.code !== 200) {
         // 提示
@@ -200,7 +219,7 @@ export default {
     async getliMonis() {
       // 发起axios
       const { data: res } = await this.$http.get("paper");
-      window.console.log(res);
+      // window.console.log(res);
       // 判断状态
       if (res.code !== 200) {
         // 提示
@@ -279,12 +298,13 @@ el-main {
   border: 1px #f0f0f0 solid;
   box-sizing: border-box;
 }
-.icon {
+#icon {
+  display: block;
   width: 59px;
   height: 59px;
   margin: 0 auto;
   margin-top: 45px;
-  background-color: black;
+  /* background-color: black; */
 }
 .icon-p {
   line-height: 0px;
