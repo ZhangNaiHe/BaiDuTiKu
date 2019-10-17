@@ -110,19 +110,18 @@ export default {
       this.$refs.regRef.validate(async valid => {
         if (!valid) return false;
         // console.log(123123);
-        let { data: res } = await this.$http.post("user_login", {
+        let { data: res } = await this.$http.post("user_register", {
           username: this.regForm.username,
           password: this.regForm.password
         });
-
-        console.log(res);
-        // if (res.code == 400) {
-        //   return this.$message.error(res.message);
-        // }
-        // if (res.code == 200) {
-        //   // this.$router.push("/login");
-        //   return this.$message.success(res.message);
-        // }
+        // console.log(res);
+        if (res.code == 400) {
+          // return this.$message.error(res.message);
+        }
+        if (res.code == 200) {
+          this.$router.push("/login");
+          return this.$message.success(res.message);
+        }
       });
     }
   }
