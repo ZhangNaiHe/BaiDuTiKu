@@ -381,9 +381,9 @@
 }
 ```
 
-### 分页
+### tabs菜单分页
 
-1. ##### 大学
+1. ##### 高考
 
 ```
 提交方式: get
@@ -523,6 +523,95 @@
             }
         ]
     }
+}
+```
+
+2. ##### 一级建造师
+
+```javascript
+提交方式: get
+提交地址: http://47.102.213.250:80/api/v1/bigstudy
+提交参数: 无
+
+响应数据
+成功返回:
+{
+    "code": 200,
+    "data": {
+        "constructionproject": [
+            {
+                "construction_chapter": "第一章 建筑工程技术"
+            },
+            {
+                "construction_chapter": "第二章 建筑工程项目施工管理"
+            },
+            {
+                "construction_chapter": "第三章 建筑工程项目施工相关法律与标准"
+            }
+        ],
+        "lidianproject": [
+            {
+                "construction_chapter": "第一章 水利水电工程技术"
+            },
+            {
+                "construction_chapter": "第二章 水利水电工程项目施工管理"
+            },
+            {
+                "construction_chapter": "第二章 水利水电工程施工管理"
+            },
+            {
+                "construction_chapter": "第三章 水利水电工程项目施工相关法规与标准"
+            }
+        ],
+        "projectmanagement": [
+            {
+                "construction_chapter": "第一章 建设工程项目的组织与管理"
+            },
+            {
+                "construction_chapter": "第二章 建设工程项目施工成本控制"
+            },
+            {
+                "construction_chapter": "第三章 建设工程项目进度控制"
+            },
+            {
+                "construction_chapter": "第四章 建设工程项目质量控制"
+            },
+            {
+                "construction_chapter": "第五章 建设工程职业健康安全与环境管理"
+            }
+        ]
+    }
+}
+```
+
+3. ##### 二级建造师
+
+```javascript
+提交方式: get
+提交地址: http://47.102.213.250:80/api/v1/bigstudy
+提交参数: 无
+
+响应数据
+成功返回:
+{
+    "code": 200,
+    "data": [
+        {
+            "construction_chapter": "第一章 施工管理"
+        },
+        {
+            "construction_chapter": "第二章 施工成本管理"
+        },
+        {
+            "construction_chapter": "第三章 施工进度管理"
+        },
+        {
+            "construction_chapter": "第四章 施工质量管理"
+        },
+        {
+            "construction_chapter": "第五章 施工职业健康安全与环境管理"
+        }
+    ]
 }
 ```
 
