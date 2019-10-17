@@ -35,13 +35,13 @@
               <a href="/Society">社会工作师</a>
             </li>
             <li>
-              <a href>企业法律顾问</a>
+              <a href="/Company">企业法律顾问</a>
             </li>
             <li>
-              <a href>教师资格证</a>
+              <a href="/Teacher">教师资格证</a>
             </li>
             <li>
-              <a href>助理社会工作师</a>
+              <a href="/Assistant-society">助理社会工作师</a>
             </li>
           </ul>
         </div>
@@ -52,10 +52,10 @@
         <div class="scend">
           <ul class="headss">
             <li>
-              <a href>一级建造师</a>
+              <a href="/One-constructor">一级建造师</a>
             </li>
             <li>
-              <a href>二级建造师</a>
+              <a href="/Two-constructor">二级建造师</a>
             </li>
           </ul>
         </div>
@@ -66,10 +66,10 @@
         <div class="scend">
           <ul class="headss">
             <li>
-              <a href>考研</a>
+              <a href="/Research">考研</a>
             </li>
             <li>
-              <a href>高考</a>
+              <a href="/College">高考</a>
             </li>
           </ul>
         </div>
@@ -80,19 +80,19 @@
         <div class="scend">
           <ul class="headss">
             <li>
-              <a href>会计从业资格</a>
+              <a href="/Accounting-work">会计从业资格</a>
             </li>
             <li>
-              <a href>中级会计师</a>
+              <a href="/Semi-senior">中级会计师</a>
             </li>
             <li>
-              <a href>注册会计师CPA</a>
+              <a href="/CPA">注册会计师CPA</a>
             </li>
             <li>
-              <a href>中级经济师</a>
+              <a href="/Intermediate-economist">中级经济师</a>
             </li>
             <li>
-              <a href>初级会计师</a>
+              <a href="/Junior-accountant">初级会计师</a>
             </li>
           </ul>
         </div>
@@ -103,19 +103,19 @@
         <div class="scend">
           <ul class="headss">
             <li>
-              <a href>临床执业医师</a>
+              <a href="/Clinical-practitioner">临床执业医师</a>
             </li>
             <li>
-              <a href>临床助理医师</a>
+              <a href="/Clinical-assistant">临床助理医师</a>
             </li>
             <li>
-              <a href>执业中药师</a>
+              <a href="/Chinese-medicine">执业中药师</a>
             </li>
             <li>
-              <a href>执业西药师</a>
+              <a href="/Western-medicine">执业西药师</a>
             </li>
             <li>
-              <a href>护士资格</a>
+              <a href="/Nurse-qualification">护士资格</a>
             </li>
           </ul>
         </div>
@@ -154,82 +154,82 @@
           <div class="right">
             <ul>
               <li>
-                <a href>社会工作师</a>
+                <a href="/Society">社会工作师</a>
               </li>
               <li>
-                <a href>企业法律顾问</a>
+                <a href="/Company">企业法律顾问</a>
               </li>
               <li>
-                <a href>教师资格证</a>
+                <a href="/Teacher">教师资格证</a>
               </li>
               <li>
-                <a href>助理社会工作师</a>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <a href>一级建造师</a>
-              </li>
-              <li>
-                <a href>二级建造师</a>
+                <a href="/Assistant-society">助理社会工作师</a>
               </li>
             </ul>
             <ul>
               <li>
-                <a href>考研</a>
+                <a href="/One-constructor">一级建造师</a>
               </li>
               <li>
-                <a href>高考</a>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <a href>会计从业资格</a>
-              </li>
-              <li>
-                <a href>中级会计师</a>
-              </li>
-              <li>
-                <a href>注册会计师CPA</a>
-              </li>
-              <li>
-                <a href>中级经济师</a>
-              </li>
-              <li>
-                <a href>初级会计师</a>
+                <a href="/Two-constructor">二级建造师</a>
               </li>
             </ul>
             <ul>
               <li>
-                <a href>计算机四级</a>
+                <a href="/Research">考研</a>
+              </li>
+              <li>
+                <a href="/College">高考</a>
               </li>
             </ul>
             <ul>
               <li>
-                <a href>警察招考</a>
+                <a href="/Accounting-work">会计从业资格</a>
               </li>
               <li>
-                <a href>政法干警</a>
+                <a href="/Semi-senior">中级会计师</a>
               </li>
               <li>
-                <a href>国考</a>
+                <a href="/CPA">注册会计师CPA</a>
+              </li>
+              <li>
+                <a href="/Intermediate-economist">中级经济师</a>
+              </li>
+              <li>
+                <a href="/Junior-accountant">初级会计师</a>
               </li>
             </ul>
             <ul>
               <li>
-                <a href>临床执业医师</a>
+                <a href="/Computer-level">计算机四级</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="/Police-test">警察招考</a>
               </li>
               <li>
-                <a href>临床助理医师</a>
+                <a href="/Police-officers">政法干警</a>
               </li>
               <li>
-                <a href>执业中药师</a>
+                <a href="/National-exam">国考</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="/Clinical-practitioner">临床执业医师</a>
               </li>
               <li>
-                <a href>执业西药师</a>
+                <a href="/Clinical-assistant">临床助理医师</a>
               </li>
               <li>
-                <a href>护士资格</a>
+                <a href="/Chinese-medicine">执业中药师</a>
+              </li>
+              <li>
+                <a href="/Western-medicine">执业西药师</a>
+              </li>
+              <li>
+                <a href="/Nurse-qualification">护士资格</a>
               </li>
             </ul>
           </div>
@@ -239,9 +239,14 @@
   </div>
 </template>
 
-<script>
 
+<script>
+import Botton from "../components/Botton.vue";
+export default {
+
+}
 </script>
+
 
 <style scoped>
 * {
@@ -298,7 +303,6 @@
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0px;
-  z-index: 100;
   right: 167px;
 }
 
@@ -383,7 +387,6 @@
 .scend {
   width: 100%;
   height: 45px;
-  z-index: 100;
   position: absolute;
   left: 0;
   top: 46px;
@@ -512,7 +515,6 @@
   top: 46px;
   display: none;
   box-shadow: 0 0 5px rgb(163, 163, 163);
-  z-index: 100;
 }
 
 .alltest:hover + .scend_all {
