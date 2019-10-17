@@ -17,16 +17,16 @@
         <el-form-item label="用户名" prop="username">
           <el-input v-model="regForm.username" placeholder="请设置用户名"></el-input>
         </el-form-item>
-        <el-form-item label="手机号" prop="number">
-          <el-input v-model="regForm.number" placeholder="可用于登录和找回密码"></el-input>
+        <el-form-item label="手机号" prop="phone">
+          <el-input v-model="regForm.phone" placeholder="可用于登录和找回密码"></el-input>
         </el-form-item>
         <el-form-item label="密码" prop="password">
           <el-input v-model="regForm.password" placeholder="请设置密码"></el-input>
         </el-form-item>
         <!-- <div class="el-form-last"> -->
-        <el-form-item label="验证码" prop="verify">
-          <el-input class="item-yzm" v-model="regForm.verify" placeholder="请输入验证码"></el-input>
-          <button class="item-yzm-num">获取短信验证码</button>
+        <el-form-item label="验证码" prop="number">
+          <el-input class="item-yzm" v-model="regForm.number" placeholder="请输入验证码"></el-input>
+          <el-button class="item-yzm-num" @click="getPhone">获取短信验证码</el-button>
         </el-form-item>
         <!-- </div> -->
 
@@ -55,10 +55,11 @@ export default {
       checked: false,
       regForm: {
         username: "111",
-        number: "",
+        phone: "13389259491",
         password: "111",
-        verify: ""
+        number: "123456"
       },
+      coodss: "",
       regRules: {
         username: [
           // required 是否必须
@@ -93,7 +94,7 @@ export default {
             trigger: "blur"
           }
         ]
-        // verify: [
+        // phone: [
         //   { required: true, message: "请输入您的密码", trigger: "blur" },
         //   {
         //     min: 3,
@@ -106,6 +107,19 @@ export default {
     };
   },
   methods: {
+    // 验证码
+    async getPhone() {
+      console.log(this.regForm.phone);
+      let { data: res } = await this.$http.post("dunx", {
+        phone: this.regForm.phone
+      });
+      if (res.code == 200) {
+        this.coodss = res.verificationcode;
+        console.log(this.coodss);
+        return this.$message.success(res.verificationcode);
+      }
+    },
+    // 注册
     register() {
       this.$refs.regRef.validate(async valid => {
         if (!valid) return false;
@@ -114,13 +128,15 @@ export default {
           username: this.regForm.username,
           password: this.regForm.password
         });
-        // console.log(res);
-        if (res.code == 400) {
-          // return this.$message.error(res.message);
-        }
+        console.log(res);
         if (res.code == 200) {
-          this.$router.push("/login");
-          return this.$message.success(res.message);
+          if (this.regForm.number == this.coodss) {
+            this.$router.push("/login");
+            return this.$message.success("验证码正确");
+            return this.$message.success(res.message);
+          } else {
+            return this.$message.error("验证码错误");
+          }
         }
       });
     }
