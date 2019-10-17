@@ -32,7 +32,7 @@
         <div class="scend">
           <ul class="headss">
             <li>
-              <a href="/">社会工作师</a>
+              <a href="/Society">社会工作师</a>
             </li>
             <li>
               <a href>企业法律顾问</a>
@@ -243,7 +243,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 * {
   margin: 0;
   padding: 0;

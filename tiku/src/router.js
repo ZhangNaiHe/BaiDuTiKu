@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-import Nav from './components/Nav.vue';
+import Nav from './views/Nav.vue';
 
 Vue.use(Router);
 
@@ -14,11 +14,28 @@ export default new Router({
       name: "home",
       component: Home
     },
+    // 导航栏
     {
       path: "/nav",
       name: "nav",
-      component: Nav
+      component: Nav,
     },
+    // 社会工作师
+    {
+      path:'/Society',
+      component: () => import("@/components/Society.vue")
+    },
+    // 企业法律顾问
+    {
+      path:'/Company',
+      component: () => import("@/components/Company.vue")
+    },
+    // 教师资格证
+    {
+      path:'/Teacher',
+      component: () => import("@/components/Teacher.vue")
+    },
+    // 助理社会工作师
     {
       path: "/about",
       name: "about",
