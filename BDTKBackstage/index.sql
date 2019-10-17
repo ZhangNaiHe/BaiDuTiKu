@@ -54,16 +54,16 @@ CREATE TABLE `login` (
   `user_id` int(30) NOT NULL AUTO_INCREMENT COMMENT '用户的id',
   `username` varchar(50) NOT NULL COMMENT '用户的名称',
   `password` varchar(50) NOT NULL COMMENT '用户的密码',
-  `user_head` varchar(80) DEFAULT NULL COMMENT '用户头像的地址',
-  `reg_time` int(11) DEFAULT NULL COMMENT '用户注册的时间',
+  `user_head` varchar(80) DEFAULT 'admin.png' COMMENT '用户头像的地址',
+  `reg_time` varchar(255) DEFAULT NULL COMMENT '用户注册的时间',
   `study_num` int(60) DEFAULT '0' COMMENT '知识点总数',
-  `phone` int(11) NOT NULL COMMENT '用户的电话号码',
+  `phone` varchar(255) NOT NULL COMMENT '用户的电话号码',
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 /*Data for the table `login` */
 
-insert  into `login`(`user_id`,`username`,`password`,`user_head`,`reg_time`,`study_num`,`phone`) values (1,'admin','123456','admin.jpg',2147483647,0,0),(2,'lijiapeng','123456','admin.jpg',2147483647,0,0),(3,'jiajionghui','123456','admin.jpg',2147483647,0,0),(4,'zhaoheng','123456','admin.jpg',2147483647,0,0);
+insert  into `login`(`user_id`,`username`,`password`,`user_head`,`reg_time`,`study_num`,`phone`) values (1,'admin','123456','admin.jpg','2147483647',0,'0'),(2,'lijiapeng','123456','admin.jpg','2147483647',0,'0'),(3,'jiajionghui','123456','admin.jpg','2147483647',0,'0'),(4,'zhaoheng','123456','admin.jpg','2147483647',0,'0');
 
 /*Table structure for table `menu_list` */
 
