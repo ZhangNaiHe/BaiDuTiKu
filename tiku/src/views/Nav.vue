@@ -240,7 +240,7 @@
 </template>
 
 <script>
-export default {};
+
 </script>
 
 <style scoped>
@@ -298,6 +298,7 @@ export default {};
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0px;
+  z-index: 100;
   right: 167px;
 }
 
@@ -382,6 +383,7 @@ export default {};
 .scend {
   width: 100%;
   height: 45px;
+  z-index: 100;
   position: absolute;
   left: 0;
   top: 46px;
@@ -510,6 +512,7 @@ export default {};
   top: 46px;
   display: none;
   box-shadow: 0 0 5px rgb(163, 163, 163);
+  z-index: 100;
 }
 
 .alltest:hover + .scend_all {

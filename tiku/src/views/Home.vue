@@ -2,8 +2,10 @@
   <div class="home">
     <!-- 布局 -->
     <el-container>
-      <el-header>
-        <!-- 导航栏 -->
+      <el-header style=" height: 46px;
+    width: 1559px;
+    margin-left: -20px">
+        <index-nav></index-nav>
       </el-header>
       <el-main>
         <!-- 轮播图 -->
@@ -15,7 +17,7 @@
           background-color="#545c64"
           text-color="#fff"
           active-text-color="#ffd04b"
-          style="width:230px;position:absolute;top:60px;left:17.5%;z-index: 99;"
+          style="width:230px;position:absolute;top:46px;left:17.5%;z-index: 99;"
           :unique-opened="true"
         >
           <el-submenu :index="i" v-for="(item,i) in MenusList" :key="item.cat_father_id">
@@ -301,12 +303,13 @@
           </div>
         </div>
       </el-main>
-      <el-footer>Footer</el-footer>
+      <el-footer></el-footer>
     </el-container>
   </div>
 </template>
 
 <script>
+import "../css/box.css";
 export default {
   data() {
     return {
@@ -852,7 +855,7 @@ el-main {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .coll {
-      margin-top: -24px;
+  margin-top: -24px;
 }
 .coll > a {
   display: block;
@@ -870,6 +873,6 @@ el-main {
   color: #666;
 }
 .coll > a:nth-child(6n + 1) {
-margin-left: 0px;
+  margin-left: 0px;
 }
 </style>

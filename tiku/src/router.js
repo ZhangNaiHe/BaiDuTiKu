@@ -4,7 +4,7 @@ import Home from "./views/Home.vue";
 import Nav from './views/Nav.vue';
 
 Vue.use(Router);
-
+Vue.component('index-nav',Nav)
 export default new Router({
   mode: "history",
   base: process.env.BASE_URL,
