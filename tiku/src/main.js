@@ -4,8 +4,6 @@ import router from "./router";
 // 配置elementui框架
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-import "./css/tiku.css";
-
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
 import "./assets/css/base.css";
