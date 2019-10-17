@@ -7,20 +7,16 @@
       </el-header>
       <el-main>
         <!-- 轮播图 -->
-        <el-carousel height="350px">
+        <el-carousel height="278px">
           <el-carousel-item v-for="item in 2" :key="item"></el-carousel-item>
         </el-carousel>
         <!-- 菜单 -->
         <el-menu
-          default-active="1"
-          class="el-menu-vertical-demo"
-          @open="handleOpen"
-          @close="handleClose"
           background-color="#545c64"
           text-color="#fff"
           active-text-color="#ffd04b"
           style="width:230px;position:absolute;top:60px;left:17.5%;z-index: 99;"
-          unique-opened="false"
+          :unique-opened="true"
         >
           <el-submenu :index="i" v-for="(item,i) in MenusList" :key="item.cat_father_id">
             <template slot="title">
@@ -48,11 +44,7 @@
               <!-- 跳转连接el-link -->
               <el-link :underline="false">
                 <div class="class-box" v-for="(item1,i) in lists" :key="i">
-                  <img :src="ss+lists[0].subject_pic" alt id="icon" />
-                  <!-- 图标 -->
-                  <!-- <div id="icon" :class="imgs[i]"></div> -->
-                  <!-- <img id="icon" :src="icons[i]" alt /> -->
-                  <!-- <i id="icon" :class="icons[i]"></i> -->
+                  <img :src="ss+lists[i].subject_pic" alt id="icon" />
                   <p class="icon-p">{{item1.subject_title}}</p>
                   <p class="icon-s">
                     <span>{{item1.total}}</span>个考点
@@ -202,8 +194,111 @@
         </div>
         <!-- 资格考试专区 -->
         <div class="cation">
-          <p>资格考试专区</p>
+          <p class="cat_p">资格考试专区</p>
           <div class="cation_end"></div>
+          <!-- 专区 -->
+          <div class="accou">
+            <!-- one -->
+            <div class="accou_one">
+              <div class="acc_cai">
+                <div class="acc_img"></div>
+                <div class="acc_p">
+                  <p>财会类</p>
+                  <p>5门考试</p>
+                </div>
+              </div>
+              <div class="acc_kuai">
+                <span>会计从业资格</span>
+                <span>初级会计师</span>
+                <span>中级会计师</span>
+                <span>注册会计师CPA</span>
+                <span>中级经济师</span>
+              </div>
+            </div>
+            <!-- two -->
+            <div class="accou_one" style="margin-left: 150px;">
+              <div class="acc_cai">
+                <div class="acc_imga"></div>
+                <div class="acc_p">
+                  <p>建筑类</p>
+                  <p>2门考试</p>
+                </div>
+              </div>
+              <div class="acc_kuai">
+                <span>一级建造师</span>
+                <span>二级建造师</span>
+              </div>
+            </div>
+            <!-- three -->
+            <div class="accou_one">
+              <div class="acc_cai">
+                <div class="acc_imgb"></div>
+                <div class="acc_p">
+                  <p>职业资格类</p>
+                  <p>4门考试</p>
+                </div>
+              </div>
+              <div class="acc_kuai" style="border:none;">
+                <span>教师资格证</span>
+                <span>企业法律顾问</span>
+                <span>社会工作师</span>
+                <span>助理社会工作师</span>
+              </div>
+            </div>
+            <!-- four -->
+            <div class="accou_one" style="margin-left: 150px;">
+              <div class="acc_cai">
+                <div class="acc_imgc"></div>
+                <div class="acc_p">
+                  <p>公务员</p>
+                  <p>2门考试</p>
+                </div>
+              </div>
+              <div class="acc_kuai" style="border:none;">
+                <span>警察招考</span>
+                <span>政法干警</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 教材教辅专区 -->
+        <div class="book">
+          <p class="book_p">教材教辅专区</p>
+          <div class="book_list"></div>
+          <!-- 标题 -->
+          <h3 class="book_h">
+            中小学教辅资源
+            <span class="book_s">90149本</span>
+          </h3>
+          <!-- 学校 -->
+          <div class="school">
+            <div class="gao">
+              <div class="maxk"></div>
+              <span>高中</span>
+            </div>
+            <div class="chu">
+              <div class="maxk"></div>
+              <span>初中</span>
+            </div>
+            <div class="xiao">
+              <div class="maxk"></div>
+              <span>小学</span>
+            </div>
+          </div>
+        </div>
+        <!-- 二级 -->
+        <div class="book">
+          <p class="book_p">教材教辅专区</p>
+          <div class="book_list"></div>
+          <!-- 标题 -->
+          <h3 class="book_h">
+            大学教辅资源
+            <span class="book_s">6256本</span>
+          </h3>
+          <!-- 大学 -->
+          <div class="coll">
+            <a href="#" v-for="(item6,i6) in bigs" :key="i6">{{item6.big_teacher_name}}</a>
+          </div>
         </div>
       </el-main>
       <el-footer>Footer</el-footer>
@@ -228,7 +323,9 @@ export default {
       // 热门试卷
       hots: [],
       // 图片
-      ss: "/img/"
+      ss: "/img/",
+      // 大学教材
+      bigs: []
     };
   },
   created() {
@@ -237,6 +334,7 @@ export default {
     this.getliNians();
     this.getliMonis();
     this.getHots();
+    this.getColls();
   },
   methods: {
     // 获取菜单列表
@@ -264,9 +362,9 @@ export default {
     async getLists() {
       // 发起axios
       const { data: res } = await this.$http.get("subject");
-      window.console.log(res);
+      // window.console.log(res);
       this.lists = res.data;
-      window.console.log(this.lists[0].subject_pic);
+      // window.console.log(this.lists[1].subject_pic);
       // window.console.log(res.data.total);
       // window.console.log(res.data[0].total);
       // 判断
@@ -309,6 +407,13 @@ export default {
       // console.log(res);
       // 把数据给hots
       this.hots = res.data.hotSum;
+    },
+    // 获取大学资料
+    async getColls() {
+      // 发起axios
+      const { data: res } = await this.$http.get("bigteacher");
+      window.console.log(res);
+      this.bigs = res.data;
     }
   }
 };
@@ -574,5 +679,197 @@ el-main {
 .bj_list {
   clear: both;
   margin-top: 20px;
+}
+.cation {
+  width: 1182px;
+  margin: 0 auto;
+}
+.cat_p {
+  font-size: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.cation_end {
+  width: 40px;
+  height: 4px;
+  background-color: #11a68d;
+  margin: 0 auto;
+}
+.accou_one {
+  position: relative;
+  width: 515px;
+  float: left;
+  padding-top: 30px;
+}
+.acc_cai {
+  height: 59px;
+  line-height: 30px;
+}
+.acc_img {
+  width: 59px;
+  height: 59px;
+  float: left;
+  margin-right: 20px;
+  background-image: url("../assets/images/accoun01.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.acc_imga {
+  width: 59px;
+  height: 59px;
+  float: left;
+  margin-right: 20px;
+  background-image: url("../assets/images/accoun02.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.acc_imgb {
+  width: 59px;
+  height: 59px;
+  float: left;
+  margin-right: 20px;
+  background-image: url("../assets/images/accoun03.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.acc_imgc {
+  width: 59px;
+  height: 59px;
+  float: left;
+  margin-right: 20px;
+  background-image: url("../assets/images/accoun04.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.acc_p p:nth-child(1) {
+  font-size: 20px;
+  color: #333;
+  line-height: 20px;
+  height: 20px;
+  margin-bottom: -5px;
+  padding-top: 8px;
+}
+.acc_p p:nth-child(2) {
+  font-size: 14px;
+  color: #666;
+  line-height: 14px;
+  height: 14px;
+}
+.acc_kuai {
+  height: 104px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.acc_kuai span {
+  height: 14px;
+  line-height: 14px;
+  margin-top: 21px;
+  width: 126px;
+  display: block;
+  float: left;
+  color: #333;
+  font-size: 14px;
+}
+.book {
+  width: 1182px;
+  margin: 0 auto;
+  clear: both;
+}
+.book_p {
+  padding-top: 60px;
+  font-size: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.book_list {
+  width: 40px;
+  height: 4px;
+  background-color: #11a68d;
+  margin: 0 auto;
+}
+.book_h {
+  font-size: 24px;
+  line-height: 1.2;
+  color: #333;
+  font-weight: 700;
+}
+.book_s {
+  margin-left: 12px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #666;
+  font-weight: 400;
+}
+.school > div {
+  position: relative;
+  float: left;
+  width: 380px;
+  height: 140px;
+}
+.gao {
+  background-image: url("../assets/images/gaozhong.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.chu {
+  margin-left: 20px;
+  background-image: url("../assets/images/cchuzhong.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.xiao {
+  margin-left: 20px;
+  background-image: url("../assets/images/xiaoxue.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.school span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  margin: -20px 0 0 -40px;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+}
+.maxk {
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.coll {
+  margin-top: -24px;
+}
+.coll > a {
+  display: block;
+  text-decoration: none;
+  float: left;
+  margin: 30px 0 0 20px;
+  width: 178px;
+  height: 70px;
+  line-height: 70px;
+  background-color: #fcfdfd;
+  border-radius: 3px;
+  border: solid 1px #00a78d;
+  font-size: 18px;
+  text-align: center;
+  color: #666;
+}
+.coll > a:nth-child(6n + 1) {
+  margin-left: 0px;
 }
 </style>
