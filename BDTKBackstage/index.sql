@@ -2,8 +2,7 @@
 SQLyog Ultimate - MySQL GUI v8.2 
 MySQL - 5.7.25 : Database - baidutiku
 *********************************************************************
-*/
-
+*/
 
 /*!40101 SET NAMES utf8 */;
 
@@ -31,17 +30,6 @@ CREATE TABLE `big_teacher` (
 
 insert  into `big_teacher`(`big_teacher_id`,`big_teacher_name`) values (1,'大学数据'),(2,'大学英语'),(3,'大学物理'),(4,'大学化学'),(5,'大学生物'),(6,'大学地理'),(7,'思想政治'),(8,'统计'),(9,'信息技术'),(10,'工学'),(11,'建筑'),(12,'经济学'),(13,'管理学'),(14,'法学'),(15,'文学'),(16,'其他');
 
-/*Table structure for table `college` */
-
-DROP TABLE IF EXISTS `college`;
-
-CREATE TABLE `college` (
-  `subject_id` int(40) NOT NULL COMMENT '科目id',
-  `structure_id` int(30) NOT NULL COMMENT '结构id'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-/*Data for the table `college` */
-
 /*Table structure for table `exam` */
 
 DROP TABLE IF EXISTS `exam`;
@@ -66,15 +54,16 @@ CREATE TABLE `login` (
   `user_id` int(30) NOT NULL AUTO_INCREMENT COMMENT '用户的id',
   `username` varchar(50) NOT NULL COMMENT '用户的名称',
   `password` varchar(50) NOT NULL COMMENT '用户的密码',
-  `user_head` varchar(80) NOT NULL COMMENT '用户头像的地址',
-  `reg_time` varchar(60) NOT NULL COMMENT '用户注册的时间',
-  `study_num` int(60) NOT NULL COMMENT '知识点总数',
+  `user_head` varchar(80) DEFAULT NULL COMMENT '用户头像的地址',
+  `reg_time` int(11) DEFAULT NULL COMMENT '用户注册的时间',
+  `study_num` int(60) DEFAULT '0' COMMENT '知识点总数',
+  `phone` int(11) NOT NULL COMMENT '用户的电话号码',
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 /*Data for the table `login` */
 
-insert  into `login`(`user_id`,`username`,`password`,`user_head`,`reg_time`,`study_num`) values (1,'admin','123456','http://1.2.36.0','1571232789235',0),(2,'lijiapeng','123456','http://1.2.36.0','1571232789235',0),(3,'jiajionghui','123456','http://1.2.36.0','1571232789235',0),(4,'zhaoheng','123456','http://1.2.36.0','1571232789235',0);
+insert  into `login`(`user_id`,`username`,`password`,`user_head`,`reg_time`,`study_num`,`phone`) values (1,'admin','123456','http://1.2.36.0',2147483647,0,0),(2,'lijiapeng','123456','http://1.2.36.0',2147483647,0,0),(3,'jiajionghui','123456','http://1.2.36.0',2147483647,0,0),(4,'zhaoheng','123456','http://1.2.36.0',2147483647,0,0);
 
 /*Table structure for table `menu_list` */
 
@@ -134,7 +123,7 @@ CREATE TABLE `subject` (
 
 /*Data for the table `subject` */
 
-insert  into `subject`(`subject_id`,`subject_pic`,`subject_title`) values (1,'http://127.0.0.1','文科数学'),(2,'http://127.0.0.1','语文'),(3,'http://127.0.0.1','物理'),(4,'http://127.0.0.1','化学'),(5,'http://127.0.0.1','生物'),(6,'http://127.0.0.1','政治'),(7,'http://127.0.0.1','历史'),(8,'http://127.0.0.1','地理');
+insert  into `subject`(`subject_id`,`subject_pic`,`subject_title`) values (1,'./file-upload/public/uploads/00.jpg','文科数学'),(2,'http://127.0.0.1','语文'),(3,'http://127.0.0.1','物理'),(4,'http://127.0.0.1','化学'),(5,'http://127.0.0.1','生物'),(6,'http://127.0.0.1','政治'),(7,'http://127.0.0.1','历史'),(8,'http://127.0.0.1','地理');
 
 /*Table structure for table `test_paper` */
 
@@ -151,6 +140,20 @@ CREATE TABLE `test_paper` (
 /*Data for the table `test_paper` */
 
 insert  into `test_paper`(`paper_id`,`paper_name`,`chicks`,`paper_cat`) values (1,'2019年高考真题 文科数学(北京卷)',10,'history'),(2,'2019年高考真题 文综 (北京卷)',9,'paper '),(3,'2019年高考真题 英语 (北京卷)',12,'paper '),(4,'2019年高考真题 理综 (北京卷)',55,'history '),(5,'2019年高考真题 语文 (北京卷)',38,'paper '),(6,'2019年高考真题 理科数学 (北京卷)',46,'history '),(7,'2019年高考真题 文科数学 (北京卷)',77,'paper '),(8,'2019年高考真题 语文 (北京卷)',54,'history '),(9,'2019年高考真题 英语 (北京卷)',75,'paper'),(10,'2019年高考真题 文科数学 (北京卷)',36,'history');
+
+/*Table structure for table `user_uploads` */
+
+DROP TABLE IF EXISTS `user_uploads`;
+
+CREATE TABLE `user_uploads` (
+  `upload_id` int(11) NOT NULL AUTO_INCREMENT,
+  `image_name` text COLLATE utf8_unicode_ci,
+  `user_id_fk` int(11) DEFAULT NULL,
+  `created` int(11) DEFAULT NULL,
+  PRIMARY KEY (`upload_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Data for the table `user_uploads` */
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
