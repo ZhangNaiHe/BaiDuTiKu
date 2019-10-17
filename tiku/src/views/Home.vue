@@ -125,7 +125,7 @@
                         style=" list-style:none;margin-bottom: 30px;"
                       >
                         <i
-                          class="el-icon-wind-power"
+                          :class="fonts[i5]"
                           style="float:left;margin-top:-6px;color:#11a68d;margin-right:3px"
                         ></i>
                         <p class="nian_p">{{item5.paper_name}}</p>
@@ -310,6 +310,7 @@
 
 <script>
 import "../css/box.css";
+import "../css/iconfont/iconfont.css";
 export default {
   data() {
     return {
@@ -328,7 +329,18 @@ export default {
       // 图片
       ss: "/img/",
       // 大学教材
-      bigs: []
+      bigs: [],
+      // 图标
+      fonts:[
+        "iconfont icon-shuzi2",
+        "iconfont icon-num-chart",
+        "iconfont icon-shuzisan",
+        "iconfont icon-shuzi5",
+        "iconfont icon-shuzi6",
+        "iconfont icon-shuzi3",
+        "iconfont icon-shuzicai",
+        "iconfont icon-3",
+      ]
     };
   },
   created() {

@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "iconfont";
+  font-family: "iconfont";
+  src: url('./iconfont.ttf');
+  /* IE9*/
+  src: url('./iconfont.ttf') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('./iconfont.ttf') format('woff'),
+    /* chrome, firefox */
+    url('./iconfont.ttf') format('truetype'),
+    /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('./iconfont.ttf') format('svg');
+  /* iOS 4.1- */
+}
