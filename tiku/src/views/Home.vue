@@ -412,7 +412,7 @@ export default {
     async getColls() {
       // 发起axios
       const { data: res } = await this.$http.get("bigteacher");
-      window.console.log(res);
+      // window.console.log(res);
       this.bigs = res.data;
     }
   }
@@ -494,7 +494,7 @@ el-main {
   /* background-color: black; */
 }
 .icon-p {
-  line-height: 0px;
+  line-height: 40px;
   font-size: 18px;
   color: #333;
 }
@@ -651,7 +651,7 @@ el-main {
 .tu_tit {
   position: absolute;
   left: 30px;
-  top: 10px;
+  top: 30px;
 }
 .tu_tit p:nth-child(1) {
   font-size: 16px;
@@ -659,7 +659,7 @@ el-main {
   line-height: 16px;
   color: #333;
   font-weight: 700;
-  margin-bottom: 0px;
+  margin-bottom: 6px;
 }
 .tu_tit p:nth-child(2) {
   font-size: 12px;
@@ -670,6 +670,8 @@ el-main {
 .tu_ul {
   font-size: 14px;
   color: #333;
+  margin-left: 44px;
+  margin-top: 20px;
 }
 .tu_ul li {
   line-height: 14px;
@@ -677,8 +679,9 @@ el-main {
   padding-bottom: 20px;
 }
 .bj_list {
-  clear: both;
+  /* clear: both; */
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 .cation {
   width: 1182px;
@@ -750,7 +753,7 @@ el-main {
   color: #333;
   line-height: 20px;
   height: 20px;
-  margin-bottom: -5px;
+  margin-bottom: 6px;
   padding-top: 8px;
 }
 .acc_p p:nth-child(2) {
@@ -807,6 +810,9 @@ el-main {
   color: #666;
   font-weight: 400;
 }
+.school {
+  margin-top: 20px;
+}
 .school > div {
   position: relative;
   float: left;
@@ -852,7 +858,7 @@ el-main {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .coll {
-  margin-top: -24px;
+  /* margin-top: -24px; */
 }
 .coll > a {
   display: block;
