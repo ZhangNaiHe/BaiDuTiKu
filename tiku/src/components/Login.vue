@@ -32,7 +32,7 @@
         </div>
       </el-form>
       <div class="footer">
-        <span class="footer-sm">扫码登录 |</span>
+        <a href class="footer-sm">扫码登录 |</a>
         <span class="footer-img1">
           <!-- <img class="img1" src="../assets/jjh-login.png" alt /> -->
         </span>
@@ -42,7 +42,7 @@
         <span class="footer-img3">
           <!-- <img class="img3" src="../assets/jjh-login.png" alt /> -->
         </span>
-        <span class="footer-zc">立即注册</span>
+        <a href="./register" class="footer-zc">立即注册</a>
       </div>
     </el-dialog>
   </div>
@@ -56,7 +56,7 @@ export default {
       checked: true,
       loginForm: {
         username: "admin",
-        password: "123"
+        password: "123456"
       },
       loginRules: {
         username: [
@@ -97,7 +97,6 @@ export default {
           return this.$message.error(res.message);
         }
       });
-      
     }
   }
 };
@@ -220,17 +219,20 @@ export default {
   /* background-color: rgb(175, 240, 240); */
 }
 
-.footer > span {
+.footer > a {
   color: #2e82ff;
+  text-decoration: none;
   font-family: Microsoft YaHei;
 }
 
 .footer-zc {
+  float: right;
   width: 60px;
   height: 20px;
-  float: right;
   margin-top: 10px;
   margin-right: 20px;
+  color: #2e82ff;
   font-family: Microsoft YaHei;
+  text-decoration: none;
 }
 </style>

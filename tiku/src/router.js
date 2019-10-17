@@ -24,6 +24,53 @@ export default new Router({
     }, {
       path: '/login',
       component: () => import("@/components/Login.vue")
+    }, {
+      path: '/register',
+      component: () => import("@/components/Register.vue")
+    },
+    {
+      path:"/r",
+      name:"recruit",
+      component:()=> import("./views/Recruit.vue")
+    },
+    {
+      path:'/colleges',
+      name:'colleges',
+      component: () => import("./views/Colleges.vue"),
+      children: [
+      {
+         path: '/mathmath',
+         component: () => import('./components/Mathmath.vue')     
+      },
+      {
+        path: '/chinesemath',
+        component: () => import('./components/Chinesemath.vue') 
+      },
+      {
+        path: '/physics',
+        component: () => import('./components/Physics.vue') 
+      },
+      {
+        path: '/chemistry',
+        component: () => import('./components/Chemistry.vue') 
+      },
+      {
+        path: '/bios',
+        component: () => import('./components/Bios.vue')    
+      },
+      {
+        path: '/politics',
+        component: () => import('./components/Politics.vue')    
+      },
+    {
+      path: '/history',
+      component: () => import('./components/History.vue')   
+    },
+    {
+      path: '/where',
+      component: () => import('./components/Where.vue')   
+    }
+      ]
     }
   ]
 });
