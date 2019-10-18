@@ -20,7 +20,8 @@
         </div>
         <div class="wenzi">
           <a href="/my">我的首页</a>
-          <a href="/logout">退出</a>
+          <a href="/login">登录</a>
+          <a href="/logout" @click="handlerOut">退出</a>
         </div>
       </div>
       <ul class="nav_ul">
@@ -242,7 +243,17 @@
 <script>
 import Botton from "../components/Botton.vue";
 export default {
+  data:{
+    return:{
 
+    }
+  },
+  methods:{
+    handlerOut(){
+      window.sessionStorage.removeItem("token");
+      this.$router.push("/login")
+    }
+  }
 }
 </script>
 
@@ -298,7 +309,7 @@ export default {
 .chong {
   display: none;
   width: 75px;
-  height: 110px;
+  height: 140px;
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0px;

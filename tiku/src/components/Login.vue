@@ -114,10 +114,13 @@ export default {
         let { data: res } = await this.$http.post("user_login", this.loginForm);
         console.log(res);
         if (res.code == 200) {
+          
+          window.sessionStorage.setItem("token",res.data.token);
           this.$router.push("/");
           return this.$message.success(res.message);
         }
         if (res.code == 400) {
+          window.sessionStorage.removeItem("token")
           return this.$message.error(res.message);
         }
       });
