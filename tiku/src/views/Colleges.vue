@@ -369,7 +369,9 @@
     <el-footer>Footer</el-footer>
   </el-container>
 </template>
+
  <script>
+ import '../assets/css/zhangnaiheniubi.css';
 export default {
   name: "Index",
   data() {
