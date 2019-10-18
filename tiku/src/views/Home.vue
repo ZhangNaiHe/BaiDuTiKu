@@ -87,7 +87,6 @@
                     <!-- 试卷 -->
                     <ul>
                       <li class="parer_list" v-for="(item3,i3) in liNians" :key="i3">
-                        <p class="list_p"></p>
                         <p class="nian_p">{{item3.paper_name}}</p>
                         <p class="nian_s">解析|下载|估分</p>
                       </li>
