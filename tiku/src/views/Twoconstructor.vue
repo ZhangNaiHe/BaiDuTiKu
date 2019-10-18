@@ -75,9 +75,7 @@
       <div class="search-subject-choose">
         <p class="choose-subject">
           <!-- 子路由 -->
-          <router-link class="subject-demo" to="/mathmath">建筑工程</router-link>
-          <router-link class="subject-demo" to="/chinesemath">水利水电工程</router-link>
-          <router-link class="subject-demo" to="/physics">建设工程项目管理</router-link>
+          <router-link class="subject-demo" to="/mathmath">建设工程施工管理</router-link>
         </p>
         <div>
           <!-- 子组件显示 -->
@@ -201,7 +199,7 @@ body {
   color: #fff;
   position: relative;
   margin-right: 35px;
-  background-position: -1410px -270px;
+  background-position: -940px -270px;
 }
 
 .withyou-box-score {
@@ -212,7 +210,7 @@ body {
   height: 172px;
   color: #fff;
   position: relative;
-  background-position: -1410px -540px;
+  background-position: 0 -540px;
 }
 
 .withyou-main {
@@ -269,18 +267,17 @@ body {
   font-size: 14px;
   width: 1182px;
   overflow: hidden;
-  margin-left: -20px;
+  margin-left: 245px;
   margin-top: 20px;
 }
 
 .subject-demo {
-  color: #11a68d;
-  /* padding-bottom: 10px; */
-  /* margin-right: 30px; */
+  color: #0f9982;
+  padding-bottom: 10px;
+  margin-right: 30px;
   border-bottom: 4px solid transparent;
   height: 30px;
   line-height: 30px;
-  margin-left: 110px;
   padding-bottom: 5px;
 }
 </style>

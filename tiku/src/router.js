@@ -207,6 +207,11 @@ export default new Router({
     {
       path:'/oneconstructor',
       component: () => import("./views/Oneconstructor.vue")
+    },
+    // 二级建筑师
+    {
+      path: '/twoconstructor',
+      component: () => import('./views/Twoconstructor.vue')
     }
   ]
 });

@@ -302,7 +302,7 @@ export default {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0px;
-  right: 174px;
+  right: 166px;
 }
 
 .head {
