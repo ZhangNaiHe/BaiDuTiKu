@@ -244,6 +244,7 @@ body {
 .search-subject {
   background-color: #f0f0f0;
   width: 100%;
+  padding-top: 30px;
   height: 654px;
 }
 

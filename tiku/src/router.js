@@ -227,6 +227,11 @@ export default new Router({
     {
       path: '/pa',
       component: () => import('./views/Cpa.vue')
+    },
+    // 中级经济师
+    {
+      path: '/Intermediateeconomist',
+      component: () => import('./views/Intermediateeconomist.vue')
     }
   ]
 });

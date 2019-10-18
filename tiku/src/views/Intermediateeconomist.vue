@@ -75,7 +75,8 @@
       <div class="search-subject-choose">
         <p class="choose-subject">
           <!-- 子路由 -->
-          <router-link class="subject-demo" to="/societywork">社会工作综合能力（初级）</router-link>
+          <router-link class="subject-demo" to="/mathmath">专业知识与实务</router-link>
+          <router-link class="subject-demo" to="/chinesemath">中级经济基础</router-link>
         </p>
         <div>
           <!-- 子组件显示 -->
@@ -268,7 +269,7 @@ body {
   font-size: 14px;
   width: 1182px;
   overflow: hidden;
-  margin-left: 44px;
+  margin-left: 95px;
   margin-top: 20px;
 }
 
@@ -279,8 +280,7 @@ body {
   border-bottom: 4px solid transparent;
   height: 30px;
   line-height: 30px;
-  margin-left: 185px;
+  margin-left: 80px;
   padding-bottom: 5px;
 }
-
 </style>
