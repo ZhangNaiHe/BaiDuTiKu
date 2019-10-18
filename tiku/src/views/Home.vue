@@ -193,7 +193,9 @@
               </h3>
             </div>
             <!-- 轮播 -->
-            <div class="someconn"></div>
+            <div class="someconn">
+              <chui-zhi></chui-zhi>
+            </div>
           </div>
         </div>
         <!-- 考试资源 -->
@@ -600,9 +602,8 @@ export default {
   opacity: 0.65;
   border-bottom: 1px solid #1e1e1e;
   position: relative;
-
 }
-.non_ul li.active{
+.non_ul li.active {
   background-color: #fff !important;
   color: #11a68d !important;
 }
@@ -727,6 +728,7 @@ export default {
 }
 .sometit {
   width: 310px;
+  margin-top: -13px;
 }
 .sometit h3 {
   font-size: 20px;
@@ -770,7 +772,8 @@ export default {
 }
 .someconn {
   width: 310px;
-  height: 364px;
+  height: 375px;
+  margin-top: -14px;
 }
 .linian {
   padding-top: 10px;
