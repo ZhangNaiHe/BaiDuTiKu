@@ -20,7 +20,7 @@
       </el-carousel>-->
       <!-- 菜单 -->
       <div class="car" style="width: 1920px;margin: 0 auto;">
-        <el-carousel height="350px">
+        <el-carousel height="350px"  indicator-position="none">
           <el-carousel-item v-for="item in 2" :key="item"></el-carousel-item>
         </el-carousel>
       </div>
