@@ -87,7 +87,7 @@
                     <!-- 试卷 -->
                     <ul>
                       <li class="parer_list" v-for="(item3,i3) in liNians" :key="i3">
-                        <span></span>
+                        <p class="list_p"></p>
                         <p class="nian_p">{{item3.paper_name}}</p>
                         <p class="nian_s">解析|下载|估分</p>
                       </li>
@@ -304,7 +304,9 @@
           </div>
         </div>
       </el-main>
-      <el-footer></el-footer>
+      <el-footer>
+        
+      </el-footer>
     </el-container>
   </div>
 </template>
@@ -600,11 +602,11 @@ el-main {
   list-style: none;
   margin: 20px 0;
 }
+.parer_list p:hover {
+  cursor: pointer;
+}
 .parer_list .nian_p:hover {
   color: #11a68d;
-}
-.parer_list span{
-
 }
 .nian_p {
   font-size: 14px;
@@ -616,6 +618,12 @@ el-main {
   margin-left: -38px;
   font-weight: 400;
 }
+/* .list_p {
+  width: 3px;
+  height: 3px;
+  background-image: url("../assets/images/dian.png");
+  background-repeat: no-repeat;
+} */
 .nian_p::before {
   content: "";
   width: 3px;
@@ -669,6 +677,9 @@ el-main {
   background-size: 100%;
   position: relative;
 }
+.bj div:nth-child(1):hover {
+  cursor: pointer;
+}
 .tu_o {
   height: 100px;
   background-image: url("../assets/images/beijing02.png");
@@ -711,9 +722,16 @@ el-main {
   height: 14px;
   padding-bottom: 20px;
 }
+.tu_ul li:hover {
+  cursor: pointer;
+  color: #11a68d;
+}
 .bj_list {
   clear: both;
   margin-top: 20px;
+}
+.bj_list span:hover {
+  cursor: pointer;
 }
 .cation {
   width: 1182px;
@@ -808,6 +826,10 @@ el-main {
   color: #333;
   font-size: 14px;
 }
+.acc_kuai span:hover {
+  cursor: pointer;
+  color: #11a68d;
+}
 .book {
   width: 1182px;
   margin: 0 auto;
@@ -847,6 +869,9 @@ el-main {
   float: left;
   width: 380px;
   height: 140px;
+}
+.school .maxk:hover {
+  cursor: pointer;
 }
 .gao {
   background-image: url("../assets/images/gaozhong.png");
