@@ -2,21 +2,24 @@
   <div class="home">
     <!-- 布局 -->
     <el-container>
-      <el-header style=" height: 46px;
+      <el-header
+        style=" height: 46px;
     width: 1559px;
-    margin-left: -20px">
+    margin-left: -20px;
+    mardin:0 auto"
+      >
         <index-nav></index-nav>
       </el-header>
-      <el-main>
-        <!-- 轮播图 -->
-        <!-- <el-carousel height="278px">
+      <!-- <el-main> -->
+      <!-- 轮播图 -->
+      <!-- <el-carousel height="278px">
           <el-carousel-item v-for="item in 2" :key="item"></el-carousel-item>
-        </el-carousel>-->
-        <!-- 菜单 -->
-        <el-carousel height="350px">
-          <el-carousel-item v-for="item in 2" :key="item"></el-carousel-item>
-        </el-carousel>
-        <el-menu
+      </el-carousel>-->
+      <!-- 菜单 -->
+      <el-carousel height="350px">
+        <el-carousel-item v-for="item in 2" :key="item"></el-carousel-item>
+      </el-carousel>
+      <!-- <el-menu
           style="width:230px;position:absolute;top:46px;left:17.5%;z-index: 99;"
           :unique-opened="true"
         >
@@ -28,281 +31,401 @@
               <span slot="title">{{subitem}}</span>
             </el-menu-item>
           </el-submenu>
-        </el-menu>
-        <!-- 高考专区-->
-        <div class="division">
-          <p class="dip">高考专区</p>
-          <div class="division_end"></div>
-          <!-- 章节学习 -->
-          <div class="gaokao_main">
-            <div class="gaokao_erea">
-              <p>
-                章节学习
-                <span>考点各个击破,重难点自测</span>
-              </p>
-            </div>
-            <!-- 课程 -->
-            <div class="box-con">
-              <!-- 跳转连接el-link -->
-              <el-link :underline="false">
-                <div class="class-box" v-for="(item1,i) in lists" :key="i">
-                  <img :src="ss+lists[i].subject_pic" alt id="icon" />
-                  <p class="icon-p">{{item1.subject_title}}</p>
-                  <p class="icon-s">
-                    <span>{{item1.total}}</span>个考点
-                  </p>
-                </div>
-              </el-link>
-            </div>
-            <!-- 大家都在学 -->
-            <div class="some">
-              <!-- 标题 -->
-              <div class="sometit">
-                <h3>
-                  大家都在学
-                  <a href="#">我也要学</a>
-                </h3>
+      </el-menu>-->
+      <!-- 菜单导航 -->
+      <div class="non">
+        <!-- 一级 -->
+        <ul class="non_ul">
+          <li>
+            高考
+            <span>></span>
+          </li>
+          <li>
+            建筑类
+            <span>></span>
+          </li>
+          <li>
+            财会类
+            <span>></span>
+          </li>
+          <li>
+            计算机类
+            <span>></span>
+          </li>
+          <li>
+            公务员
+            <span>></span>
+          </li>
+          <li>
+            医药类
+            <span>></span>
+          </li>
+          <li>
+            其他
+            <span>></span>
+          </li>
+        </ul>
+        <!-- 二 -->
+        <div class="stion">
+          <ul>
+            <li>
+              <a href="#">高考</a>
+            </li>
+          </ul>
+        </div>
+        <div class="stion">
+          <ul>
+            <li>
+              <a href="#">一级建造师</a>
+            </li>
+            <li>
+              <a href="#">二级建造师</a>
+            </li>
+          </ul>
+        </div>
+        <div class="stion">
+          <ul>
+            <li>
+              <a href="#">会计从业资格</a>
+            </li>
+            <li>
+              <a href="#">中级会计师</a>
+            </li>
+            <li>
+              <a href="#">注册会计师CPA</a>
+            </li>
+            <li>
+              <a href="#">中级经济师</a>
+            </li>
+            <li>
+              <a href="#">初级会计师</a>
+            </li>
+          </ul>
+        </div>
+        <div class="stion">
+          <ul>
+            <li>
+              <a href="#">计算机四级</a>
+            </li>
+          </ul>
+        </div>
+        <div class="stion">
+          <ul>
+            <li>
+              <a href="#">警察招考</a>
+            </li>
+            <li>
+              <a href="#">政法干警</a>
+            </li>
+            <li>
+              <a href="#">国考</a>
+            </li>
+          </ul>
+        </div>
+        <div class="stion">
+          <ul>
+            <li>
+              <a href="#">临床执业医师</a>
+            </li>
+            <li>
+              <a href="#">临床助理医师</a>
+            </li>
+            <li>
+              <a href="#">执业中药医师</a>
+            </li>
+            <li>
+              <a href="#">执业西药药师</a>
+            </li>
+            <li>
+              <a href="#">护士资格</a>
+            </li>
+          </ul>
+        </div>
+        <div class="stion">
+          <ul>
+            <li>
+              <a href="#">考研</a>
+            </li>
+            <li>
+              <a href="#">高考</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 高考专区-->
+      <div class="division">
+        <p class="dip">高考专区</p>
+        <div class="division_end"></div>
+        <!-- 章节学习 -->
+        <div class="gaokao_main">
+          <div class="gaokao_erea">
+            <p>
+              章节学习
+              <span>考点各个击破,重难点自测</span>
+            </p>
+          </div>
+          <!-- 课程 -->
+          <div class="box-con">
+            <!-- 跳转连接el-link -->
+            <el-link :underline="false">
+              <div class="class-box" v-for="(item1,i) in lists" :key="i">
+                <img :src="ss+lists[i].subject_pic" alt id="icon" />
+                <p class="icon-p">{{item1.subject_title}}</p>
+                <p class="icon-s">
+                  <span>{{item1.total}}</span>个考点
+                </p>
               </div>
-              <!-- 轮播 -->
-              <div class="someconn"></div>
+            </el-link>
+          </div>
+          <!-- 大家都在学 -->
+          <div class="some">
+            <!-- 标题 -->
+            <div class="sometit">
+              <h3>
+                大家都在学
+                <a href="#">我也要学</a>
+              </h3>
+            </div>
+            <!-- 轮播 -->
+            <div class="someconn"></div>
+          </div>
+        </div>
+        <!-- 考试资源 -->
+        <div class="kaoshi">
+          <div class="kaoshi_main">
+            <p>
+              试卷资源
+              <span>一考知底，高分必刷，全面提分</span>
+              <span>当前位置: 北京</span>
+              <a href="#">更多地区></a>
+            </p>
+            <div class="linian">
+              <!-- 真题 -->
+              <div class="lizhen">
+                <div class="year">
+                  <h3>
+                    历年真题
+                    <a href="#" class="more">更多真题试卷></a>
+                  </h3>
+                  <!-- 试卷 -->
+                  <ul>
+                    <li class="parer_list" v-for="(item3,i3) in liNians" :key="i3">
+                      <p class="nian_p">{{item3.paper_name}}</p>
+                      <p class="nian_s">解析|下载|估分</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 模拟 -->
+              <div class="lizhen" style="padding-left: 80px;">
+                <div class="year">
+                  <h3>
+                    模拟试卷
+                    <a href="#" class="more">更多模拟试卷></a>
+                  </h3>
+                  <!-- 试卷 -->
+                  <ul>
+                    <li class="parer_list" v-for="(item4,i4) in liMonis" :key="i4">
+                      <p class="nian_p">{{item4.paper_name}}</p>
+                      <p class="nian_s">解析|下载</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 热门 -->
+              <div class="lizhen" style="padding-left: 40px;padding-right: 0px;border: none;">
+                <div class="year">
+                  <h3>
+                    热门试卷
+                    <a href="#" class="more">更多热门试卷></a>
+                  </h3>
+                  <!-- 试卷 -->
+                  <ul>
+                    <li
+                      class="parer_list"
+                      v-for="(item5,i5) in hots"
+                      :key="i5"
+                      style=" list-style:none;margin-bottom: 26px;"
+                    >
+                      <i
+                        :class="fonts[i5]"
+                        style="float:left;margin-top:-6px;color:#11a68d;margin-right:3px"
+                      ></i>
+                      <p class="nian_p">{{item5.paper_name}}</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- 考试资源 -->
-          <div class="kaoshi">
-            <div class="kaoshi_main">
-              <p>
-                试卷资源
-                <span>一考知底，高分必刷，全面提分</span>
-                <span>当前位置: 北京</span>
-                <a href="#">更多地区></a>
-              </p>
-              <div class="linian">
-                <!-- 真题 -->
-                <div class="lizhen">
-                  <div class="year">
-                    <h3>
-                      历年真题
-                      <a href="#" class="more">更多真题试卷></a>
-                    </h3>
-                    <!-- 试卷 -->
-                    <ul>
-                      <li class="parer_list" v-for="(item3,i3) in liNians" :key="i3">
-                        <p class="nian_p">{{item3.paper_name}}</p>
-                        <p class="nian_s">解析|下载|估分</p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- 模拟 -->
-                <div class="lizhen" style="padding-left: 80px;">
-                  <div class="year">
-                    <h3>
-                      模拟试卷
-                      <a href="#" class="more">更多模拟试卷></a>
-                    </h3>
-                    <!-- 试卷 -->
-                    <ul>
-                      <li class="parer_list" v-for="(item4,i4) in liMonis" :key="i4">
-                        <p class="nian_p">{{item4.paper_name}}</p>
-                        <p class="nian_s">解析|下载</p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- 热门 -->
-                <div class="lizhen" style="padding-left: 40px;padding-right: 0px;border: none;">
-                  <div class="year">
-                    <h3>
-                      热门试卷
-                      <a href="#" class="more">更多热门试卷></a>
-                    </h3>
-                    <!-- 试卷 -->
-                    <ul>
-                      <li
-                        class="parer_list"
-                        v-for="(item5,i5) in hots"
-                        :key="i5"
-                        style=" list-style:none;margin-bottom: 26px;"
-                      >
-                        <i
-                          :class="fonts[i5]"
-                          style="float:left;margin-top:-6px;color:#11a68d;margin-right:3px"
-                        ></i>
-                        <p class="nian_p">{{item5.paper_name}}</p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+          <!-- 名校精品试卷 -->
+          <div class="ming" style="clear:both">
+            <div class="ming_tit">
+              <h3>
+                名校精品试卷
+                <a href="#">更多名校精品卷></a>
+              </h3>
             </div>
-            <!-- 名校精品试卷 -->
-            <div class="ming" style="clear:both">
-              <div class="ming_tit">
-                <h3>
-                  名校精品试卷
-                  <a href="#">更多名校精品卷></a>
-                </h3>
-              </div>
-              <!-- 名校 -->
-              <div class="bj">
-                <div class="tu">
-                  <div class="tu_tit">
-                    <p>北京大学附属中学</p>
-                    <p>同地区推荐共8套试卷</p>
-                  </div>
+            <!-- 名校 -->
+            <div class="bj">
+              <div class="tu">
+                <div class="tu_tit">
+                  <p>北京大学附属中学</p>
+                  <p>同地区推荐共8套试卷</p>
                 </div>
-                <ul class="tu_ul">
-                  <li>语文 海淀区2016年高三期末试卷</li>
-                  <li>英语 海淀区2016年高三期末试卷</li>
-                  <li>理科数学 海淀区2016年高三期末试卷</li>
-                </ul>
               </div>
-              <div class="bj">
-                <div class="tu_o">
-                  <div class="tu_tit">
-                    <p>北京市第一零一中学</p>
-                    <p>同地区推荐共1套试卷</p>
-                  </div>
+              <ul class="tu_ul">
+                <li>语文 海淀区2016年高三期末试卷</li>
+                <li>英语 海淀区2016年高三期末试卷</li>
+                <li>理科数学 海淀区2016年高三期末试卷</li>
+              </ul>
+            </div>
+            <div class="bj">
+              <div class="tu_o">
+                <div class="tu_tit">
+                  <p>北京市第一零一中学</p>
+                  <p>同地区推荐共1套试卷</p>
                 </div>
-                <ul class="tu_ul">
-                  <li>化学 海淀区2016年高三期末试卷</li>
-                </ul>
               </div>
-              <div class="bj" style="margin-right:0px;">
-                <div class="tu_w">
-                  <div class="tu_tit">
-                    <p>北京市第四中学</p>
-                    <p>同地区推荐共9套试卷</p>
-                  </div>
+              <ul class="tu_ul">
+                <li>化学 海淀区2016年高三期末试卷</li>
+              </ul>
+            </div>
+            <div class="bj" style="margin-right:0px;">
+              <div class="tu_w">
+                <div class="tu_tit">
+                  <p>北京市第四中学</p>
+                  <p>同地区推荐共9套试卷</p>
                 </div>
-                <ul class="tu_ul">
-                  <li>语文 西城区2016年高三期末试卷</li>
-                  <li>英语 西城区2016年高三期末试卷</li>
-                  <li>理科数学 西城区2016年高三期末试卷</li>
-                </ul>
               </div>
-              <!-- 各种名校 -->
-              <div class="bj_list">
-                <el-tag>北京市八一学校</el-tag>
-                <el-tag type="success">北京师范大学第二附属中学</el-tag>
-                <el-tag type="info">东北师范大学附属中学</el-tag>
-                <el-tag type="warning">上海中学</el-tag>
-                <el-tag type="success">衡水中学</el-tag>
-                <el-tag type="info">南京外国语学校</el-tag>
-                <el-tag type="warning">成都市第七中学</el-tag>
-              </div>
+              <ul class="tu_ul">
+                <li>语文 西城区2016年高三期末试卷</li>
+                <li>英语 西城区2016年高三期末试卷</li>
+                <li>理科数学 西城区2016年高三期末试卷</li>
+              </ul>
+            </div>
+            <!-- 各种名校 -->
+            <div class="bj_list">
+              <el-tag>北京市八一学校</el-tag>
+              <el-tag type="success">北京师范大学第二附属中学</el-tag>
+              <el-tag type="info">东北师范大学附属中学</el-tag>
+              <el-tag type="warning">上海中学</el-tag>
+              <el-tag type="success">衡水中学</el-tag>
+              <el-tag type="info">南京外国语学校</el-tag>
+              <el-tag type="warning">成都市第七中学</el-tag>
             </div>
           </div>
         </div>
-        <!-- 资格考试专区 -->
-        <div class="cation">
-          <p class="cat_p">资格考试专区</p>
-          <div class="cation_end"></div>
-          <!-- 专区 -->
-          <div class="accou">
-            <!-- one -->
-            <div class="accou_one">
-              <div class="acc_cai">
-                <div class="acc_img"></div>
-                <div class="acc_p">
-                  <p>财会类</p>
-                  <p>5门考试</p>
-                </div>
-              </div>
-              <div class="acc_kuai">
-                <span>会计从业资格</span>
-                <span>初级会计师</span>
-                <span>中级会计师</span>
-                <span>注册会计师CPA</span>
-                <span>中级经济师</span>
+      </div>
+      <!-- 资格考试专区 -->
+      <div class="cation">
+        <p class="cat_p">资格考试专区</p>
+        <div class="cation_end"></div>
+        <!-- 专区 -->
+        <div class="accou">
+          <!-- one -->
+          <div class="accou_one">
+            <div class="acc_cai">
+              <div class="acc_img"></div>
+              <div class="acc_p">
+                <p>财会类</p>
+                <p>5门考试</p>
               </div>
             </div>
-            <!-- two -->
-            <div class="accou_one" style="margin-left: 150px;">
-              <div class="acc_cai">
-                <div class="acc_imga"></div>
-                <div class="acc_p">
-                  <p>建筑类</p>
-                  <p>2门考试</p>
-                </div>
-              </div>
-              <div class="acc_kuai">
-                <span>一级建造师</span>
-                <span>二级建造师</span>
+            <div class="acc_kuai">
+              <span>会计从业资格</span>
+              <span>初级会计师</span>
+              <span>中级会计师</span>
+              <span>注册会计师CPA</span>
+              <span>中级经济师</span>
+            </div>
+          </div>
+          <!-- two -->
+          <div class="accou_one" style="margin-left: 150px;">
+            <div class="acc_cai">
+              <div class="acc_imga"></div>
+              <div class="acc_p">
+                <p>建筑类</p>
+                <p>2门考试</p>
               </div>
             </div>
-            <!-- three -->
-            <div class="accou_one">
-              <div class="acc_cai">
-                <div class="acc_imgb"></div>
-                <div class="acc_p">
-                  <p>职业资格类</p>
-                  <p>4门考试</p>
-                </div>
-              </div>
-              <div class="acc_kuai" style="border:none;">
-                <span>教师资格证</span>
-                <span>企业法律顾问</span>
-                <span>社会工作师</span>
-                <span>助理社会工作师</span>
+            <div class="acc_kuai">
+              <span>一级建造师</span>
+              <span>二级建造师</span>
+            </div>
+          </div>
+          <!-- three -->
+          <div class="accou_one">
+            <div class="acc_cai">
+              <div class="acc_imgb"></div>
+              <div class="acc_p">
+                <p>职业资格类</p>
+                <p>4门考试</p>
               </div>
             </div>
-            <!-- four -->
-            <div class="accou_one" style="margin-left: 150px;">
-              <div class="acc_cai">
-                <div class="acc_imgc"></div>
-                <div class="acc_p">
-                  <p>公务员</p>
-                  <p>2门考试</p>
-                </div>
+            <div class="acc_kuai" style="border:none;">
+              <span>教师资格证</span>
+              <span>企业法律顾问</span>
+              <span>社会工作师</span>
+              <span>助理社会工作师</span>
+            </div>
+          </div>
+          <!-- four -->
+          <div class="accou_one" style="margin-left: 150px;">
+            <div class="acc_cai">
+              <div class="acc_imgc"></div>
+              <div class="acc_p">
+                <p>公务员</p>
+                <p>2门考试</p>
               </div>
-              <div class="acc_kuai" style="border:none;">
-                <span>警察招考</span>
-                <span>政法干警</span>
-              </div>
+            </div>
+            <div class="acc_kuai" style="border:none;">
+              <span>警察招考</span>
+              <span>政法干警</span>
             </div>
           </div>
         </div>
-        <!-- 教材教辅专区 -->
-        <div class="book">
-          <p class="book_p">教材教辅专区</p>
-          <div class="book_list"></div>
-          <!-- 标题 -->
-          <h3 class="book_h">
-            中小学教辅资源
-            <span class="book_s">90149本</span>
-          </h3>
-          <!-- 学校 -->
-          <div class="school">
-            <div class="gao">
-              <div class="maxk"></div>
-              <span>高中</span>
-            </div>
-            <div class="chu">
-              <div class="maxk"></div>
-              <span>初中</span>
-            </div>
-            <div class="xiao">
-              <div class="maxk"></div>
-              <span>小学</span>
-            </div>
+      </div>
+      <!-- 教材教辅专区 -->
+      <div class="book">
+        <p class="book_p">教材教辅专区</p>
+        <div class="book_list"></div>
+        <!-- 标题 -->
+        <h3 class="book_h">
+          中小学教辅资源
+          <span class="book_s">90149本</span>
+        </h3>
+        <!-- 学校 -->
+        <div class="school">
+          <div class="gao">
+            <div class="maxk"></div>
+            <span>高中</span>
+          </div>
+          <div class="chu">
+            <div class="maxk"></div>
+            <span>初中</span>
+          </div>
+          <div class="xiao">
+            <div class="maxk"></div>
+            <span>小学</span>
           </div>
         </div>
-        <!-- 二级 -->
-        <div class="book">
-          <p class="book_p">教材教辅专区</p>
-          <div class="book_list"></div>
-          <!-- 标题 -->
-          <h3 class="book_h">
-            大学教辅资源
-            <span class="book_s">6256本</span>
-          </h3>
-          <!-- 大学 -->
-          <div class="coll">
-            <a href="#" v-for="(item6,i6) in bigs" :key="i6">{{item6.big_teacher_name}}</a>
-          </div>
+      </div>
+      <!-- 二级 -->
+      <div class="book">
+        <p class="book_p">教材教辅专区</p>
+        <div class="book_list"></div>
+        <!-- 标题 -->
+        <h3 class="book_h">
+          大学教辅资源
+          <span class="book_s">6256本</span>
+        </h3>
+        <!-- 大学 -->
+        <div class="coll">
+          <a href="#" v-for="(item6,i6) in bigs" :key="i6">{{item6.big_teacher_name}}</a>
         </div>
-      </el-main>
+      </div>
+      <!-- </el-main> -->
       <el-footer></el-footer>
     </el-container>
   </div>
@@ -311,6 +434,7 @@
 <script>
 import "../css/box.css";
 import "../css/iconfont/iconfont.css";
+import "../js/box.js"
 export default {
   data() {
     return {
@@ -363,15 +487,25 @@ export default {
       }
       //把获取到的数据给MenusLsit
       this.MenusList = res.data.tabs;
-      // console.log(this.MenusList)
+      // console.log(this.MenusList);
+      // this.MenusLists = res.data.tabs;
       // 把cat_son_name用split切割 用逗号隔开
-      this.MenusList.forEach(item => {
+      // this.MenusList.forEach(item => {
+      // item.cat_son_name = item.cat_son_name
+      // ? item.cat_son_name.split(",")
+      // : [];
+      // this.MenusLists = item.cat_son_name;
+      // });
+      // this.MenusLists = res.data.tabs;
+      // window.console.log(this.MenusLists);
+
+      res.data.tabs.forEach(item => {
         item.cat_son_name = item.cat_son_name
           ? item.cat_son_name.split(",")
           : [];
-        this.MenusLists = item.cat_son_name;
       });
-      // console.log(this.MenusLists);
+      this.MenusLists = res.data.tabs;
+      // window.console.log(this.MenusLists);
     },
     // 获取章节学习
     async getLists() {
@@ -427,7 +561,7 @@ export default {
     async getColls() {
       // 发起axios
       const { data: res } = await this.$http.get("bigteacher");
-      window.console.log(res);
+      // window.console.log(res);
       this.bigs = res.data;
     }
   }
@@ -435,6 +569,64 @@ export default {
 </script>
 
 <style scoped>
+.non {
+  width: 1182px;
+  margin: 0 auto;
+  position: relative;
+  top: -350px;
+  z-index: 99;
+}
+.non_ul {
+  position: absolute;
+  top: -16px;
+  height: 350px;
+  z-index: 99;
+  width: 230px;
+}
+.non_ul > li {
+  list-style: none;
+  height: 49px;
+  line-height: 49px;
+  color: #fff;
+  font-size: 14px;
+  padding-left: 20px;
+  background-color: #000;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  border-bottom: 1px solid #1e1e1e;
+  position: relative;
+}
+.non_ul span {
+  position: absolute;
+  right: 20px;
+  top: -1px;
+}
+.stion {
+  /* display: none; */
+  top: 0;
+  position: absolute;
+  z-index: 999;
+  left: 270px;
+  background-color: #fff;
+  opacity: 0.95;
+  min-height: 350px;
+  max-width: 950px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+}
+.stion li {
+  list-style: none;
+}
+.stion li>:hover{
+  color: #11a68d;
+}
+.stion a {
+  text-decoration: none;
+  display: block;
+  width: 130px;
+  height: 50px;
+  color: #333;
+  font-size: 14px;
+}
 .el-carousel__item:nth-child(2n + 1) {
   background-image: url("../assets/images/lunbo_1.png");
   background-repeat: no-repeat;
@@ -445,12 +637,12 @@ export default {
   background-repeat: no-repeat;
   background-size: 1920px 350px;
 }
-el-main {
+/* el-main {
   position: relative;
 }
 .el-main {
   padding: 0;
-}
+} */
 .dip {
   height: 30px;
   font-size: 30px;
