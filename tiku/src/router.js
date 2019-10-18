@@ -277,20 +277,20 @@ export default new Router({
         component: () => import('./views/Cpa.vue')
       },
       // 警察招考
-      // {
-      //   path: "/pot",
-      //   component: () => import('./views/Police-test.vue')
-      // },
-      // // 政法干警
-      // {
-      //   path: "/pol",
-      //   component: () => import('./views/Politics.vue')
-      // },
-      // // 国考
-      // {
-      //   path: "/sta",
-      //   component: () => import('./views/State.vue')
-      // }
+      {
+        path: "/pot",
+        component: () => import('./views/Police-test.vue')
+      },
+      // 政法干警
+      {
+        path: "/pol",
+        component: () => import('./views/Politics.vue')
+      },
+      // 国考
+      {
+        path: "/sta",
+        component: () => import('./views/State.vue')
+      }
     ]
   },
 
