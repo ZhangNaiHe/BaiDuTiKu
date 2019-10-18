@@ -130,6 +130,21 @@ export default new Router({
       path:'/Nurse-qualification',
       component: () => import("@/components/Nurse-qualification.vue")
     },
+    // 我的首页
+    {
+      path:'/my',
+      component: () => import("@/components/My.vue")
+    },
+    // 账号设置
+    {
+      path:'/account-settings',
+      component: () => import("@/components/Account-settings.vue")
+    },
+    // 退出
+    {
+      path:'/logout',
+      component: () => import("@/components/Logout.vue")
+    },
     {
       path: "/about",
       name: "about",

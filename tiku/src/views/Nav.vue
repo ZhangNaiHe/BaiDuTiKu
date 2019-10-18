@@ -19,9 +19,9 @@
           <img src="../../public/img/head_bg.jpg" alt class="phone" />
         </div>
         <div class="wenzi">
-          <a href>我的首页</a>
-          <a href>账号设置</a>
-          <a href>退出</a>
+          <a href="/my">我的首页</a>
+          <a href="/account-settings">账号设置</a>
+          <a href="/logout">退出</a>
         </div>
       </div>
       <ul class="nav_ul">
