@@ -3,10 +3,10 @@ html,body {
     height: 100%;
     margin: 0;
     padding:0;
+    
   }
-.el-submenu__title{
-    height: 39.5px;
-    line-height: 39.5px;
+  .el-submenu__title{
+    height: 50px;
 }
 .el-tag{
   margin-top: 20px;
