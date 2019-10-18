@@ -6,6 +6,7 @@ window.onload = function () {
     window.console.log(aDiv);
     for (var i = 0; i < aLi.length; i++) {
         aLi[i].setAttribute("index", i);
+        aDiv[i].style.display = "none";
         aLi[i].onmouseover = function () {
             for (var j = 0; j < aLi.length; j++) {
                 aLi[j].removeAttribute("class");
@@ -14,18 +15,22 @@ window.onload = function () {
                 this.style.color = "#11a68d";
             }
             this.className = "active";
-            aDiv[this.getAttribute("index")].style.display = "block"
+            aDiv[this.getAttribute("index")].style.display = "block";
         }
-        // onmouseenter onmouseleave
         aLi[i].onmouseout = function () {
             this.style.backgroundColor = '#000';
             this.style.color = '#fff';
+            // this.className = '';
             // aDiv[this.getAttribute("index")].style.display = "none"
         }
-        aDiv[i].addEventListener("onmouseout",function (){
-            console.log(222)
-        },false)
+        document.querySelector('.el-carousel__container').onmouseover = function () {
+            for (let i = 0; i < aDiv.length; i++) {
+                aDiv[i].style.display = 'none';
+            }
+            for (let j = 0; j < aLi.length; j++) {
+                aLi[j].className = '';
+            }
+        }
     }
-   
-   
+
 }

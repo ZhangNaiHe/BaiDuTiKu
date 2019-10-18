@@ -2,23 +2,29 @@
   <div class="home">
     <!-- 布局 -->
     <el-container>
-      <el-header
-        style=" height: 46px;
+      <div class="he" style="    width: 1559px;
+    margin: 0 auto;">
+        <el-header
+          style=" height: 46px;
     width: 1559px;
     margin-left: -20px;
     mardin:0 auto"
-      >
-        <index-nav></index-nav>
-      </el-header>
+        >
+          <index-nav></index-nav>
+        </el-header>
+      </div>
       <!-- <el-main> -->
       <!-- 轮播图 -->
       <!-- <el-carousel height="278px">
           <el-carousel-item v-for="item in 2" :key="item"></el-carousel-item>
       </el-carousel>-->
       <!-- 菜单 -->
-      <el-carousel height="350px">
-        <el-carousel-item v-for="item in 2" :key="item"></el-carousel-item>
-      </el-carousel>
+      <div class="car" style="width: 1920px;margin: 0 auto;">
+        <el-carousel height="350px">
+          <el-carousel-item v-for="item in 2" :key="item"></el-carousel-item>
+        </el-carousel>
+      </div>
+
       <!-- <el-menu
           style="width:230px;position:absolute;top:46px;left:17.5%;z-index: 99;"
           :unique-opened="true"
@@ -434,7 +440,7 @@
 <script>
 import "../css/box.css";
 import "../css/iconfont/iconfont.css";
-import "../js/box.js"
+import "../js/box.js";
 export default {
   data() {
     return {
@@ -592,9 +598,13 @@ export default {
   padding-left: 20px;
   background-color: #000;
   opacity: 0.65;
-  filter: alpha(opacity=65);
   border-bottom: 1px solid #1e1e1e;
   position: relative;
+
+}
+.non_ul li.active{
+  background-color: #fff !important;
+  color: #11a68d !important;
 }
 .non_ul span {
   position: absolute;
@@ -602,21 +612,19 @@ export default {
   top: -1px;
 }
 .stion {
-  /* display: none; */
   top: 0;
   position: absolute;
   z-index: 999;
   left: 270px;
   background-color: #fff;
   opacity: 0.95;
-  min-height: 350px;
-  max-width: 950px;
+  height: 350px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
 }
 .stion li {
   list-style: none;
 }
-.stion li>:hover{
+.stion li > :hover {
   color: #11a68d;
 }
 .stion a {
@@ -624,6 +632,7 @@ export default {
   display: block;
   width: 130px;
   height: 50px;
+  /* line-height: 50px; */
   color: #333;
   font-size: 14px;
 }
