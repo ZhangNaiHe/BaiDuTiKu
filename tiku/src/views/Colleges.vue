@@ -716,8 +716,6 @@ body {
   color: #666;
   margin-left: 8px;
 }
-<<<<<<< Updated upstream
-=======
 
 .el-carousel__item h3 {
   color: #475669;
@@ -744,5 +742,4 @@ body {
     margin-top: 20px;
     margin-right: 149px;
 }
->>>>>>> Stashed changes
 </style>
