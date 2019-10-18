@@ -173,7 +173,6 @@ export default new Router({
       path: '/mathmath',
       component: () => import('./components/Mathmath.vue'),
     },
-
     {
       path: '/chinesemath',
       component: () => import('./components/Chinesemath.vue')
