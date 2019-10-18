@@ -1,5 +1,10 @@
 \<template>
   <div class="r">
+    <el-header style=" height: 46px;
+    width: 1559px;
+    margin-left: -20px">
+      <index-nav></index-nav>
+    </el-header>
     <div class="recruit">
       <div class="recruit_content">
         <h2>高考题库•原创编审团</h2>
@@ -284,9 +289,15 @@
               <!-- 里面加div 以下同理 -->
               <img src="../../public/img/baidu.jpg" alt style="width:100%;height:500px;" />
               <div class="news_d">
-                <h2 style="height:14px;color:white;float:left;font-weight:300;margin-top:10px;margin-left:15px;">2016高考闪电估分行动--“为梦想而战”</h2>
-                <span style="float:right;height:25px;color:white;width:25px;margin-top:10px;margin-right:15px;">1/3</span>
-                <p style="height:14px;color:white;float:left;font-weight:300;text-align:left;font-size:16px;margin-top:20px;margin-left:10px;">2016年高考期间，百名原创编审团资深名师齐聚北京，他们于考生同步作答高考题，由资深教研员对答案进行严格把关，为高考考生提供最快速、最权威的在线估分服务，让考生先一步赢得人生，让好消息早一点于大家分享</p>
+                <h2
+                  style="height:14px;color:white;float:left;font-weight:300;margin-top:10px;margin-left:15px;"
+                >2016高考闪电估分行动--“为梦想而战”</h2>
+                <span
+                  style="float:right;height:25px;color:white;width:25px;margin-top:10px;margin-right:15px;"
+                >1/3</span>
+                <p
+                  style="height:14px;color:white;float:left;font-weight:300;text-align:left;font-size:16px;margin-top:20px;margin-left:10px;"
+                >2016年高考期间，百名原创编审团资深名师齐聚北京，他们于考生同步作答高考题，由资深教研员对答案进行严格把关，为高考考生提供最快速、最权威的在线估分服务，让考生先一步赢得人生，让好消息早一点于大家分享</p>
               </div>
             </div>
             <div class="swiper-slide swiper_s">
@@ -304,7 +315,9 @@
                   style="float:right;height:25px;color:white;width:25px;margin-top:10px;margin-right:15px;"
                 >2/3</span>
 
-                <p style="height:14px;color:white;float:left;font-weight:300;text-align:left;font-size:16px;margin-top:20px;margin-left:10px;">
+                <p
+                  style="height:14px;color:white;float:left;font-weight:300;text-align:left;font-size:16px;margin-top:20px;margin-left:10px;"
+                >
                   百度文库在京进行了K12战略发布会，发布了百度首本教辅书，业界首套智能化高考教辅书《大数据透视高考》， 该套教辅书与百度高考APP联动，通过大数据分析
                   历年高考常考知识点，帮助高三考生实现智能化复习备考。
                 </p>
@@ -318,20 +331,32 @@
               />-->
               <img src="../../public/img/qc.jpg" alt style="width:100%;height:500px;" />
               <div class="news_d">
-                <h2 style="height:14px;color:white;float:left;font-weight:300;margin-top:10px;margin-left:15px;">2015高考闪电估分行动--“青春很想赢”</h2>
-                <span style="float:right;height:25px;color:white;width:25px;margin-top:10px;margin-right:15px;">3/3</span>
-                <p style="height:14px;color:white;float:left;font-weight:300;text-align:left;font-size:16px;margin-top:20px;margin-left:10px;">2015年我们首次聚在一起，于942万考生“同步”高考。没考完一科，考生可在数小时内通过百度高考快速估分。一位参与活动现场的教师感言“感谢百度让我二十年后以这种方式纪念那段青春飞扬、理想荡漾、挥斥方遒的日子”</p>
+                <h2
+                  style="height:14px;color:white;float:left;font-weight:300;margin-top:10px;margin-left:15px;"
+                >2015高考闪电估分行动--“青春很想赢”</h2>
+                <span
+                  style="float:right;height:25px;color:white;width:25px;margin-top:10px;margin-right:15px;"
+                >3/3</span>
+                <p
+                  style="height:14px;color:white;float:left;font-weight:300;text-align:left;font-size:16px;margin-top:20px;margin-left:10px;"
+                >2015年我们首次聚在一起，于942万考生“同步”高考。没考完一科，考生可在数小时内通过百度高考快速估分。一位参与活动现场的教师感言“感谢百度让我二十年后以这种方式纪念那段青春飞扬、理想荡漾、挥斥方遒的日子”</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <span class="news_bottom">
+        申请加入原创编审团
+      </span>
+      <div class="class_bb"></div>
     </div>
+    <!-- 底部 -->
+    <index-footer></index-footer>
   </div>
 </template>
 
 <script>
-import "../../node_modules/swiper/"
+import "swiper/css/swiper.css";
 import Swiper from "swiper";
 export default {
   name: "Slider",
@@ -375,6 +400,35 @@ export default {
   padding: 0;
 }
 
+.news_bottom {
+  display: block;
+  margin: 80px auto 0;
+  background-color: #fa776b;
+  color: #fff;
+  font-size: 30px;
+  line-height: 75px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: -2px;
+  width: 413px;
+  height: 75px;
+}
+.news_bottom:hover{
+  background-color: #fd9084;
+}
+.class_bb{
+  margin: 40px auto 0;
+  color: #fff;
+  font-size: 30px;
+  line-height: 75px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: -2px;
+  width: 413px;
+  height: 75px;
+}
 .swiper-wrapper {
   height: 200px;
 }
@@ -438,12 +492,12 @@ export default {
   width: 80%;
   height: 500px;
   margin: 0 auto;
-  background-color: red;
+  /* background-color: red; */
 }
 .news_d {
   position: relative;
   bottom: 120px;
-  width: 1205px;
+  width: 1214px;
   height: 120px;
   background-color: black;
   opacity: 0.7;
