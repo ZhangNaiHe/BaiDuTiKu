@@ -167,7 +167,7 @@ export default new Router({
     path: '/colleges',
     name: 'colleges',
     component: () => import("./views/Colleges.vue"),
-    redirect: '/mathmath',
+    redirect: '/chinesemath',
     children: [
       {
       path: '/mathmath',
@@ -194,13 +194,49 @@ export default new Router({
       path: '/politics',
       component: () => import('./components/Politics.vue')
     },
+    // 教师招募
     {
       path: '/history',
       component: () => import('./components/History.vue')
     },
     {
-      path: '/where',
-      component: () => import('./components/Where.vue')
+      path: '/colleges',
+      name: 'colleges',
+      component: () => import("./views/Colleges.vue"),
+      children: [
+        {
+          path: '/mathmath',
+          component: () => import('./components/Mathmath.vue')
+        },
+        {
+          path: '/chinesemath',
+          component: () => import('./components/Chinesemath.vue')
+        },
+        {
+          path: '/physics',
+          component: () => import('./components/Physics.vue')
+        },
+        {
+          path: '/chemistry',
+          component: () => import('./components/Chemistry.vue')
+        },
+        {
+          path: '/bios',
+          component: () => import('./components/Bios.vue')
+        },
+        {
+          path: '/politics',
+          component: () => import('./components/Politics.vue')
+        },
+        {
+          path: '/history',
+          component: () => import('./components/History.vue')
+        },
+        {
+          path: '/where',
+          component: () => import('./components/Where.vue')
+        }
+      ]
     },
 
     // 助理社会工作师
@@ -233,10 +269,20 @@ export default new Router({
       path: '/pa',
       component: () => import('./views/Cpa.vue')
     },
-    // 中级经济师
+    // 警察招考
     {
-      path: '/Intermediateeconomist',
-      component: () => import('./views/Intermediateeconomist.vue')
+      path:"/pot",
+      component:() => import('./views/Police-test.vue')
+    },
+    // 政法干警
+    {
+      path:"/pol",
+      component:() => import('./views/Politics.vue')
+    },
+    // 国考
+    {
+      path:"/sta",
+      component:() =>import('./views/State.vue')
     }
     ]
   },
