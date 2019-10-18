@@ -209,22 +209,22 @@ export default new Router({
 
     // 助理社会工作师
     {
-      path: "/assistantsociety",
+      path: "/ass",
       component: () => import("./views/Ass.vue")
     },
     // 一级建筑师
     {
-      path: '/oneconstructor',
+      path: '/one',
       component: () => import("./views/One.vue")
     },
     // 二级建筑师
     {
-      path: '/twoconstructor',
+      path: '/two',
       component: () => import('./views/Two.vue')
     },
     // 会计从业资格
     {
-      path: '/accountingwork',
+      path: '/acc',
       component: () => import('./views/Acc.vue')
     },
     // 中级会计师
@@ -239,7 +239,7 @@ export default new Router({
     },
     // 中级经济师
     {
-      path: '/Intermediateeconomist',
+      path: '/int',
       component: () => import('./views/Inter.vue')
     }
     ]
