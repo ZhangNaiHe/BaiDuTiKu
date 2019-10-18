@@ -303,6 +303,7 @@ export default {
   position: absolute;
   top: 0px;
   right: 166px;
+  z-index: 999;
 }
 
 .head {
@@ -392,6 +393,7 @@ export default {
   display: none;
   box-shadow: 0 0 5px rgb(163, 163, 163);
   background-color: #fff;
+  z-index: 999;
 }
 
 .scend:hover {

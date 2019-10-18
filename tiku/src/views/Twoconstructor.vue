@@ -199,7 +199,7 @@ body {
   color: #fff;
   position: relative;
   margin-right: 35px;
-  background-position: -940px -270px;
+  background-position: -1410px -270px;
 }
 
 .withyou-box-score {
@@ -210,7 +210,7 @@ body {
   height: 172px;
   color: #fff;
   position: relative;
-  background-position: 0 -540px;
+  background-position: -1410px -540px;
 }
 
 .withyou-main {
