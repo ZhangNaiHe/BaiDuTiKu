@@ -87,6 +87,7 @@
                     <!-- 试卷 -->
                     <ul>
                       <li class="parer_list" v-for="(item3,i3) in liNians" :key="i3">
+                        <span></span>
                         <p class="nian_p">{{item3.paper_name}}</p>
                         <p class="nian_s">解析|下载|估分</p>
                       </li>
@@ -122,7 +123,7 @@
                         class="parer_list"
                         v-for="(item5,i5) in hots"
                         :key="i5"
-                        style=" list-style:none;margin-bottom: 30px;"
+                        style=" list-style:none;margin-bottom: 26px;"
                       >
                         <i
                           :class="fonts[i5]"
@@ -331,7 +332,7 @@ export default {
       // 大学教材
       bigs: [],
       // 图标
-      fonts:[
+      fonts: [
         "iconfont icon-shuzi2",
         "iconfont icon-num-chart",
         "iconfont icon-shuzisan",
@@ -339,7 +340,7 @@ export default {
         "iconfont icon-shuzi6",
         "iconfont icon-shuzi3",
         "iconfont icon-shuzicai",
-        "iconfont icon-3",
+        "iconfont icon-3"
       ]
     };
   },
@@ -596,11 +597,14 @@ el-main {
   font-size: 12px;
 }
 .parer_list {
-  list-style: square;
+  list-style: none;
   margin: 20px 0;
 }
 .parer_list .nian_p:hover {
   color: #11a68d;
+}
+.parer_list span{
+
 }
 .nian_p {
   font-size: 14px;
@@ -608,12 +612,28 @@ el-main {
   line-height: 14px;
   color: #333;
 }
+.year ul {
+  margin-left: -38px;
+  font-weight: 400;
+}
+.nian_p::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-image: url("../assets/images/dian.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+}
 .nian_s {
   font-size: 12px;
   height: 12px;
   line-height: 12px;
   letter-spacing: 3px;
   color: #11a68d;
+  margin-left: 18px;
 }
 .ming_tit {
   padding-top: 20px;
