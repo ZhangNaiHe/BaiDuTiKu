@@ -2,7 +2,13 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import Nav from './views/Nav.vue';
+<<<<<<< Updated upstream
 Vue.component("index-nav", Nav)
+=======
+
+import chuizhi from "./components/chuizhilunbo.vue";
+Vue.component("chui-zhi",chuizhi)
+>>>>>>> Stashed changes
 Vue.use(Router);
 
 export default new Router({
@@ -164,6 +170,7 @@ export default new Router({
       path: '/colleges',
       name: 'colleges',
       component: () => import("./views/Colleges.vue"),
+<<<<<<< Updated upstream
       children: [{
           path: '/mathmath',
           component: () => import('./components/Mathmath.vue')
@@ -196,6 +203,42 @@ export default new Router({
           path: '/where',
           component: () => import('./components/Where.vue')
         }
+=======
+      redirect: '/mathmath',
+      children: [
+      {
+         path: '/mathmath',
+         component: () => import('./components/Mathmath.vue')
+      },
+      {
+        path: '/chinesemath',
+        component: () => import('./components/Chinesemath.vue')
+      },
+      {
+        path: '/physics',
+        component: () => import('./components/Physics.vue')
+      },
+      {
+        path: '/chemistry',
+        component: () => import('./components/Chemistry.vue')
+      },
+      {
+        path: '/bios',
+        component: () => import('./components/Bios.vue')
+      },
+      {
+        path: '/politics',
+        component: () => import('./components/Politics.vue')
+      },
+    {
+      path: '/history',
+      component: () => import('./components/History.vue')
+    },
+    {
+      path: '/where',
+      component: () => import('./components/Where.vue')
+    }
+>>>>>>> Stashed changes
       ]
     },
     // 助理社会工作师

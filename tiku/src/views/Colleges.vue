@@ -12,6 +12,7 @@
 
     <!-- 中部start -->
     <!-- <el-card class="box-card"> -->
+
     <span class="headtext" style="font-size : 30px">伴您走过</span>
     <br />
     <span class="headtexttwo" style="font-size : 10px">学习中每一个阶段</span>
@@ -89,6 +90,10 @@
           <router-view></router-view>
         </div>
       </div>
+      <!-- 评论轮播图 -->
+      <div class="pinglun">
+        <chui-zhi></chui-zhi>
+      </div>
     </div>
     <!-- 章节学习结束 -->
 
@@ -135,32 +140,18 @@
         <div class="paper-list-wrap">
           <h3 class="paper-title">
             模拟试卷
-            <a
-              class="list-more-link"
-              href="/tikupc/paperlist/1bfd700abb68a98271fefa04-0-4-0-37-1-download"
-            >更多模拟试卷 &gt;</a>
+            <a class="list-more-link">更多模拟试卷 &gt;</a>
           </h3>
 
           <ul class="paper-list paper-list-moni">
             <li class="list-item" v-for="(item,index) in papertwolist" :key="index">
               <p class="list-item-name">
-                <a
-                  class="list-item-name-link"
-                  href="/tikupc/paperdetail/fc3396160b4e767f5acfce7a"
-                >{{item.paper_name}}</a>
+                <a class="list-item-name-link">{{item.paper_name}}</a>
               </p>
               <p class="list-item-detail">
-                <a
-                  class="list-item-link"
-                  href="/tikupc/paperdetail/fc3396160b4e767f5acfce7a?showan=1"
-                  data-paperid="fc3396160b4e767f5acfce7a"
-                >解析</a>
+                <a class="list-item-link">解析</a>
                 <span class="item-separate">|</span>
-                <a
-                  href="/tikupc/paperdetail/fc3396160b4e767f5acfce7a"
-                  class="list-item-link"
-                  data-paperid="fc3396160b4e767f5acfce7a"
-                >下载</a>
+                <a class="list-item-link">下载</a>
               </p>
             </li>
           </ul>
@@ -171,14 +162,11 @@
         <div class="hotpaper-list-wrap">
           <h3 class="hotpaper-title">
             热门试卷
-            <a
-              class="list-more-link"
-              href="/tikupc/paperlist/1bfd700abb68a98271fefa04-0-0-0-37-1-download"
-            >更多热门试卷 &gt;</a>
+            <a class="list-more-link">更多热门试卷 &gt;</a>
           </h3>
           <ul class="hotpaper-list">
             <li class="hotpaper-list-item" v-for="(item,index) in paperthreelist" :key="index">
-              <a class="hotpaper-name" href="/tikupc/paperdetail/d08fb966f5335a8102d220a5">
+              <a class="hotpaper-name">
                 <span class="hotpaper-rank rank-1"></span>
                 {{item.paper_name}}
               </a>
@@ -192,20 +180,13 @@
       <div class="school-paper-container homepage-school-container">
         <h3 class="school-container-title">
           名校精品试卷
-          <a
-            class="school-paper-more-link"
-            href="/tikupc/paperlist/1bfd700abb68a98271fefa04-0-7-0-0-1-download"
-          >更多名校精品卷 &gt;</a>
+          <a class="school-paper-more-link">更多名校精品卷 &gt;</a>
         </h3>
 
         <div class="school-list">
           <div class="school-list-item">
             <div class="school-wrap school-wrap-bg1">
-              <a
-                class="famous-school-link"
-                href="/tikupc/paperlist/1bfd700abb68a98271fefa04-0-0-0-0-1-download?school_id=924cf7ec4afe04a1b071de05"
-                data-schoolid="924cf7ec4afe04a1b071de05"
-              >
+              <a class="famous-school-link">
                 <div class="school-info">
                   <p class="name">北京大学附属中学</p>
                   <p class="info">
@@ -219,38 +200,22 @@
 
             <ul class="paper-wrap">
               <li class="paper-item">
-                <a
-                  class="paper-item-name"
-                  data-paperid="5ff2971ea76e58fafab0030f"
-                  href="/tikupc/paperdetail/5ff2971ea76e58fafab0030f"
-                >语文 海淀区2016年高三期末试卷</a>
+                <a class="paper-item-name">语文 海淀区2016年高三期末试卷</a>
               </li>
 
               <li class="paper-item">
-                <a
-                  class="paper-item-name"
-                  data-paperid="6c202ec58bd63186bcebbce0"
-                  href="/tikupc/paperdetail/6c202ec58bd63186bcebbce0"
-                >英语 海淀区2016年高三期末试卷</a>
+                <a class="paper-item-name">英语 海淀区2016年高三期末试卷</a>
               </li>
 
               <li class="paper-item">
-                <a
-                  class="paper-item-name"
-                  data-paperid="cff250d380eb6294dd886ce5"
-                  href="/tikupc/paperdetail/cff250d380eb6294dd886ce5"
-                >理科数学 海淀区2016年高三期末试卷</a>
+                <a class="paper-item-name">理科数学 海淀区2016年高三期末试卷</a>
               </li>
             </ul>
           </div>
 
           <div class="school-list-item">
             <div class="school-wrap school-wrap-bg2">
-              <a
-                class="famous-school-link"
-                href="/tikupc/paperlist/1bfd700abb68a98271fefa04-0-0-0-0-1-download?school_id=61fe04a1b0717fd5360cdc05"
-                data-schoolid="61fe04a1b0717fd5360cdc05"
-              >
+              <a class="famous-school-link">
                 <div class="school-info">
                   <p class="name">北京市第一零一中学</p>
                   <p class="info">
@@ -264,22 +229,14 @@
 
             <ul class="paper-wrap">
               <li class="paper-item">
-                <a
-                  class="paper-item-name"
-                  data-paperid="126c551252d380eb62946d03"
-                  href="/tikupc/paperdetail/126c551252d380eb62946d03"
-                >化学 海淀区2016年高三期末试卷</a>
+                <a class="paper-item-name">化学 海淀区2016年高三期末试卷</a>
               </li>
             </ul>
           </div>
 
           <div class="school-list-item school-list-item-lastchild">
             <div class="school-wrap school-wrap-bg3">
-              <a
-                class="famous-school-link"
-                href="/tikupc/paperlist/1bfd700abb68a98271fefa04-0-0-0-0-1-download?school_id=8138376baf1ffc4ffe47ac05"
-                data-schoolid="8138376baf1ffc4ffe47ac05"
-              >
+              <a class="famous-school-link">
                 <div class="school-info">
                   <p class="name">北京市第四中学</p>
                   <p class="info">
@@ -293,27 +250,15 @@
 
             <ul class="paper-wrap">
               <li class="paper-item">
-                <a
-                  class="paper-item-name"
-                  data-paperid="0432a717866fb84ae45c8d42"
-                  href="/tikupc/paperdetail/0432a717866fb84ae45c8d42"
-                >语文 西城区2016年高三期末试卷</a>
+                <a class="paper-item-name">语文 西城区2016年高三期末试卷</a>
               </li>
 
               <li class="paper-item">
-                <a
-                  class="paper-item-name"
-                  data-paperid="1a0c0366f5335a8102d22026"
-                  href="/tikupc/paperdetail/1a0c0366f5335a8102d22026"
-                >英语 西城区2016年高三期末试卷</a>
+                <a class="paper-item-name">英语 西城区2016年高三期末试卷</a>
               </li>
 
               <li class="paper-item">
-                <a
-                  class="paper-item-name"
-                  data-paperid="6623a46e58fafab069dc0238"
-                  href="/tikupc/paperdetail/6623a46e58fafab069dc0238"
-                >理科数学 西城区2016年高三期末试卷</a>
+                <a class="paper-item-name">理科数学 西城区2016年高三期末试卷</a>
               </li>
             </ul>
           </div>
@@ -321,52 +266,24 @@
       </div>
 
       <div class="more-school-list">
-        <a
-          class="more-school-name"
-          href="/tikupc/paperlist/1bfd700abb68a98271fefa04-0-0-0-0-1-download?school_id=74c008a1284ac850ad024202"
-          data-schoolid="74c008a1284ac850ad024202"
-        >北京市八一学校</a>
+        <a class="more-school-name">北京市八一学校</a>
 
-        <a
-          class="more-school-name"
-          href="/tikupc/paperlist/1bfd700abb68a98271fefa04-0-0-0-0-1-download?school_id=82e09b89680203d8ce2f2402"
-          data-schoolid="82e09b89680203d8ce2f2402"
-        >北京师范大学第二附属中学</a>
+        <a class="more-school-name">北京师范大学第二附属中学</a>
 
-        <a
-          class="more-school-name"
-          href="/tikupc/paperlist/1bfd700abb68a98271fefa04-0-0-0-0-1-download?school_id=29d628ea81c758f5f61f6706"
-          data-schoolid="29d628ea81c758f5f61f6706"
-        >东北师范大学附属中学</a>
+        <a class="more-school-name">东北师范大学附属中学</a>
 
-        <a
-          class="more-school-name"
-          href="/tikupc/paperlist/1bfd700abb68a98271fefa04-0-0-0-0-1-download?school_id=140e52ea551810a6f5248605"
-          data-schoolid="140e52ea551810a6f5248605"
-        >上海中学</a>
+        <a class="more-school-name">上海中学</a>
 
-        <a
-          class="more-school-name"
-          href="/tikupc/paperlist/1bfd700abb68a98271fefa04-0-0-0-0-1-download?school_id=924bf7ec4afe04a1b071de02"
-          data-schoolid="924bf7ec4afe04a1b071de02"
-        >衡水中学</a>
+        <a class="more-school-name">衡水中学</a>
 
-        <a
-          class="more-school-name"
-          href="/tikupc/paperlist/1bfd700abb68a98271fefa04-0-0-0-0-1-download?school_id=61fc04a1b0717fd5360cdc07"
-          data-schoolid="61fc04a1b0717fd5360cdc07"
-        >南京外国语学校</a>
+        <a class="more-school-name">南京外国语学校</a>
 
-        <a
-          class="more-school-name"
-          href="/tikupc/paperlist/1bfd700abb68a98271fefa04-0-0-0-0-1-download?school_id=14c09ec3d5bbfd0a79567303"
-          data-schoolid="14c09ec3d5bbfd0a79567303"
-        >成都市第七中学</a>
+        <a class="more-school-name">成都市第七中学</a>
       </div>
     </div>
     <!-- </el-main> -->
     <!-- 中部结束 -->
-    <el-footer>Footer</el-footer>
+    <el-footer></el-footer>
   </el-container>
 </template>
 
@@ -417,7 +334,7 @@ body {
 
 .el-container {
   /* width: 1519.2px; */
-  height: 100%;
+  height: 10000px;
 }
 
 .el-main {
@@ -799,4 +716,33 @@ body {
   color: #666;
   margin-left: 8px;
 }
+<<<<<<< Updated upstream
+=======
+
+.el-carousel__item h3 {
+  color: #475669;
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 200px;
+  margin: 0;
+}
+
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
+}
+
+
+.pinglun {
+    width: 380px;
+    height: 506px;
+    background-color: red;
+    float: right;
+    margin-top: 20px;
+    margin-right: 149px;
+}
+>>>>>>> Stashed changes
 </style>
