@@ -134,11 +134,6 @@ export default new Router({
       path: '/my',
       component: () => import("@/components/My.vue")
     },
-    // 账号设置
-    {
-      path: '/account-settings',
-      component: () => import("@/components/Account-settings.vue")
-    },
     // 退出
     {
       path: '/logout',
@@ -205,8 +200,13 @@ export default new Router({
     },
     // 助理社会工作师
     {
-      path: "/Assistantsociety",
-      component: () => import("./views/Assistant-society.vue")
+      path: "/assistantsociety",
+      component: () => import("./views/Assistantsociety.vue")
+    },
+    // 一级建筑师
+    {
+      path:'/oneconstructor',
+      component: () => import("./views/Oneconstructor.vue")
     }
   ]
 });

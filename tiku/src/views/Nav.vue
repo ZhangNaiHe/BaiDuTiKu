@@ -20,7 +20,6 @@
         </div>
         <div class="wenzi">
           <a href="/my">我的首页</a>
-          <a href="/account-settings">账号设置</a>
           <a href="/logout">退出</a>
         </div>
       </div>
@@ -299,11 +298,11 @@ export default {
 .chong {
   display: none;
   width: 75px;
-  height: 140px;
+  height: 110px;
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0px;
-  right: 167px;
+  right: 174px;
 }
 
 .head {
