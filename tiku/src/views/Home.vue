@@ -9,18 +9,18 @@
       </el-header>
       <el-main>
         <!-- 轮播图 -->
-        <el-carousel height="278px">
+        <!-- <el-carousel height="278px">
+          <el-carousel-item v-for="item in 2" :key="item"></el-carousel-item>
+        </el-carousel>-->
+        <!-- 菜单 -->
+        <el-carousel height="350px">
           <el-carousel-item v-for="item in 2" :key="item"></el-carousel-item>
         </el-carousel>
-        <!-- 菜单 -->
         <el-menu
-          background-color="#545c64"
-          text-color="#fff"
-          active-text-color="#ffd04b"
           style="width:230px;position:absolute;top:46px;left:17.5%;z-index: 99;"
           :unique-opened="true"
         >
-          <el-submenu :index="i" v-for="(item,i) in MenusList" :key="item.cat_father_id">
+          <el-submenu :index="i" v-for="(item,i) in MenusList" :key="item.cat_father_id" style="color: #fff;opacity:.65;backgroundColor:#000">
             <template slot="title">
               <span slot="title">{{item.cat_name}}</span>
             </template>
@@ -64,8 +64,7 @@
                 </h3>
               </div>
               <!-- 轮播 -->
-              <div class="someconn">
-              </div>
+              <div class="someconn"></div>
             </div>
           </div>
           <!-- 考试资源 -->
@@ -439,14 +438,12 @@ export default {
 .el-carousel__item:nth-child(2n + 1) {
   background-image: url("../assets/images/lunbo_1.png");
   background-repeat: no-repeat;
-  background-size: 100%;
-  opacity: 0.75;
+  background-size: 1920px 350px;
 }
 .el-carousel__item:nth-child(2n) {
   background-image: url("../assets/images/lunbo_2.jpg ");
   background-repeat: no-repeat;
-  background-size: 100%;
-  opacity: 0.75;
+  background-size: 1920px 350px;
 }
 el-main {
   position: relative;
