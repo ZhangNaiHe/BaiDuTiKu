@@ -75,9 +75,10 @@
       <div class="search-subject-choose">
         <p class="choose-subject">
           <!-- 子路由 -->
-          <router-link class="subject-demo" to="/mathmath">中级经济法</router-link>
-          <router-link class="subject-demo" to="/chinesemath">中级会计实务</router-link>
-          <router-link class="subject-demo" to="/physics">中级财政管理</router-link>
+          <router-link class="subject-demo" to="/mathmath">药事管理与法规</router-link>
+          <router-link class="subject-demo" to="/chinesemath">药学综合知识与技能</router-link>
+          <router-link class="subject-demo" to="/physics">药学专业知识一</router-link>
+          <router-link class="subject-demo" to="/physics">药学专业知识二</router-link>
         </p>
         <div>
           <!-- 子组件显示 -->
