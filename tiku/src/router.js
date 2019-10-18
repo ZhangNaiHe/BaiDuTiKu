@@ -241,6 +241,61 @@ export default new Router({
     {
       path: '/int',
       component: () => import('./views/Inter.vue')
+    },
+    // 初级会计师
+    {
+      path:"/jun",
+      component: () => import('./views/Junior.vue')
+    },
+    // 计算机四级
+    {
+      path: '/com',
+      component: () => import('./views/Computer.vue')
+    },
+    // 警察招考
+    {
+      path: '/pot',
+      component: () => import('./views/Police-test.vue')
+    },
+    // 政法干警
+    {
+      path: '/pol',
+      component: () => import('./views/Politics.vue')
+    },
+    // 国考
+    {
+      path: '/state',
+      component: () => import('./views/State.vue')
+    },
+    // 临床执业医师
+    {
+      path: '/pra',
+      component: () => import('./views/Practice.vue')
+    },
+    // 临床助理医师
+    {
+      path: '/aid',
+      component: () => import('./views/Aid.vue')
+    },
+    // 职业中药医师
+    {
+      path: '/tcm',
+      component: () => import('./views/Tcm.vue')
+    },
+    // 执业西药师
+    {
+      path: '/wes',
+      component: () => import('./views/Western.vue')
+    },
+    // 护士资格
+    {
+      path: '/nurse',
+      component: () => import('./views/Nurse.vue')
+    },
+    // 考研
+    {
+      path: '/res',
+      component: () => import('./views/Research.vue')
     }
     ]
   },

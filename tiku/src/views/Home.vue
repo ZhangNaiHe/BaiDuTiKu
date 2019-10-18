@@ -75,33 +75,33 @@
         <div class="stion">
           <ul>
             <li>
-              <a href="#">高考</a>
+              <a href="/colleges">高考</a>
             </li>
           </ul>
         </div>
         <div class="stion">
           <ul>
             <li>
-              <a href="#">一级建造师</a>
+              <a href="/one">一级建造师</a>
             </li>
             <li>
-              <a href="#">二级建造师</a>
+              <a href="/two">二级建造师</a>
             </li>
           </ul>
         </div>
         <div class="stion">
           <ul>
             <li>
-              <a href="#">会计从业资格</a>
+              <a href="/acc">会计从业资格</a>
             </li>
             <li>
-              <a href="#">中级会计师</a>
+              <a href="/semisenior">中级会计师</a>
             </li>
             <li>
-              <a href="#">注册会计师CPA</a>
+              <a href="/pa">注册会计师CPA</a>
             </li>
             <li>
-              <a href="#">中级经济师</a>
+              <a href="/int">中级经济师</a>
             </li>
             <li>
               <a href="#">初级会计师</a>
