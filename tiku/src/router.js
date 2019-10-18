@@ -153,9 +153,17 @@ export default new Router({
     path: '/login',
     component: () => import("@/components/Login.vue")
   },
-   {
+  {
     path: '/register',
     component: () => import("@/components/Register.vue")
+  },
+  {
+    path: '/study',
+    component: () => import("@/components/Study.vue"),
+    children: [{
+      path: '/study',
+      component: () => import('./components/S-Menu.vue')
+    }]
   },
   {
     path: "/r",
@@ -170,119 +178,119 @@ export default new Router({
     redirect: '/chinesemath',
     children: [
       {
-      path: '/mathmath',
-      component: () => import('./components/Mathmath.vue'),
-    },
-    {
-      path: '/chinesemath',
-      component: () => import('./components/Chinesemath.vue')
-    },
-    {
-      path: '/physics',
-      component: () => import('./components/Physics.vue')
-    },
-    {
-      path: '/chemistry',
-      component: () => import('./components/Chemistry.vue')
-    },
-    {
-      path: '/bios',
-      component: () => import('./components/Bios.vue')
-    },
-    {
-      path: '/politics',
-      component: () => import('./components/Politics.vue')
-    },
-    // 教师招募
-    {
-      path: '/history',
-      component: () => import('./components/History.vue')
-    },
-    {
-      path: '/colleges',
-      name: 'colleges',
-      component: () => import("./views/Colleges.vue"),
-      children: [
-        {
-          path: '/mathmath',
-          component: () => import('./components/Mathmath.vue')
-        },
-        {
-          path: '/chinesemath',
-          component: () => import('./components/Chinesemath.vue')
-        },
-        {
-          path: '/physics',
-          component: () => import('./components/Physics.vue')
-        },
-        {
-          path: '/chemistry',
-          component: () => import('./components/Chemistry.vue')
-        },
-        {
-          path: '/bios',
-          component: () => import('./components/Bios.vue')
-        },
-        {
-          path: '/politics',
-          component: () => import('./components/Politics.vue')
-        },
-        {
-          path: '/history',
-          component: () => import('./components/History.vue')
-        },
-        {
-          path: '/where',
-          component: () => import('./components/Where.vue')
-        }
-      ]
-    },
+        path: '/mathmath',
+        component: () => import('./components/Mathmath.vue'),
+      },
+      {
+        path: '/chinesemath',
+        component: () => import('./components/Chinesemath.vue')
+      },
+      {
+        path: '/physics',
+        component: () => import('./components/Physics.vue')
+      },
+      {
+        path: '/chemistry',
+        component: () => import('./components/Chemistry.vue')
+      },
+      {
+        path: '/bios',
+        component: () => import('./components/Bios.vue')
+      },
+      {
+        path: '/politics',
+        component: () => import('./components/Politics.vue')
+      },
+      // 教师招募
+      {
+        path: '/history',
+        component: () => import('./components/History.vue')
+      },
+      {
+        path: '/colleges',
+        name: 'colleges',
+        component: () => import("./views/Colleges.vue"),
+        children: [
+          {
+            path: '/mathmath',
+            component: () => import('./components/Mathmath.vue')
+          },
+          {
+            path: '/chinesemath',
+            component: () => import('./components/Chinesemath.vue')
+          },
+          {
+            path: '/physics',
+            component: () => import('./components/Physics.vue')
+          },
+          {
+            path: '/chemistry',
+            component: () => import('./components/Chemistry.vue')
+          },
+          {
+            path: '/bios',
+            component: () => import('./components/Bios.vue')
+          },
+          {
+            path: '/politics',
+            component: () => import('./components/Politics.vue')
+          },
+          {
+            path: '/history',
+            component: () => import('./components/History.vue')
+          },
+          {
+            path: '/where',
+            component: () => import('./components/Where.vue')
+          }
+        ]
+      },
 
-    // 助理社会工作师
-    {
-      path: "/assistantsociety",
-      component: () => import("./views/Assistantsociety.vue")
-    },
-    // 一级建筑师
-    {
-      path: '/oneconstructor',
-      component: () => import("./views/Oneconstructor.vue")
-    },
-    // 二级建筑师
-    {
-      path: '/twoconstructor',
-      component: () => import('./views/Twoconstructor.vue')
-    },
-    // 会计从业资格
-    {
-      path: '/accountingwork',
-      component: () => import('./views/Accountingwork.vue')
-    },
-    // 中级会计师
-    {
-      path: '/semisenior',
-      component: () => import('./views/Semisenior.vue')
-    },
-    // 注册会计师CPA
-    {
-      path: '/pa',
-      component: () => import('./views/Cpa.vue')
-    },
-    // 警察招考
-    {
-      path:"/pot",
-      component:() => import('./views/Police-test.vue')
-    },
-    // 政法干警
-    {
-      path:"/pol",
-      component:() => import('./views/Politics.vue')
-    },
-    // 国考
-    {
-      path:"/sta",
-      component:() =>import('./views/State.vue')
-    }
+      // 助理社会工作师
+      {
+        path: "/assistantsociety",
+        component: () => import("./views/Assistantsociety.vue")
+      },
+      // 一级建筑师
+      {
+        path: '/oneconstructor',
+        component: () => import("./views/Oneconstructor.vue")
+      },
+      // 二级建筑师
+      {
+        path: '/twoconstructor',
+        component: () => import('./views/Twoconstructor.vue')
+      },
+      // 会计从业资格
+      {
+        path: '/accountingwork',
+        component: () => import('./views/Accountingwork.vue')
+      },
+      // 中级会计师
+      {
+        path: '/semisenior',
+        component: () => import('./views/Semisenior.vue')
+      },
+      // 注册会计师CPA
+      {
+        path: '/pa',
+        component: () => import('./views/Cpa.vue')
+      },
+      // 警察招考
+      {
+        path: "/pot",
+        component: () => import('./views/Police-test.vue')
+      },
+      // 政法干警
+      {
+        path: "/pol",
+        component: () => import('./views/Politics.vue')
+      },
+      // 国考
+      {
+        path: "/sta",
+        component: () => import('./views/State.vue')
+      }
     ]
   },
 
