@@ -64,7 +64,8 @@
                 </h3>
               </div>
               <!-- 轮播 -->
-              <div class="someconn"></div>
+              <div class="someconn">
+              </div>
             </div>
           </div>
           <!-- 考试资源 -->
@@ -303,9 +304,7 @@
           </div>
         </div>
       </el-main>
-      <el-footer>
-        
-      </el-footer>
+      <el-footer></el-footer>
     </el-container>
   </div>
 </template>
