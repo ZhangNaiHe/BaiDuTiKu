@@ -499,20 +499,25 @@ body {
 .withyou-main p {
   margin-left: 35px;
   margin-top: 2px;
+  color: #fff;
 }
 
 .box-title-name {
   font-size: 30px;
   padding-bottom: 11px;
-  line-height: 49px;
+  line-height: 85px;
   height: 45px;
   text-decoration: none;
 }
 
 .box-title-detail {
   font-size: 14px;
-  line-height: 15px;
-  height: 70px;
+  line-height: 40px;
+  height: 60px;
+}
+
+.box-content {
+  font-size: 15px;
 }
 
 .search-subject {
