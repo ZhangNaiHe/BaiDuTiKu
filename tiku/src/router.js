@@ -2,14 +2,13 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import Nav from './views/Nav.vue';
-
+Vue.component("index-nav",Nav)
 Vue.use(Router);
 
 export default new Router({
   mode: "history",
   base: process.env.BASE_URL,
-  routes: [
-    {
+  routes: [{
       path: "/",
       name: "home",
       component: Home
@@ -22,127 +21,127 @@ export default new Router({
     },
     // 社会工作师
     {
-      path:'/Society',
+      path: '/Society',
       component: () => import("@/components/Society.vue")
     },
     // 企业法律顾问
     {
-      path:'/Company',
+      path: '/Company',
       component: () => import("@/components/Company.vue")
     },
     // 教师资格证
     {
-      path:'/Teacher',
+      path: '/Teacher',
       component: () => import("@/components/Teacher.vue")
     },
     // 助理社会工作师
     {
-      path:'/Assistant-society',
+      path: '/Assistant-society',
       component: () => import("@/components/Assistant-society.vue")
     },
     // 一级建造师
     {
-      path:'/One-constructor',
+      path: '/One-constructor',
       component: () => import("@/components/One-constructor.vue")
     },
     // 二级建造师
     {
-      path:'/Two-constructor',
+      path: '/Two-constructor',
       component: () => import("@/components/Two-constructor.vue")
     },
     // 考研
     {
-      path:'/Research',
+      path: '/Research',
       component: () => import("@/components/Research.vue")
     },
     // 高考
     {
-      path:'/College',
+      path: '/College',
       component: () => import("@/components/College.vue")
     },
     // 会计从业资格
     {
-      path:'/Accounting-work',
+      path: '/Accounting-work',
       component: () => import("@/components/Accounting-work.vue")
     },
     // 中级会计师
     {
-      path:'/Semi-senior',
+      path: '/Semi-senior',
       component: () => import("@/components/Semi-senior.vue")
     },
     // 注册会计师CPA
     {
-      path:'/CPA',
+      path: '/CPA',
       component: () => import("@/components/CPA.vue")
     },
     // 中级经济师
     {
-      path:'/Intermediate-economist',
+      path: '/Intermediate-economist',
       component: () => import("@/components/Intermediate-economist.vue")
     },
     // 初级会计师
     {
-      path:'/Junior-accountant',
+      path: '/Junior-accountant',
       component: () => import("@/components/Junior-accountant.vue")
     },
     // 计算机四级
     {
-      path:'/Computer-level',
+      path: '/Computer-level',
       component: () => import("@/components/Computer-level.vue")
     },
     // 警察招考
     {
-      path:'/Police-test',
+      path: '/Police-test',
       component: () => import("@/components/Police-test.vue")
     },
     // 政法干警
     {
-      path:'/Police-officers',
+      path: '/Police-officers',
       component: () => import("@/components/Police-officers.vue")
     },
     // 国考
     {
-      path:'/National-exam',
+      path: '/National-exam',
       component: () => import("@/components/National-exam.vue")
     },
     // 临床执业医师
     {
-      path:'/Clinical-practitioner',
+      path: '/Clinical-practitioner',
       component: () => import("@/components/Clinical-practitioner.vue")
     },
     // 临床助理医师
     {
-      path:'/Clinical-assistant',
+      path: '/Clinical-assistant',
       component: () => import("@/components/Clinical-assistant.vue")
     },
     // 执业中药师
     {
-      path:'/Chinese-medicine',
+      path: '/Chinese-medicine',
       component: () => import("@/components/Chinese-medicine.vue")
     },
     // 执业西药师
     {
-      path:'/Western-medicine',
+      path: '/Western-medicine',
       component: () => import("@/components/Western-medicine.vue")
     },
     // 护士资格
     {
-      path:'/Nurse-qualification',
+      path: '/Nurse-qualification',
       component: () => import("@/components/Nurse-qualification.vue")
     },
     // 我的首页
     {
-      path:'/my',
+      path: '/my',
       component: () => import("@/components/My.vue")
     },
     // 账号设置
     {
-      path:'/account-settings',
+      path: '/account-settings',
       component: () => import("@/components/Account-settings.vue")
     },
     // 退出
     {
-      path:'/logout',
+      path: '/logout',
       component: () => import("@/components/Logout.vue")
     },
     {
@@ -152,7 +151,7 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/About.vue")
+        import( /* webpackChunkName: "about" */ "./views/About.vue")
     }, {
       path: '/login',
       component: () => import("@/components/Login.vue")
@@ -161,48 +160,53 @@ export default new Router({
       component: () => import("@/components/Register.vue")
     },
     {
-      path:"/r",
-      name:"recruit",
-      component:()=> import("./views/Recruit.vue")
+      path: "/r",
+      name: "recruit",
+      component: () => import("./views/Recruit.vue")
     },
+    // 高考
     {
-      path:'/colleges',
-      name:'colleges',
+      path: '/colleges',
+      name: 'colleges',
       component: () => import("./views/Colleges.vue"),
-      children: [
-      {
-         path: '/mathmath',
-         component: () => import('./components/Mathmath.vue')
-      },
-      {
-        path: '/chinesemath',
-        component: () => import('./components/Chinesemath.vue')
-      },
-      {
-        path: '/physics',
-        component: () => import('./components/Physics.vue')
-      },
-      {
-        path: '/chemistry',
-        component: () => import('./components/Chemistry.vue')
-      },
-      {
-        path: '/bios',
-        component: () => import('./components/Bios.vue')
-      },
-      {
-        path: '/politics',
-        component: () => import('./components/Politics.vue')
-      },
-    {
-      path: '/history',
-      component: () => import('./components/History.vue')
-    },
-    {
-      path: '/where',
-      component: () => import('./components/Where.vue')
-    }
+      children: [{
+          path: '/mathmath',
+          component: () => import('./components/Mathmath.vue')
+        },
+        {
+          path: '/chinesemath',
+          component: () => import('./components/Chinesemath.vue')
+        },
+        {
+          path: '/physics',
+          component: () => import('./components/Physics.vue')
+        },
+        {
+          path: '/chemistry',
+          component: () => import('./components/Chemistry.vue')
+        },
+        {
+          path: '/bios',
+          component: () => import('./components/Bios.vue')
+        },
+        {
+          path: '/politics',
+          component: () => import('./components/Politics.vue')
+        },
+        {
+          path: '/history',
+          component: () => import('./components/History.vue')
+        },
+        {
+          path: '/where',
+          component: () => import('./components/Where.vue')
+        }
       ]
+    },
+    // 助理社会工作师
+    {
+      path: "/Assistantsociety",
+      component: () => import("./views/Assistant-society.vue")
     }
   ]
 });

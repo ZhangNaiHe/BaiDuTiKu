@@ -433,9 +433,9 @@ export default {
 
 .scend_all {
   position: relative;
+  z-index: 999;
 }
 
-.scend_all
 
 /* 社会工作师div */
 .right > ul {
