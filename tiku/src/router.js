@@ -2,7 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import Nav from './views/Nav.vue';
-Vue.component("index-nav",Nav)
+Vue.component("index-nav", Nav)
 Vue.use(Router);
 
 export default new Router({
@@ -205,13 +205,28 @@ export default new Router({
     },
     // 一级建筑师
     {
-      path:'/oneconstructor',
+      path: '/oneconstructor',
       component: () => import("./views/Oneconstructor.vue")
     },
     // 二级建筑师
     {
       path: '/twoconstructor',
       component: () => import('./views/Twoconstructor.vue')
+    },
+    // 会计从业资格
+    {
+      path: '/accountingwork',
+      component: () => import('./views/Accountingwork.vue')
+    },
+    // 中级会计师
+    {
+      path: '/semisenior',
+      component: () => import('./views/Semisenior.vue')
+    },
+    // 注册会计师CPA
+    {
+      path: '/pa',
+      component: () => import('./views/Cpa.vue')
     }
   ]
 });
