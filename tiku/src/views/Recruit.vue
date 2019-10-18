@@ -331,7 +331,7 @@
 </template>
 
 <script>
-import "swiper/css/swiper.css";
+import "../../node_modules/swiper/"
 import Swiper from "swiper";
 export default {
   name: "Slider",
