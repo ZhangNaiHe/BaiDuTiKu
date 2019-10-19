@@ -18,106 +18,58 @@
           :style="{height:height+'px'}"
         >
           <!-- <div class="lunbo-box"> -->
-          <el-avatar
+          <!-- <el-avatar
             class="lunbo-pictrue"
             style="float:left"
-            src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-          ></el-avatar>
+            
+          ></el-avatar>-->
+          <img src="../assets/images/xiaogou.jpg" alt style="float:left;width:40px;height:40px" />
           <!-- </div> -->
-          <div class="lunbo-li" >
-            <span class="lunbo-name" v-for="(item,index) in contentName" :key="index">{{item}}</span>
-            <span class="lunbo-span">{{item}}</span>
+          <div class="lunbo-li">
+            <span class="lunbo-name">开心快乐已学完了244个知识点</span>
+            <span class="lunbo-span">今天学了不等式的综合应用等3个知识点</span>
           </div>
         </li>
         <li
           class="rollScreen_once"
-          v-for="(item,index) in contentArr"
-          :key="index+contentArr.length"
           :style="{height:height+'px'}"
         >
-          <el-avatar
-            class="lunbo-pictrue"
-            style="float:left"
-            src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-          ></el-avatar>
-          <div class="lunbo-li" >
-            <span class="lunbo-name" v-for="(item,index) in contentName" :key="index">{{item}}</span>
-            <span class="lunbo-span">{{item}}</span>
+           <img src="../assets/images/xiaogou01.jpg" alt style="float:left;width:40px;height:40px" />
+          <div class="lunbo-li">
+            <span class="lunbo-name" ></span>
+            <span class="lunbo-span"></span>
+          </div>
+        </li>
+       <li
+          class="rollScreen_once"
+          :style="{height:height+'px'}"
+        >
+           <img src="../assets/images/xiaogou04.jpg" alt style="float:left;width:40px;height:40px" />
+          <div class="lunbo-li">
+            <span class="lunbo-name" ></span>
+            <span class="lunbo-span"></span>
           </div>
         </li>
         <li
           class="rollScreen_once"
-          v-for="(item,index) in contentArr"
-          :key="index"
           :style="{height:height+'px'}"
         >
-          <!-- <div class="lunbo-box"> -->
-          <el-avatar
-            class="lunbo-pictrue"
-            style="float:left"
-            src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-          ></el-avatar>
-          <!-- </div> -->
-          <div class="lunbo-li" >
-            <span class="lunbo-name" v-for="(item,index) in contentName" :key="index">{{item}}</span>
-            <span class="lunbo-span">{{item}}</span>
+           <img src="../assets/images/xiaogou03.jpg" alt style="float:left;width:40px;height:40px" />
+          <div class="lunbo-li">
+            <span class="lunbo-name" ></span>
+            <span class="lunbo-span"></span>
           </div>
         </li>
         <li
           class="rollScreen_once"
-          v-for="(item,index) in contentArr"
-          :key="index"
           :style="{height:height+'px'}"
         >
-          <!-- <div class="lunbo-box"> -->
-          <el-avatar
-            class="lunbo-pictrue"
-            style="float:left"
-            src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-          ></el-avatar>
-          <!-- </div> -->
-          <div class="lunbo-li" >
-            <span class="lunbo-name" v-for="(item,index) in contentName" :key="index">{{item}}</span>
-            <span class="lunbo-span">{{item}}</span>
+           <img src="../assets/images/xiaogou02.jpg" alt style="float:left;width:40px;height:40px" />
+          <div class="lunbo-li">
+            <span class="lunbo-name" ></span>
+            <span class="lunbo-span"></span>
           </div>
         </li>
-        <li
-          class="rollScreen_once"
-          v-for="(item,index) in contentArr"
-          :key="index"
-          :style="{height:height+'px'}"
-        >
-          <!-- <div class="lunbo-box"> -->
-          <el-avatar
-            class="lunbo-pictrue"
-            style="float:left"
-            src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-          ></el-avatar>
-          <!-- </div> -->
-          <div class="lunbo-li" >
-            <span class="lunbo-name" v-for="(item,index) in contentName" :key="index">{{item}}</span>
-            <span class="lunbo-span">{{item}}</span>
-          </div>
-        </li>
-        <li
-          class="rollScreen_once"
-          v-for="(item,index) in contentArr"
-          :key="index"
-          :style="{height:height+'px'}"
-        >
-          <!-- <div class="lunbo-box"> -->
-          <el-avatar
-            class="lunbo-pictrue"
-            style="float:left"
-            src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-          ></el-avatar>
-          <!-- </div> -->
-          <div class="lunbo-li" >
-            <span class="lunbo-name" v-for="(item,index) in contentName" :key="index">{{item}}</span>
-            <span class="lunbo-span">{{item}}</span>
-          </div>
-        </li>
-        
       </ul>
     </div>
   </div>
@@ -139,22 +91,9 @@ export default {
     return {
       contentArr: [
         "今天学了数列与不等式的综合等5个知识点"
-        // "今天学了判断两个函数是否为同一函数等11个...",
-        // "今天学了变量间的相关关系等2个知识点",
-        // "今天学了规律的客观性和普遍性等9个知识点",
-        // "今天学了圆的切线的性质定理的证明等2个知识点",
-        // "今天学了导数的乘法与除法法则等4个知识点",
-        // "今天学了圆锥曲线中的范围、最值问题等10..."
       ],
       contentName: [
         "ZhangNaiHe"
-        // "ZhaoHeng",
-        // "LiJiaPeng",
-        // "YuJingYao",
-        // "FanLianLian",
-        // "GuanRui",
-        // "WangMingRen",
-        // "JiaJiongHui"
       ],
       num: 0
     };

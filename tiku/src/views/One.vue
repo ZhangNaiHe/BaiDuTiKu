@@ -89,7 +89,9 @@
 
     <!-- </el-main> -->
     <!-- 中部结束 -->
-    <el-footer>Footer</el-footer>
+    <el-footer>
+      <index-footer></index-footer>
+    </el-footer>
   </el-container>
 </template>
 

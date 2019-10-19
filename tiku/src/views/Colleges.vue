@@ -92,7 +92,60 @@
       </div>
       <!-- 评论轮播图 -->
       <div class="pinglun">
-        <chui-zhi></chui-zhi>
+        <!-- <nins-hit></nins-hit> -->
+        <div class="someconn">
+          <ul class="som_ul">
+            <li>
+              <img src="../assets/images/xiaogou.jpg" alt />
+              <div class="som_d">
+                <p>开心快乐已学完了244个知识点</p>
+                <p>今天学了不等式的综合应用等3个知识点</p>
+              </div>
+            </li>
+            <li>
+              <img src="../assets/images/xiaogou01.jpg" alt />
+              <div class="som_d">
+                <p>小美已学完了37个知识点</p>
+                <p>今天学了抛物线的定义及应用等4个知识点</p>
+              </div>
+            </li>
+            <li>
+              <img src="../assets/images/xiaogou02.jpg" alt />
+              <div class="som_d">
+                <p>Scorpio已学完了280个知识点</p>
+                <p>今天学了奇函数等8个知识点</p>
+              </div>
+            </li>
+            <li>
+              <img src="../assets/images/xiaogou03.jpg" alt />
+              <div class="som_d">
+                <p>VInegarooooooo已学完了111个知识点</p>
+                <p>今天学了从刀耕火种到精耕细作等1个知识点</p>
+              </div>
+            </li>
+            <li>
+              <img src="../assets/images/xiaogou04.jpg" alt />
+              <div class="som_d">
+                <p>坏猪灬已学完了263个知识点</p>
+                <p>今天学了竖直上抛运动等18个知识点</p>
+              </div>
+            </li>
+            <li>
+              <img src="../assets/images/xiaogou05.jpg" alt />
+              <div class="som_d">
+                <p>桢夏已学完了124个知识点</p>
+                <p>今天学了指数函数模型等18个知识点</p>
+              </div>
+            </li>
+            <li>
+              <img src="../assets/images/xiaogou06.jpg" alt />
+              <div class="som_d">
+                <p>某年某日已学完了219个知识点</p>
+                <p>今天学了伴性遗传等16个知识点</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <!-- 章节学习结束 -->
@@ -283,7 +336,9 @@
     </div>
     <!-- </el-main> -->
     <!-- 中部结束 -->
-    <el-footer></el-footer>
+    <el-footer>
+      <index-footer></index-footer>
+    </el-footer>
   </el-container>
 </template>
 
@@ -324,6 +379,31 @@ export default {
 </script>
 
 <style scoped>
+.someconn {
+  width: 310px;
+  height: 364px;
+  margin-top: 25px;
+  margin-left: 40px;
+}
+.som_ul {
+  list-style: none;
+}
+.som_ul li {
+  margin-bottom: 30px;
+}
+.som_d p {
+  height: 20px;
+  line-height: 20px;
+  color: #666;
+  font-size: 12px;
+}
+.som_ul img {
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-left: -20px;
+  margin-right: 20px;
+}
 * {
   color: black;
 }
@@ -334,7 +414,7 @@ body {
 
 .el-container {
   /* width: 1519.2px; */
-  height: 10000px;
+  /* height: 10000px; */
 }
 
 .el-main {
@@ -733,13 +813,11 @@ body {
   background-color: #d3dce6;
 }
 
-
 .pinglun {
-    width: 380px;
-    height: 506px;
-    background-color: red;
-    float: right;
-    margin-top: 20px;
-    margin-right: 149px;
+  width: 380px;
+  height: 506px;
+  float: right;
+  margin-top: 20px;
+  margin-right: 149px;
 }
 </style>

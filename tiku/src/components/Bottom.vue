@@ -43,20 +43,35 @@
       </div>
       <div class="fourth">
         <p class="fourth_p">合作机构</p>
-        <a href=""><img src="../../public/img/long.png" alt=""></a>
-        <a href=""><img src="../../public/img/mu.png" alt=""></a>
-        <a href=""><img src="../../public/img/wang.png" alt=""></a>
-        <a href=""><img src="../../public/img/xi.png" alt=""><br></a>
-        <a href=""><img src="../../public/img/yi.png" alt=""></a>
-        <a href=""><img src="../../public/img/yao.png" alt=""></a>
+        <a href>
+          <img src="../../public/img/long.png" alt />
+        </a>
+        <a href>
+          <img src="../../public/img/mu.png" alt />
+        </a>
+        <a href>
+          <img src="../../public/img/wang.png" alt />
+        </a>
+        <a href>
+          <img src="../../public/img/xi.png" alt />
+          <br />
+        </a>
+        <a href>
+          <img src="../../public/img/yi.png" alt />
+        </a>
+        <a href>
+          <img src="../../public/img/yao.png" alt />
+        </a>
       </div>
     </div>
     <div class="tail_bottom">
       <div class="font">
-        <font
-          class="f_font"
-          color="#999999"
-        >京ICP证030173号&#8195;京网文[2013]0934-983号&#8195;Copyright&#8194;©&#8194;2018&#8194;Baidu&#8194;<a href="">使用百度前必读</a></font>
+        <font class="f_font" color="#999999">
+          京ICP证030173号&#8195;京网文[2013]0934-983号&#8195;Copyright&#8194;©&#8194;2018&#8194;Baidu&#8194;
+          <a
+            href
+          >使用百度前必读</a>
+        </font>
       </div>
     </div>
   </div>
@@ -68,8 +83,17 @@ export default {};
 
 <style scoped>
 .tiku_tail {
-  width: 100%;
+  /* width: 100%; */
+  width: 1920px;
+  margin-left: -20px;
   height: 248px;
+  margin-top: 90px;
+}
+.tiku_tail ul {
+  list-style: none;
+}
+.tiku_tail a {
+  text-decoration: none;
 }
 .tail_top {
   width: 100%;
@@ -79,21 +103,23 @@ export default {};
 .tail_bottom {
   width: 100%;
   height: 44px;
+  text-align: center;
   background-color: #39464d;
 }
 .font {
   height: 15px;
-  width: 500px;
+  width: 501px;
   margin: 0 auto;
   padding-top: 10px;
 }
 .f_font {
   font-size: 12px;
+  margin-left: -385px;
 }
-.f_font a{
+.f_font a {
   color: #809999;
 }
-.f_font a:hover{
+.f_font a:hover {
   color: #149987;
 }
 .first {
@@ -119,16 +145,15 @@ export default {};
 .fourth {
   float: left;
   height: 100%;
-  width: 590px;
+  width: 550px;
   /* background-color: skyblue; */
   border-left: 1px solid #39464d;
-
 }
 .first_one {
   line-height: 24px;
   font-size: 14px;
   color: #cccccc;
-  margin-left: 172px;
+  margin-left: 131px;
   margin-top: 16px;
 }
 .first_p {
@@ -140,7 +165,7 @@ export default {};
   line-height: 24px;
   font-size: 14px;
   color: #cccccc;
-  margin-left: 20px;
+  margin-left: -23px;
   margin-top: 16px;
 }
 .second_p {
@@ -148,7 +173,10 @@ export default {};
   margin-left: 20px;
   margin-top: 30px;
 }
-.third_three a{
+.third_three{
+  margin-left: -40px;
+}
+.third_three a {
   line-height: 26px;
   font-size: 14px;
   color: #cccccc;
@@ -163,7 +191,7 @@ export default {};
   margin-top: 30px;
   margin-bottom: 15px;
 }
-.third_three img{
+.third_three img {
   margin-right: -16px;
   margin-left: 29px;
 }
@@ -173,7 +201,7 @@ export default {};
   margin-top: 30px;
   margin-bottom: 15px;
 }
-.fourth img{
-  margin-left: 36px;
+.fourth img {
+  margin-left: 52px;
 }
 </style>

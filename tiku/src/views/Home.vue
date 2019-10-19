@@ -20,7 +20,7 @@
       </el-carousel>-->
       <!-- 菜单 -->
       <div class="car" style="width: 1920px;margin: 0 auto;">
-        <el-carousel height="350px"  indicator-position="none">
+        <el-carousel height="350px" indicator-position="none">
           <el-carousel-item v-for="item in 2" :key="item"></el-carousel-item>
         </el-carousel>
       </div>
@@ -104,56 +104,56 @@
               <a href="/int">中级经济师</a>
             </li>
             <li>
-              <a href="#">初级会计师</a>
+              <a href="/jun">初级会计师</a>
             </li>
           </ul>
         </div>
         <div class="stion">
           <ul>
             <li>
-              <a href="#">计算机四级</a>
+              <a href="/com">计算机四级</a>
             </li>
           </ul>
         </div>
         <div class="stion">
           <ul>
             <li>
-              <a href="#">警察招考</a>
+              <a href="/pot">警察招考</a>
             </li>
             <li>
-              <a href="#">政法干警</a>
+              <a href="/pol">政法干警</a>
             </li>
             <li>
-              <a href="#">国考</a>
-            </li>
-          </ul>
-        </div>
-        <div class="stion">
-          <ul>
-            <li>
-              <a href="#">临床执业医师</a>
-            </li>
-            <li>
-              <a href="#">临床助理医师</a>
-            </li>
-            <li>
-              <a href="#">执业中药医师</a>
-            </li>
-            <li>
-              <a href="#">执业西药药师</a>
-            </li>
-            <li>
-              <a href="#">护士资格</a>
+              <a href="/state">国考</a>
             </li>
           </ul>
         </div>
         <div class="stion">
           <ul>
             <li>
-              <a href="#">考研</a>
+              <a href="/pra">临床执业医师</a>
             </li>
             <li>
-              <a href="#">高考</a>
+              <a href="/aid">临床助理医师</a>
+            </li>
+            <li>
+              <a href="/tcm">执业中药医师</a>
+            </li>
+            <li>
+              <a href="/wes">执业西药药师</a>
+            </li>
+            <li>
+              <a href="/nurse">护士资格</a>
+            </li>
+          </ul>
+        </div>
+        <div class="stion">
+          <ul>
+            <li>
+              <a href="/res">考研</a>
+            </li>
+            <li>
+              <a href="/colleges">高考</a>
             </li>
           </ul>
         </div>
@@ -194,7 +194,43 @@
             </div>
             <!-- 轮播 -->
             <div class="someconn">
-              <chui-zhi></chui-zhi>
+              <ul class="som_ul">
+                <li>
+                  <img src="../assets/images/xiaogou.jpg" alt />
+                  <div class="som_d">
+                    <p>开心快乐已学完了244个知识点</p>
+                    <p>今天学了不等式的综合应用等3个知识点</p>
+                  </div>
+                </li>
+                <li>
+                  <img src="../assets/images/xiaogou01.jpg" alt />
+                  <div class="som_d">
+                    <p>小美已学完了37个知识点</p>
+                    <p>今天学了抛物线的定义及应用等4个知识点</p>
+                  </div>
+                </li>
+                <li>
+                  <img src="../assets/images/xiaogou02.jpg" alt />
+                  <div class="som_d">
+                    <p>Scorpio已学完了280个知识点</p>
+                    <p>今天学了奇函数等8个知识点</p>
+                  </div>
+                </li>
+                <li>
+                  <img src="../assets/images/xiaogou03.jpg" alt />
+                  <div class="som_d">
+                    <p>VInegarooooooo已学完了111个知识点</p>
+                    <p>今天学了从刀耕火种到精耕细作等1个知识点</p>
+                  </div>
+                </li>
+                <li>
+                  <img src="../assets/images/xiaogou04.jpg" alt />
+                  <div class="som_d">
+                    <p>坏猪灬已学完了263个知识点</p>
+                    <p>今天学了竖直上抛运动等18个知识点</p>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -433,8 +469,72 @@
           <a href="#" v-for="(item6,i6) in bigs" :key="i6">{{item6.big_teacher_name}}</a>
         </div>
       </div>
+      <!-- 回到顶部 -->
+       <!-- <el-backtop target=".page-component__scroll .el-scrollbar__wrap" > -->
       <!-- </el-main> -->
-      <el-footer></el-footer>
+      <el-footer>
+        <!-- <index-footer></index-footer> -->
+        <div class="foot">
+          <div class="f1">
+            <div class="f1_tit">
+              百度题库
+              <p
+                class="f1_p"
+              >百度题库旨在为考生提供高效的智能备考服务，全面覆盖中小学财会类、建筑工程、职业资格、医卫类、计算机类等领域。拥有优质丰富的学习资料和备考全阶段的高效服务，助您不断前行！</p>
+            </div>
+          </div>
+          <div class="f2">
+            <div class="f1_tit">联系我们</div>
+            <p>
+              <i class="el-icon-user-solid"></i> 胡老师
+            </p>
+            <p>
+              <i class="el-icon-message"></i> tiku01@baidu.com
+            </p>
+            <p>
+              <i class="el-icon-s-home"></i> qq群：53811201
+            </p>
+          </div>
+          <div class="f3">
+            <div class="f1_tit">投诉建议</div>
+            <p>
+              <i class="el-icon-question"></i> 使用题库前必读
+            </p>
+            <p>
+              <i class="el-icon-tickets"></i> 投诉中心
+            </p>
+            <p>
+              <i class="el-icon-chat-dot-square"></i> 意见反馈
+            </p>
+          </div>
+          <div class="f4">
+            <div class="f1_tit">合作机构</div>
+            <div class="f4_m">
+              <ul>
+                <li>
+                  <img src="../../public/img/long.png" alt />
+                </li>
+                <li>
+                  <img src="../../public/img/mu.png" alt />
+                </li>
+                <li>
+                  <img src="../../public/img/wang.png" alt />
+                </li>
+                <li>
+                  <img src="../../public/img/xi.png" alt />
+                </li>
+                <li>
+                  <img src="../../public/img/yi.png" alt />
+                </li>
+                <li>
+                  <img src="../../public/img/yao.png" alt />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="f5">京ICP证030173号 京网文[2013]0934-983号 Copyright © 2018 Baidu 使用百度前必读</p>
+      </el-footer>
     </el-container>
   </div>
 </template>
@@ -472,7 +572,16 @@ export default {
         "iconfont icon-shuzi3",
         "iconfont icon-shuzicai",
         "iconfont icon-3"
-      ]
+      ],
+       myBackToTopStyle: {
+        right: '50px',
+        bottom: '50px',
+        width: '40px',
+        height: '40px',
+        borderRadius: '4px',
+        lineHeight: '45px', // 请保持与高度一致以垂直居中
+        background: '#e7eaf1'// 按钮的背景颜色
+      }
     };
   },
   created() {
@@ -495,17 +604,6 @@ export default {
       }
       //把获取到的数据给MenusLsit
       this.MenusList = res.data.tabs;
-      // console.log(this.MenusList);
-      // this.MenusLists = res.data.tabs;
-      // 把cat_son_name用split切割 用逗号隔开
-      // this.MenusList.forEach(item => {
-      // item.cat_son_name = item.cat_son_name
-      // ? item.cat_son_name.split(",")
-      // : [];
-      // this.MenusLists = item.cat_son_name;
-      // });
-      // this.MenusLists = res.data.tabs;
-      // window.console.log(this.MenusLists);
 
       res.data.tabs.forEach(item => {
         item.cat_son_name = item.cat_son_name
@@ -577,6 +675,118 @@ export default {
 </script>
 
 <style scoped>
+.el-backtop {
+    height: 100%;
+        width: 100%;
+        background-color: #f2f5f6;
+        box-shadow: 0 0 6px rgba(0,0,0, .12);
+        text-align: center;
+        line-height: 40px;
+        color: #1989fa;
+      
+}
+.el-footer {
+  width: 100%;
+  height: 251px !important;
+  background-color: #343f45;
+  margin-top: 80px;
+}
+.f5 {
+  color: #999;
+  width: 1514px;
+  height: 46px;
+  margin: 0 auto;
+  line-height: 46px;
+  text-align: center;
+  background-color: #39464d;
+  margin-top: 165px;
+  font-size: 12px;
+  margin-left: -17px;
+}
+.foot {
+  width: 1180px;
+  margin: 0 auto;
+  background-color: #343f45;
+  font-size: 14px;
+  padding-top: 40px;
+  color: #ccc;
+}
+.f1_tit {
+  color: #149987;
+}
+.foot p {
+  line-height: 24px;
+}
+.f1_p {
+  color: #ccc;
+}
+.f1 {
+  float: left;
+  width: 360px;
+  height: 125px;
+  border-right: 1px solid #39464d;
+}
+.f4_m ul {
+  list-style: none;
+  width: 366px;
+  position: absolute;
+  padding-left: 0px;
+}
+.f4_m li {
+  float: left;
+  width: 75px;
+  height: 30px;
+  margin-right: 9px;
+  margin-bottom: 10px;
+}
+.f2 {
+  box-sizing: border-box;
+  width: 210px;
+  height: 125px;
+  padding-left: 25px;
+  float: left;
+  border-right: 1px solid #39464d;
+}
+.f3 {
+  float: left;
+  box-sizing: border-box;
+  height: 125px;
+  padding-left: 25px;
+  float: left;
+  border-right: 1px solid #39464d;
+}
+.f4 {
+  float: left;
+  padding-left: 50px;
+  position: relative;
+  width: 410px;
+  box-sizing: border-box;
+}
+.someconn {
+  width: 310px;
+  height: 364px;
+  margin-top: 45px !important;
+}
+.som_ul {
+  list-style: none;
+}
+.som_ul li {
+  margin-bottom: 30px;
+}
+.som_d p {
+  height: 20px;
+  line-height: 20px;
+  color: #666;
+  font-size: 12px;
+  margin-top: -10px;
+}
+.som_ul img {
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-left: -20px;
+  margin-right: 20px;
+}
 .non {
   width: 1182px;
   margin: 0 auto;

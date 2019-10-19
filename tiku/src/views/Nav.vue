@@ -3,7 +3,7 @@
   <div class="headnav">
     <!-- 导航栏 -->
     <div class="nav">
-      <a href>
+      <a href="/">
         <span class="logo"></span>
       </a>
       <!-- 人像 -->
@@ -19,7 +19,7 @@
           <img src="../../public/img/head_bg.jpg" alt class="phone" />
         </div>
         <div class="wenzi">
-          <a href="/my">我的首页</a>
+          <a href="/">我的首页</a>
           <a href="/login">登录</a>
           <a href="/logout" @click="handlerOut">退出</a>
         </div>
@@ -52,10 +52,10 @@
         <div class="scend">
           <ul class="headss">
             <li>
-              <a href="/One-constructor">一级建造师</a>
+              <a href="/one">一级建造师</a>
             </li>
             <li>
-              <a href="/Two-constructor">二级建造师</a>
+              <a href="/two">二级建造师</a>
             </li>
           </ul>
         </div>
@@ -66,10 +66,10 @@
         <div class="scend">
           <ul class="headss">
             <li>
-              <a href="/Research">考研</a>
+              <a href="/res">考研</a>
             </li>
             <li>
-              <a href="/College">高考</a>
+              <a href="/colleges">高考</a>
             </li>
           </ul>
         </div>
@@ -80,19 +80,19 @@
         <div class="scend">
           <ul class="headss">
             <li>
-              <a href="/Accounting-work">会计从业资格</a>
+              <a href="/acc">会计从业资格</a>
             </li>
             <li>
-              <a href="/Semi-senior">中级会计师</a>
+              <a href="/semisenior">中级会计师</a>
             </li>
             <li>
-              <a href="/CPA">注册会计师CPA</a>
+              <a href="/pa">注册会计师CPA</a>
             </li>
             <li>
-              <a href="/Intermediate-economist">中级经济师</a>
+              <a href="/int">中级经济师</a>
             </li>
             <li>
-              <a href="/Junior-accountant">初级会计师</a>
+              <a href="/int">初级会计师</a>
             </li>
           </ul>
         </div>
@@ -103,19 +103,19 @@
         <div class="scend">
           <ul class="headss">
             <li>
-              <a href="/Clinical-practitioner">临床执业医师</a>
+              <a href="/pra">临床执业医师</a>
             </li>
             <li>
-              <a href="/Clinical-assistant">临床助理医师</a>
+              <a href="/aid">临床助理医师</a>
             </li>
             <li>
-              <a href="/Chinese-medicine">执业中药师</a>
+              <a href="/tcm">执业中药师</a>
             </li>
             <li>
-              <a href="/Western-medicine">执业西药师</a>
+              <a href="/wes">执业西药师</a>
             </li>
             <li>
-              <a href="/Nurse-qualification">护士资格</a>
+              <a href="/nurse">护士资格</a>
             </li>
           </ul>
         </div>
@@ -168,68 +168,68 @@
             </ul>
             <ul>
               <li>
-                <a href="/One-constructor">一级建造师</a>
+                <a href="/one">一级建造师</a>
               </li>
               <li>
-                <a href="/Two-constructor">二级建造师</a>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <a href="/Research">考研</a>
-              </li>
-              <li>
-                <a href="/College">高考</a>
+                <a href="/two">二级建造师</a>
               </li>
             </ul>
             <ul>
               <li>
-                <a href="/Accounting-work">会计从业资格</a>
+                <a href="/res">考研</a>
               </li>
               <li>
-                <a href="/Semi-senior">中级会计师</a>
-              </li>
-              <li>
-                <a href="/CPA">注册会计师CPA</a>
-              </li>
-              <li>
-                <a href="/Intermediate-economist">中级经济师</a>
-              </li>
-              <li>
-                <a href="/Junior-accountant">初级会计师</a>
+                <a href="/colleges">高考</a>
               </li>
             </ul>
             <ul>
               <li>
-                <a href="/Computer-level">计算机四级</a>
+                <a href="/acc">会计从业资格</a>
+              </li>
+              <li>
+                <a href="/semisenior">中级会计师</a>
+              </li>
+              <li>
+                <a href="/pa">注册会计师CPA</a>
+              </li>
+              <li>
+                <a href="/pa">中级经济师</a>
+              </li>
+              <li>
+                <a href="/jun">初级会计师</a>
               </li>
             </ul>
             <ul>
               <li>
-                <a href="/Police-test">警察招考</a>
-              </li>
-              <li>
-                <a href="/Police-officers">政法干警</a>
-              </li>
-              <li>
-                <a href="/National-exam">国考</a>
+                <a href="/com">计算机四级</a>
               </li>
             </ul>
             <ul>
               <li>
-                <a href="/Clinical-practitioner">临床执业医师</a>
+                <a href="/pot">警察招考</a>
               </li>
               <li>
-                <a href="/Clinical-assistant">临床助理医师</a>
+                <a href="/pol">政法干警</a>
               </li>
               <li>
-                <a href="/Chinese-medicine">执业中药师</a>
+                <a href="/state">国考</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="/pra">临床执业医师</a>
               </li>
               <li>
-                <a href="/Western-medicine">执业西药师</a>
+                <a href="/aid">临床助理医师</a>
               </li>
               <li>
-                <a href="/Nurse-qualification">护士资格</a>
+                <a href="/tcm">执业中药师</a>
+              </li>
+              <li>
+                <a href="/wes">执业西药师</a>
+              </li>
+              <li>
+                <a href="/nurse">护士资格</a>
               </li>
             </ul>
           </div>

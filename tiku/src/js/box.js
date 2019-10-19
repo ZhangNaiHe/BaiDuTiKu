@@ -6,7 +6,6 @@ window.onload = function () {
     window.console.log(aDiv);
     for (var i = 0; i < aLi.length; i++) {
         aLi[i].setAttribute("index", i);
-        aDiv[i].style.display = "none";
         aLi[i].onmouseover = function () {
             for (var j = 0; j < aLi.length; j++) {
                 aLi[j].removeAttribute("class");
