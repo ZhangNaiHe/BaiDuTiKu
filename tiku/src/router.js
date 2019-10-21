@@ -34,11 +34,6 @@ export default new Router({
       name: "nav",
       component: Nav,
     },
-    // 我的首页
-    {
-      path: '/my',
-      component: () => import("@/components/My.vue")
-    },
     // 退出
     {
       path: '/logout',

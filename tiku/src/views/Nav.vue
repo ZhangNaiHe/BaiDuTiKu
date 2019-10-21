@@ -241,7 +241,7 @@
 
 
 <script>
-import Botton from "../components/Botton.vue";
+import Bottom from "../components/Bottom.vue";
 export default {
   data:{
     return:{
